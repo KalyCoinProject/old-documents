@@ -1,0 +1,8 @@
+{
+  "title": "Kalycoin Documentation",
+  "plugins": [
+    "-lunr",
+    "language-picker",
+    "anchors"
+  ]
+}

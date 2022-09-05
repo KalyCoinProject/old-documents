@@ -1,0 +1,1055 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>bech32 support · Kalycoin Documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../OfflineStaking.html" />
+    
+    
+    <link rel="prev" href="../Testnet-User-Guide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Using the Kalycoin wallet</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../Kalycoin-Wallet-Tutorial/">
+            
+                <a href="../Kalycoin-Wallet-Tutorial/">
+            
+                    
+                    Desktop wallet basic usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../KLC-wallet-usage-best-practices/">
+            
+                <a href="../KLC-wallet-usage-best-practices/">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../updatekalycoin/">
+            
+                <a href="../updatekalycoin/">
+            
+                    
+                    How to Update your Kalycoin wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../kalycoin0182overview/">
+            
+                <a href="../kalycoin0182overview/">
+            
+                    
+                    Kalycoin 0.18.2 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../Kalycoin-Core-v0202-Recommendations/">
+            
+                <a href="../Kalycoin-Core-v0202-Recommendations/">
+            
+                    
+                    Kalycoin Core v0.20.2 Recommendations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../commands/">
+            
+                <a href="../commands/">
+            
+                    
+                    Kalycoin Core Wallet Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../Adding-Nodes/">
+            
+                <a href="../Adding-Nodes/">
+            
+                    
+                    Adding Nodes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../Encrypt-and-Unlock-Kalycoin-Wallet/">
+            
+                <a href="../Encrypt-and-Unlock-Kalycoin-Wallet/">
+            
+                    
+                    Encrypt and Unlock Kalycoin Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                <a href="../Wallet-Recovery-with-Salvagewallet.html">
+            
+                    
+                    Wallet Recovery With Salvagewallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="../Testnet-User-Guide.html">
+            
+                <a href="../Testnet-User-Guide.html">
+            
+                    
+                    Testnet User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    bech32 support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Staking</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../OfflineStaking.html">
+            
+                <a href="../OfflineStaking.html">
+            
+                    
+                    Offline Staking
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../OfflineStakingDelegation/">
+            
+                <a href="../OfflineStakingDelegation/">
+            
+                    
+                    Offline Staking Address Delegation - Undelegation Transaction Details
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../kalycoinrepo/">
+            
+                <a href="../kalycoinrepo/">
+            
+                    
+                    Repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../gcpgettingstarted/">
+            
+                <a href="../gcpgettingstarted/">
+            
+                    
+                    KLC On Google Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../Kalycoin-AWS/">
+            
+                <a href="../Kalycoin-AWS/">
+            
+                    
+                    KLC On AWS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../How-to-Stake-KLC-using-a-Linux-Virtual-Private-Server/">
+            
+                <a href="../How-to-Stake-KLC-using-a-Linux-Virtual-Private-Server/">
+            
+                    
+                    Stake With VPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../Kalycoin-on-Raspberry-Pi/">
+            
+                <a href="../Kalycoin-on-Raspberry-Pi/">
+            
+                    
+                    Stake With Raspberry Pi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="../How-to-Stake-with-Kalycoin/">
+            
+                <a href="../How-to-Stake-with-Kalycoin/">
+            
+                    
+                    How to Stake With Kalycoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="../freebsd/">
+            
+                <a href="../freebsd/">
+            
+                    
+                    How to Stake on FreeBSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Other Kalycoin wallets</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../Kalycoin-Electrum-User-Guide.html">
+            
+                <a href="../Kalycoin-Electrum-User-Guide.html">
+            
+                    
+                    Kalycoin Electrum Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../KLC-WebWallet-usage/">
+            
+                <a href="../KLC-WebWallet-usage/">
+            
+                    
+                    Web Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../How-to-use-Kalycoin-Android-Wallet/">
+            
+                <a href="../How-to-use-Kalycoin-Android-Wallet/">
+            
+                    
+                    How to use Kalycoin Android Wallet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../Kalycoin-Exchange-Usage-Guide-and-Info.html">
+            
+                <a href="../Kalycoin-Exchange-Usage-Guide-and-Info.html">
+            
+                    
+                    Kalycoin Exchange Usage Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../How-To-Add-Options/">
+            
+                <a href="../How-To-Add-Options/">
+            
+                    
+                    How to Add Options
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="../How-to-Use-Bootstrap/">
+            
+                <a href="../How-to-Use-Bootstrap/">
+            
+                    
+                    How to Use bootstrap.dat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="../Kalycoin-RPC-API/">
+            
+                <a href="../Kalycoin-RPC-API/">
+            
+                    
+                    Kalycoin RPC API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Kalycoin Lightning Client</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../lightning/">
+            
+                <a href="../lightning/">
+            
+                    
+                    Kalycoin Lightning Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Deploy Kalycoin</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../buildkalycoin.html">
+            
+                <a href="../buildkalycoin.html">
+            
+                    
+                    Build Kalycoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../Guidance-of-Kalycoin-Deployment-and-RPC-Settings.html">
+            
+                <a href="../Guidance-of-Kalycoin-Deployment-and-RPC-Settings.html">
+            
+                    
+                    Guidance of Kalycoin Deployment and RPC Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../Launch-Kalycoin-with-Docker.html">
+            
+                <a href="../Launch-Kalycoin-with-Docker.html">
+            
+                    
+                    Launch Kalycoin With Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../Build-Kalycoin-on-CentOS.html">
+            
+                <a href="../Build-Kalycoin-on-CentOS.html">
+            
+                    
+                    How to Build Kalycoin on CentOS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../How-To-Build-Kalycoin-On-Raspbian.md">
+            
+                <span>
+            
+                    
+                    How to Build Kalycoin on Raspbian
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../How-to-Deploy-Star-Network/">
+            
+                <a href="../How-to-Deploy-Star-Network/">
+            
+                    
+                    Deploy Kalycoin Star Network
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Smart Contract and KRC20</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../KRC20-Token-Introduce.html">
+            
+                <a href="../KRC20-Token-Introduce.html">
+            
+                    
+                    KRC20 Token Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../KRC20-integration.html">
+            
+                <a href="../KRC20-integration.html">
+            
+                    
+                    KRC20 Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="../Raw-KRC20-Transaction-implementation-guide">
+            
+                <span>
+            
+                    
+                    Raw KRC20 Transaction implemention guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Web3</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../Web3-Compatability-Layer/">
+            
+                <a href="../Web3-Compatability-Layer/">
+            
+                    
+                    Web3 Compatability Layer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../Janus-Docker-Container.html">
+            
+                <a href="../Janus-Docker-Container.html">
+            
+                    
+                    Janus Docker Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="../Truffle.html">
+            
+                <a href="../Truffle.html">
+            
+                    
+                    Truffle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.4" data-path="../Web3-Caveats.html">
+            
+                <a href="../Web3-Caveats.html">
+            
+                    
+                    Web3 Caveats
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Qnekt/Metamask</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../Qnekt.html">
+            
+                <a href="../Qnekt.html">
+            
+                    
+                    Qnekt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="../Why-The-Need-To-Fork-Metamask.html">
+            
+                <a href="../Why-The-Need-To-Fork-Metamask.html">
+            
+                    
+                    Why the need to fork Metamask?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="../Sideloading-Qnekt/">
+            
+                <a href="../Sideloading-Qnekt/">
+            
+                    
+                    Sideloading Qnekt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.4" data-path="../First-Time-Setup/">
+            
+                <a href="../First-Time-Setup/">
+            
+                    
+                    First time setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.5" data-path="../Using-Testnet-Faucet/">
+            
+                <a href="../Using-Testnet-Faucet/">
+            
+                    
+                    Using Testnet Faucet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.6" data-path="../Connecting-Qnekt-to-regtest/">
+            
+                <a href="../Connecting-Qnekt-to-regtest/">
+            
+                    
+                    Connecting Qnekt to regtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.7" data-path="../Connecting-react-box-to-regtest/">
+            
+                <a href="../Connecting-react-box-to-regtest/">
+            
+                    
+                    Connecting react-box to regtest
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Unita (archived)</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../Technical-White-Paper-for-KalycoinX/">
+            
+                <a href="../Technical-White-Paper-for-KalycoinX/">
+            
+                    
+                    Unita Technical White Paper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="../unitarepo/">
+            
+                <a href="../unitarepo/">
+            
+                    
+                    Install Unita from Linux repositories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="../unitagettingstarted/">
+            
+                <a href="../unitagettingstarted/">
+            
+                    
+                    Unita on Google Cloud Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="../One-Click-Launch-Chain/">
+            
+                <a href="../One-Click-Launch-Chain/">
+            
+                    
+                    Unita One-Click-Launch-Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="../SCAR-Consensus/">
+            
+                <a href="../SCAR-Consensus/">
+            
+                    
+                    SCAR: Scalable Consensus Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="../DDAO-Data-Management/">
+            
+                <a href="../DDAO-Data-Management/">
+            
+                    
+                    DDAO: Decentralized Data Access Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Research</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../Confidential-Assets.html">
+            
+                <a href="../Confidential-Assets.html">
+            
+                    
+                    Confidential Assets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.2" data-path="../Data-Analytics.html">
+            
+                <a href="../Data-Analytics.html">
+            
+                    
+                    Data Analytics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >bech32 support</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="bech32-addresses-on-kalycoin-0161"><a name="bech32-addresses-on-kalycoin-0161" class="plugin-anchor" href="#bech32-addresses-on-kalycoin-0161"><i class="fa fa-link" aria-hidden="true"></i></a>bech32 addresses on Kalycoin 0.16.1</h1>
+<p><strong>IMPORTANT NOTE:</strong> bech32 addresses <strong>CANNOT</strong> <strong>participate in staking.</strong> They&apos;re only for transacting and storing Kalycoin.</p>
+<p>Kalycoin 0.16 brought several important updates, one of the most important is in fact the support for bech32 addresses. <strong>These can be enabled on new wallets</strong> by adding <code>addresstype=bech32</code> to the kalycoin.conf file</p>
+<p><strong>PLEASE NOTE</strong> bech32 is very new and most online services don&apos;t support it yet, this means you cannot withdraw from most exchanges/online wallets to a bech32 address for now, as time passes and there&apos;s more support for bech32, it&apos;ll be easy to use from/to any service.</p>
+<p>There&apos;s many advantages to this new format, it&apos;s the future in many ways as even lightning network will benefit from this, bech32 addresses on Kalycoin start with <code>qc1</code>. To learn more about bech32: </p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki" target="_blank">https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki</a></p>
+<p><a href="https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/" target="_blank">https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/</a></p>
+<h3 id="lets-see-how-to-enable-these-addresses-on-kalycoin-0161"><a name="lets-see-how-to-enable-these-addresses-on-kalycoin-0161" class="plugin-anchor" href="#lets-see-how-to-enable-these-addresses-on-kalycoin-0161"><i class="fa fa-link" aria-hidden="true"></i></a>Let&apos;s see how to enable these addresses on Kalycoin 0.16.1:</h3>
+<p>Following our sample, in Mac OS, we need to go to the folder /Users/yourusername/Library/Application Support/Kalycoin <strong>(If it doesn&apos;t exist, you need to create it)</strong></p>
+<p>There&apos;s two options for navigating ourselves towards that folder, the first one is by opening Finder and going to the menu: go -&gt; go to folder.. &gt; ~/Library/Application Support/Kalycoin</p>
+<p><img src="0.png" alt="0"></p>
+<p><img src="1.png" alt="1"></p>
+<p>Optionally, we can use the Mac OS terminal if you&apos;re more comfortable with it</p>
+<p><img src="2.png" alt="2"></p>
+<p>Once inside that folder, we need to create the kalycoin.conf file (from a text editor or command line) and add</p>
+<p><code>addresstype=bech32</code> to it, save and close the file.</p>
+<p><img src="3.png" alt="3"></p>
+<p>Next, we launch the Kalycoin wallet, we&apos;ll be able to create and use bech32 addresses now. Just go to the &quot;receive&quot; menu and create a new payment request<img src="4.png" alt="4"></p>
+<p>Sending and receiving is pretty much the same as before, just copy and paste the address on the send field to send some Kalycoin to a bech32 address, or do the same for receiving.</p>
+<h1 id="other-operating-systems"><a name="other-operating-systems" class="plugin-anchor" href="#other-operating-systems"><i class="fa fa-link" aria-hidden="true"></i></a>Other Operating systems:</h1>
+<h4 id="windows"><a name="windows" class="plugin-anchor" href="#windows"><i class="fa fa-link" aria-hidden="true"></i></a>Windows:</h4>
+<p>Navigate to %Appdata%/ and you&apos;ll find the Kalycoin folder</p>
+<h4 id="linuxfreebsd"><a name="linuxfreebsd" class="plugin-anchor" href="#linuxfreebsd"><i class="fa fa-link" aria-hidden="true"></i></a>Linux/FreeBSD:</h4>
+<p>Your home folder contains the Kalycoin folder, by default it&apos;s in this location ~/.kalycoin/ </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Testnet-User-Guide.html" class="navigation navigation-prev " aria-label="Previous page: Testnet User Guide">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../OfflineStaking.html" class="navigation navigation-next " aria-label="Next page: Offline Staking">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"bech32 support","level":"2.11","depth":1,"next":{"title":"Offline Staking","level":"3.1","depth":1,"path":"OfflineStaking.md","ref":"OfflineStaking.md","articles":[]},"previous":{"title":"Testnet User Guide","level":"2.10","depth":1,"path":"Testnet-User-Guide.md","ref":"Testnet-User-Guide.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","language-picker","anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"language-picker":{"grid-columns":3},"anchors":{},"highlight":{},"search":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Kalycoin Documentation","language":"en","gitbook":"*"},"file":{"path":"bech32/README.md","mtime":"2022-09-02T00:30:05.710Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-02T00:33:17.916Z"},"basePath":"..","book":{"language":"en"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
