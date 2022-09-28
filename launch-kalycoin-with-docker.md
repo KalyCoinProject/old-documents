@@ -20,7 +20,7 @@ $ docker pull Kalycoin / Kalycoin
 
 ### **Or, build Kalycoin image with provided Dockerfile**
 
-The Dockerfile can be downloaded on github: [Dockerfile](https://github.com/KalyCoinProject/documents/blob/main/en/Launch-KalyCoin-with-Docker.md)
+The Dockerfile can be downloaded on github: [Dockerfile](https://github.com/KalyCoinProject/old-documents/blob/main/en/Launch-KalyCoin-with-Docker.md)
 
 $docker build --rm -t Kalycoin / Kalycoin .
 

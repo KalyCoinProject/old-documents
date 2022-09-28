@@ -2,13 +2,13 @@
 
 
 
-* [Delegating Address to Super Staker](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#delegating-address-to-super-staker)
-* [Delegating Address Operations](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#delegating-Address-operations)
-* [Super Staker Configuration](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#super-staker-configuration)
-* [Launching Kalycoin Core as a Super Staker](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#launching-kalycoin-core-as-a-super-staker)
-* [kalycoind Super Staker](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#kalycoind-super-staker)
-* [Super Staker Operations](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#super-staker-operations)
-* [Restore](https://github.com/KalyCoinProject/documents/blob/main/en/OfflineStaking.md#restore)
+* [Delegating Address to Super Staker](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#delegating-address-to-super-staker)
+* [Delegating Address Operations](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#delegating-Address-operations)
+* [Super Staker Configuration](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#super-staker-configuration)
+* [Launching Kalycoin Core as a Super Staker](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#launching-kalycoin-core-as-a-super-staker)
+* [kalycoind Super Staker](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#kalycoind-super-staker)
+* [Super Staker Operations](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#super-staker-operations)
+* [Restore](https://github.com/KalyCoinProject/old-documents/blob/main/en/OfflineStaking.md#restore)
 
 ### **Delegating Address to Super Staker**
 

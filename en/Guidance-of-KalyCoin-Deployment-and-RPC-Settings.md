@@ -55,7 +55,7 @@ All the four ways above cand get Kalycoin nodes. There are two important binarie
 
 ## Deploy Kalycoin node
 
-For the instruction for Kalycoin docker images, please refer to "[How to launch Kalycoin with docker](https://github.com/kalycoinproject/documents/blob/master/zh/Launch-Kalycoin-with-Docker.md)".
+For the instruction for Kalycoin docker images, please refer to "[How to launch Kalycoin with docker](https://github.com/KalyCoinProject/old-documents/blob/master/zh/Launch-Kalycoin-with-Docker.md)".
 
 Other normal deployment methods are almost the same, here we take Ubuntu as an example. The commands in Mac and windows are exactly the same.
 

@@ -404,7 +404,7 @@ Follow the link to see the contract creation transaction on the blockchain (afte
 
 Note that contracts are referenced using their address hash which is a 40-character hexadecimal address and just another way to represent a Kalycoin “Q” address.
 
-From this point, you can add the new token to your wallet as shown above [Adding a KRC20 Token](https://github.com/kalycoinproject/documents/tree/master/en/KLC-WebWallet-usage#adding-a-krc20-token).
+From this point, you can add the new token to your wallet as shown above [Adding a KRC20 Token](https://github.com/KalyCoinProject/old-documents/tree/master/en/KLC-WebWallet-usage#adding-a-krc20-token).
 
 ### Create Contract
 

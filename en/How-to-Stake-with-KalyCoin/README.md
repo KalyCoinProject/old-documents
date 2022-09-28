@@ -46,7 +46,7 @@ This will generate a new address with Prefix 'Q'. You can send some KLC to this 
 
 Note：**The coin should wait for 2000 blocks before being able to stake, i.e. about 17 hours to MATURE.**. 
 
-After the Kalycoin node syncing to the latest block, you can check current balance with `./kalycoin-cli getbalance` or get utxo list with`./kalycoin-cli listunspent`。（[what is UTXO?](https://github.com/kalycoinproject/documents/blob/master/zh/Kalycoin-Blockchain-Guide.md#utxo账户模型)）。
+After the Kalycoin node syncing to the latest block, you can check current balance with `./kalycoin-cli getbalance` or get utxo list with`./kalycoin-cli listunspent`。（[what is UTXO?](https://github.com/KalyCoinProject/old-documents/blob/master/zh/Kalycoin-Blockchain-Guide.md#utxo账户模型)）。
 
 Please do following steps after your coin is mature.
 

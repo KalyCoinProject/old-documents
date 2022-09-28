@@ -182,13 +182,13 @@ This document https://docs.kalycoin.io/en/commands/ explains in a very clear way
 
 # Offline Staking
 
-* [Delegating Address to Super Staker](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#delegating-address-to-super-staker)
-* [Delegating Address Operations](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#delegating-aAddress-operations)
-* [Super Staker Configuration](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#super-staker-configuration)
-* [Launching Kalycoin Core as a Super Staker](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#launching-kalycoin-core-as-a-super-staker)
-* [kalycoind Super Staker](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#kalycoind-super-staker)
-* [Super Staker Operations](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#super-staker-operations)
-* [Restore](https://github.com/kalycoinproject/documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#restore)
+* [Delegating Address to Super Staker](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#delegating-address-to-super-staker)
+* [Delegating Address Operations](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#delegating-aAddress-operations)
+* [Super Staker Configuration](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#super-staker-configuration)
+* [Launching Kalycoin Core as a Super Staker](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#launching-kalycoin-core-as-a-super-staker)
+* [kalycoind Super Staker](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#kalycoind-super-staker)
+* [Super Staker Operations](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#super-staker-operations)
+* [Restore](https://github.com/KalyCoinProject/old-documents/tree/master/en/Kalycoin-Wallet-Tutorial/README.md#restore)
 
 # Delegating Address to Super Staker
 

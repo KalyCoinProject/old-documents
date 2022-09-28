@@ -93,7 +93,7 @@ Another way to launch the Core wallet on Testnet is to include "`testnet=1`" in 
 
 # regtest
 
-Regression Test (regtest) is another test blockchain that runs as local blockchain. regtest can be run in a Docker container (https://github.com/kalycoinproject/documents/blob/master/en/Launch-Kalycoin-with-Docker.md). To run the Core wallet for regtest on a desktop or server, use the "`-regtest`" parameter to launch as shown in the examples above.
+Regression Test (regtest) is another test blockchain that runs as local blockchain. regtest can be run in a Docker container (https://github.com/KalyCoinProject/old-documents/blob/master/en/Launch-Kalycoin-with-Docker.md). To run the Core wallet for regtest on a desktop or server, use the "`-regtest`" parameter to launch as shown in the examples above.
 
 ![10 regtestkalycoin-qt](https://user-images.githubusercontent.com/29760787/60824422-91c07480-a177-11e9-97c6-7ae4f5c5b33d.jpg)
 kalycoin-qt on regtest, mining two blocks a minute
