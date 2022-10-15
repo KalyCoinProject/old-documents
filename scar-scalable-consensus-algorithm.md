@@ -100,7 +100,7 @@ In this formula, parent\_block\_time is the block time of the previous block and
 
 As shown in the following figure, assume that there are 5 authorized super nodes A, B, C, D, E, their public keys are stored in a ordered list, which is determined by the DGP vote mentioned above. Assume that at height h1, the ordered miners list is \[pubkey\_A, pubkey\_B, pubkey\_C, pubkey\_D, pubkey\_E], and the five supernodes will create new blocks in turn.
 
-![](<.gitbook/assets/image (11).png>)
+![](<.gitbook/assets/image (10).png>)
 
 When a new block is created, the miners sign the block with an encryption algorithm and then append the signature to the block. In this way, other nodes can recover the miner's public key from the block by decryption, thereby verifying whether the miner has the right to create a block by comparing with the super node list. When a chain is signed by the majority of miners, the chain can be viewed as a permanent chain. For example, in the above image, the chain from the genesis block to the height of h3 is a permanent chain because it has been signed by miners D, E and A. If any miner wants to make a fork under height h3, this fork cannot be followed by most miners.
 
@@ -114,13 +114,13 @@ A miner can create a new block in the following situations:
 
 From the above definition, which super node can generate a new block: the node signed for the nearest n/2 blocks can be removed from the current miner list. For example, at the block height h2, the list of miners in the next block is calculated as shown.
 
-![](<.gitbook/assets/image (18).png>)
+![](<.gitbook/assets/image (12).png>)
 
 After selecting the three nodes (B, C, and D) that can generate the next block, we only need to set the super node list as an ordered list, and specify their priority order to avoid them competing for the next block of production. The miner\_index in the formula is the priority index of the sorted miners list. The super node with a higher order will be assigned a earlier block\_time, and then each super node will use the allocated block\_time to create a new block and keep wait before the block\_time is over.
 
 However, the super-node mode of the consortium blockchain also faces a problem: the failure of some nodes will lead to a sudden drop in network efficiency. In order to avoid the failure of some nodes, we add the following strategy to make sure the network works. We set timeout in the system parameters. If a super node fails to broadcast a new block due to a failure, the next super node will replace it after the timeout time and generate the block. As shown in the figure below, in the case of the above five super nodes, Miner B fails when producing a block with a height of h2+1. Subsequently, B's next node C in the supernode list will broadcast the new block it created after its block\_interval+timeout time of parent\_block\_time.
 
-![](<.gitbook/assets/image (6).png>)
+![](<.gitbook/assets/image (13).png>)
 
 ### **Conclusion**
 

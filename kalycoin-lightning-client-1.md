@@ -190,7 +190,7 @@ You should see the eclair desktop client as on the screenshot below:
 
 ### **Create a lightning network channel**
 
-![](<.gitbook/assets/image (106).png>)
+![](<.gitbook/assets/image (80).png>)
 
 Right-click the lower left corner of the local Kalycoin Eclair client and select “Copy URI” to get its node address (public key).
 
