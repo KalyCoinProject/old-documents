@@ -35,7 +35,7 @@ On the left side of the wallet, we can find basic wallet functionality such as:
 
 On the send menu, we have different functions, all are quite basic to learn and use.
 
-![](<.gitbook/assets/imagen (24).png>)
+![](<.gitbook/assets/imagen (34).png>)
 
 **Pay to:** Here we’ll enter the address we want to send Kalycoin to **(Only Kalycoin ignition addresses will work).**
 
@@ -200,17 +200,17 @@ To operate as a Super Staker, the wallet must be able to check arbitrary address
 
 Next, the wallet will prompt to be restarted as a Super Staker using Settings – Options – Enable super staking and OK to restart the wallet.
 
-![](<.gitbook/assets/19 (1).png>)
+![](.gitbook/assets/19.png)
 
 On startup, the wallet will confirm that you want to scan and rebuild the database
 
-![](<.gitbook/assets/20 (1).png>)
+![](.gitbook/assets/20.png)
 
 The wallet will show "Reindexing blocks on disk…" and "Syncing Headers" while it rebuilds the database, this may take several tens of minutes depending on your computer.
 
 After launching, go back to the Stake – Super Staking page and select the "Configure super staker" button (the gear symbol will now be visible) to compete the Super Staker configuration. Click the Custom box to see the default recommendations (shown below) or customize the setup. Click OK to complete the setup.
 
-![](.gitbook/assets/21.png)
+![](<.gitbook/assets/21 (1).png>)
 
 The configuration settings are:
 
@@ -228,7 +228,7 @@ The configuration settings are:
 
 Next, split the UTXOs to valid amounts for committing stakes by the Super Staker. The UTXOs must be a minimum amount of 100 KLC. On the Super staker page select the split coins button (trident icon) and use the default values or make adjustments, but no UTXOs under 100 KLC will be used for staking.
 
-![](.gitbook/assets/22.png)
+![](<.gitbook/assets/22 (1).png>)
 
 You can also split UTXOs with the splitutxosforaddress command, which can be used for delegated addresses as well. To split the UTXOs between a minimum and maximum value, enter the command:
 
@@ -314,4 +314,4 @@ Delegations to a Super Staker may be checked using the "Delegations…" button o
 
 Normally delegation and Super Staker configuration are stored in the wallet.dat file. If there are problems with the wallet.dat file the delegation information and super staker information may be recovered using the Restore button on the delegation and Super Staker pages. In this case, the wallet will rescan the "state" contract memory for offline staking transactions for the appropriate addresses.
 
-![](.gitbook/assets/23.png)
+![](<.gitbook/assets/23 (1).png>)

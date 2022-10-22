@@ -773,7 +773,7 @@ getblockchaininfo
 }
 ```
 
-![](<.gitbook/assets/imagen (47).png>)
+![](<.gitbook/assets/imagen (28).png>)
 
 Figure 7. The `getblockchaininfo` command
 

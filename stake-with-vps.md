@@ -38,7 +38,7 @@ After we've created our SSH key, we click on "add new"
 
 Here we can paste our SSH-key, enter a name for it and click on add ssh key.
 
-<figure><img src=".gitbook/assets/imagen (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/imagen (23).png" alt=""><figcaption></figcaption></figure>
 
 ### **Logging in to your VPS**
 

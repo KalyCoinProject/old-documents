@@ -4,7 +4,7 @@
 
 **This document includes the full list of Kalycoin RPCs based on Kalycoin core v0.17.6. According to this document you can learn how to use Kalycoin RPC API.**
 
-***
+****
 
 ### Tables of Contents
 
@@ -152,7 +152,7 @@
 * [Zmq](https://github.com/KalyCoinProject/old-documents/tree/main/en/KalyCoin-RPC-API#zmq)
   *   [getzmqnotifications](https://github.com/KalyCoinProject/old-documents/tree/main/en/KalyCoin-RPC-API#getzmqnotifications)
 
-      #### Tables of Contents
+      ### Tables of Contents
 
       * [Blockchain](https://github.com/KalyCoinProject/old-documents/tree/main/en/KalyCoin-RPC-API#blockchain)
         * [callcontract](https://github.com/KalyCoinProject/old-documents/tree/main/en/KalyCoin-RPC-API#callcontract)
@@ -308,11 +308,11 @@ callcontract "address" "data" ( address )
 
 1\. "address" (string, required) The account address
 
-2\. "data" (string, required) The data hex string
+2\. "data"    (string, required) The data hex string
 
-3\. address (string, optional) The sender address hex string
+3\. address   (string, optional) The sender address hex string
 
-4\. gasLimit (string, optional) The gas limit for executing the contract
+4\. gasLimit  (string, optional) The gas limit for executing the contract
 
 **Test example:**
 
@@ -322,43 +322,43 @@ callcontract "address" "data" ( address )
 
 {
 
-"address": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
+&#x20; "address": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
 
-"executionResult": {
+&#x20; "executionResult": {
 
-"gasUsed": 39999999,
+&#x20; "gasUsed": 39999999,
 
-"excepted": "None",
+&#x20; "excepted": "None",
 
-"newAddress": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
+&#x20; "newAddress": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
 
-"output": "",
+&#x20; "output": "",
 
-"codeDeposit": 0,
+&#x20; "codeDeposit": 0,
 
-"gasRefunded": 0,
+&#x20; "gasRefunded": 0,
 
-"depositSize": 0,
+&#x20; "depositSize": 0,
 
-"gasForDeposit": 0
+&#x20; "gasForDeposit": 0
 
-},
+&#x20; },
 
-"transactionReceipt":
+&#x20; "transactionReceipt":
 
-{
+&#x20; {
 
-"stateRoot": "1253c56cf79597e89ce179f14e6a86a493356dac410c30efc576503687ad2670",
+&#x20;   "stateRoot": "1253c56cf79597e89ce179f14e6a86a493356dac410c30efc576503687ad2670",
 
-"gasUsed": 39999999,
+&#x20;   "gasUsed": 39999999,
 
-"bloom": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+&#x20;   "bloom": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
 
-"log": \[
+&#x20;   "log": \[
 
-]
+&#x20; ]
 
-}
+&#x20; }
 
 }
 
@@ -388,7 +388,9 @@ Returns the hash of the best (tip) block in the longest blockchain.
 
 **Examples:**
 
-\> Kalycoin -cli getbestblockhash
+\> Kalycoin -cli getbestblockhash&#x20;
+
+&#x20;
 
 \>curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getbestblockhash", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -418,49 +420,49 @@ According the blockhash returns the info of the corresponding block If verbosity
 
 {
 
-"hash" : "hash", (string) the block hash (same as provided)
+&#x20; "hash" : "hash",       (string) the block hash (same as provided)
 
-"confirmations" : n, (numeric) The number of confirmations, or -1 if the block is not on the main chain
+&#x20; "confirmations" : n,   (numeric) The number of confirmations, or -1 if the block is not on the main chain
 
-"size" : n, (numeric) The block size
+&#x20; "size" : n,            (numeric) The block size
 
-"strippedsize" : n, (numeric) The block size excluding witness data
+&#x20; "strippedsize" : n,    (numeric) The block size excluding witness data
 
-"weight" : n (numeric) The block weight as defined in BIP 141
+&#x20; "weight" : n           (numeric) The block weight as defined in BIP 141
 
-"height" : n, (numeric) The block height or index
+&#x20; "height" : n,          (numeric) The block height or index
 
-"version" : n, (numeric) The block version
+&#x20; "version" : n,         (numeric) The block version
 
-"versionHex" : "00000000", (string) The block version formatted in hexadecimal
+&#x20; "versionHex" : "00000000", (string) The block version formatted in hexadecimal
 
-"merkleroot" : "xxxx", (string) The merkle root
+&#x20; "merkleroot" : "xxxx", (string) The merkle root
 
-"tx" : \[ (array of string) The transaction ids
+&#x20; "tx" : \[               (array of string) The transaction ids
 
-"transactionid" (string) The transaction id
+&#x20;    "transactionid"     (string) The transaction id
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
-"time" : ttt, (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "time" : ttt,          (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
 
-"mediantime" : ttt, (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "mediantime" : ttt,    (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
 
-"nonce" : n, (numeric) The nonce
+&#x20; "nonce" : n,           (numeric) The nonce
 
-"bits" : "1d00ffff", (string) The bits
+&#x20; "bits" : "1d00ffff",   (string) The bits
 
-"difficulty" : x.xxx, (numeric) The difficulty
+&#x20; "difficulty" : x.xxx,  (numeric) The difficulty
 
-"chainwork" : "xxxx", (string) Expected number of hashes required to produce the chain up to this block (in hex)
+&#x20; "chainwork" : "xxxx",  (string) Expected number of hashes required to produce the chain up to this block (in hex)
 
-"nTx" : n, (numeric) The number of transactions in the block.
+&#x20; "nTx" : n,             (numeric) The number of transactions in the block.
 
-"previousblockhash" : "hash", (string) The hash of the previous block
+&#x20; "previousblockhash" : "hash",  (string) The hash of the previous block
 
-"nextblockhash" : "hash" (string) The hash of the next block
+&#x20; "nextblockhash" : "hash"       (string) The hash of the next block
 
 }
 
@@ -468,21 +470,23 @@ According the blockhash returns the info of the corresponding block If verbosity
 
 {
 
-..., Same output as verbosity = 1.
+&#x20;   ..., Same output as verbosity = 1.
 
-"tx" : \[ (array of Objects) The transactions in the format of the getrawtransaction RPC. Different from verbosity = 1 "tx" result.
+&#x20;   "tx" : \[ (array of Objects) The transactions in the format of the getrawtransaction RPC. Different from verbosity = 1 "tx" result.
 
-,...
+&#x20;   ,...
 
-],
+&#x20;   ],
 
-,... Same output as verbosity = 1.
+&#x20;   ,... Same output as verbosity = 1.
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getblock "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblock", "params": \["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -494,61 +498,61 @@ According the blockhash returns the info of the corresponding block If verbosity
 
 {
 
-"hash": "eeab43864b89c15bd1ffad21eaabc97f4fa4a576a71b46c9d512afc26168569f",
+&#x20; "hash": "eeab43864b89c15bd1ffad21eaabc97f4fa4a576a71b46c9d512afc26168569f",
 
-"confirmations": 2,
+&#x20; "confirmations": 2,
 
-"strippedsize": 846,
+&#x20; "strippedsize": 846,
 
-"size": 882,
+&#x20; "size": 882,
 
-"weight": 3420,
+&#x20; "weight": 3420,
 
-"height": 402359,
+&#x20; "height": 402359,
 
-"version": 536870912,
+&#x20; "version": 536870912,
 
-"versionHex": "20000000",
+&#x20; "versionHex": "20000000",
 
-"merkleroot": "359698a4d0e24baadfe9892b56bb5a6090830aea9fe1bf221f4766d7d552eeff",
+&#x20; "merkleroot": "359698a4d0e24baadfe9892b56bb5a6090830aea9fe1bf221f4766d7d552eeff",
 
-"hashStateRoot": "6099ad48961a320b62cc29ba3d89dcbd8bbc0e33069f6c7169ba008039cbc44f",
+&#x20; "hashStateRoot": "6099ad48961a320b62cc29ba3d89dcbd8bbc0e33069f6c7169ba008039cbc44f",
 
-"hashUTXORoot": "9e729950c184acd011471252a0c1a4bc279cd4c1e86d543bead4af6df787b2dd",
+&#x20; "hashUTXORoot": "9e729950c184acd011471252a0c1a4bc279cd4c1e86d543bead4af6df787b2dd",
 
-"tx": \[
+&#x20; "tx": \[
 
-"9cd9f5e952988cd88c73b7cd172cc17f7ba6ec7c34918b50fbfa3901251cbc2f",
+&#x20;   "9cd9f5e952988cd88c73b7cd172cc17f7ba6ec7c34918b50fbfa3901251cbc2f",
 
-"49260697a2d127541cfd5190fc18a5193f118d4b1cc23504a520983ad7f0ee35"
+&#x20;   "49260697a2d127541cfd5190fc18a5193f118d4b1cc23504a520983ad7f0ee35"
 
-],
+&#x20; ],
 
-"time": 1562145008,
+&#x20; "time": 1562145008,
 
-"mediantime": 1562144608,
+&#x20; "mediantime": 1562144608,
 
-"nonce": 0,
+&#x20; "nonce": 0,
 
-"bits": "1a037540",
+&#x20; "bits": "1a037540",
 
-"difficulty": 4851625.823213781,
+&#x20; "difficulty": 4851625.823213781,
 
-"chainwork": "000000000000000000000000000000000000000000000114688c263219ba17a6",
+&#x20; "chainwork": "000000000000000000000000000000000000000000000114688c263219ba17a6",
 
-"nTx": 2,
+&#x20; "nTx": 2,
 
-"previousblockhash": "dd7ccce7a7b419874dac6097c6505c3b00efdce9336aa9ad79363c81d8a05e26",
+&#x20; "previousblockhash": "dd7ccce7a7b419874dac6097c6505c3b00efdce9336aa9ad79363c81d8a05e26",
 
-"nextblockhash": "60ef2b919581b7d7f684e6e2de574ee72ac94cb924770988d2686ca4c3b6e24a",
+&#x20; "nextblockhash": "60ef2b919581b7d7f684e6e2de574ee72ac94cb924770988d2686ca4c3b6e24a",
 
-"flags": "proof-of-stake",
+&#x20; "flags": "proof-of-stake",
 
-"proofhash": "000001199a996fef47845c16830c9187ed076dea11d34ba734201a011945c962",
+&#x20; "proofhash": "000001199a996fef47845c16830c9187ed076dea11d34ba734201a011945c962",
 
-"modifier": "148572257a37c882895429d69b15d8a2446be5ad5f0d74237ecf621841164990",
+&#x20; "modifier": "148572257a37c882895429d69b15d8a2446be5ad5f0d74237ecf621841164990",
 
-"signature": "304402204fe60e75699f3773e3c1d86281f2e7cf17268d23e40628622b3a215fea299e68022041c767b4e2ede77311aeaca2dfafc8f9066f628d2aa3234a57604cebc976c311"
+&#x20; "signature": "304402204fe60e75699f3773e3c1d86281f2e7cf17268d23e40628622b3a215fea299e68022041c767b4e2ede77311aeaca2dfafc8f9066f628d2aa3234a57604cebc976c311"
 
 }
 
@@ -560,85 +564,85 @@ Returns an object containing various state info regarding blockchain processing.
 
 {
 
-"chain": "xxxx", (string) current network name as defined in BIP70 (main, test, regtest)
+&#x20; "chain": "xxxx",              (string) current network name as defined in BIP70 (main, test, regtest)
 
-"blocks": xxxxxx, (numeric) the current number of blocks processed in the server
+&#x20; "blocks": xxxxxx,             (numeric) the current number of blocks processed in the server
 
-"headers": xxxxxx, (numeric) the current number of headers we have validated
+&#x20; "headers": xxxxxx,            (numeric) the current number of headers we have validated
 
-"bestblockhash": "...", (string) the hash of the currently best block
+&#x20; "bestblockhash": "...",       (string) the hash of the currently best block
 
-"difficulty": xxxxxx, (numeric) the current difficulty
+&#x20; "difficulty": xxxxxx,         (numeric) the current difficulty
 
-"mediantime": xxxxxx, (numeric) median time for the current best block
+&#x20; "mediantime": xxxxxx,         (numeric) median time for the current best block
 
-"verificationprogress": xxxx, (numeric) estimate of verification progress \[0..1]
+&#x20; "verificationprogress": xxxx, (numeric) estimate of verification progress \[0..1]
 
-"initialblockdownload": xxxx, (bool) (debug information) estimate of whether this node is in Initial Block Download mode.
+&#x20; "initialblockdownload": xxxx, (bool) (debug information) estimate of whether this node is in Initial Block Download mode.
 
-"chainwork": "xxxx" (string) total amount of work in active chain, in hexadecimal
+&#x20; "chainwork": "xxxx"           (string) total amount of work in active chain, in hexadecimal
 
-"size\_on\_disk": xxxxxx, (numeric) the estimated size of the block and undo files on disk
+&#x20; "size\_on\_disk": xxxxxx,       (numeric) the estimated size of the block and undo files on disk
 
-"pruned": xx, (boolean) if the blocks are subject to pruning
+&#x20; "pruned": xx,                 (boolean) if the blocks are subject to pruning
 
-"pruneheight": xxxxxx, (numeric) lowest-height complete block stored (only present if pruning is enabled)
+&#x20; "pruneheight": xxxxxx,        (numeric) lowest-height complete block stored (only present if pruning is enabled)
 
-"automatic\_pruning": xx, (boolean) whether automatic pruning is enabled (only present if pruning is enabled)
+&#x20; "automatic\_pruning": xx,      (boolean) whether automatic pruning is enabled (only present if pruning is enabled)
 
-"prune\_target\_size": xxxxxx, (numeric) the target size used by pruning (only present if automatic pruning is enabled)
+&#x20; "prune\_target\_size": xxxxxx,  (numeric) the target size used by pruning (only present if automatic pruning is enabled)
 
-"softforks": \[ (array) status of softforks in progress
+&#x20; "softforks": \[                (array) status of softforks in progress
 
-{
+&#x20;    {
 
-"id": "xxxx", (string) name of softfork
+&#x20;       "id": "xxxx",           (string) name of softfork
 
-"version": xx, (numeric) block version
+&#x20;       "version": xx,          (numeric) block version
 
-"reject": { (object) progress toward rejecting pre-softfork blocks
+&#x20;       "reject": {             (object) progress toward rejecting pre-softfork blocks
 
-"status": xx, (boolean) true if threshold reached
+&#x20;          "status": xx,        (boolean) true if threshold reached
 
-},
+&#x20;       },
 
-}, ...
+&#x20;    }, ...
 
-],
+&#x20; ],
 
-"bip9\_softforks": { (object) status of BIP9 softforks in progress
+&#x20; "bip9\_softforks": {           (object) status of BIP9 softforks in progress
 
-"xxxx" : { (string) name of the softfork
+&#x20;    "xxxx" : {                 (string) name of the softfork
 
-"status": "xxxx", (string) one of "defined", "started", "locked\_in", "active", "failed"
+&#x20;       "status": "xxxx",       (string) one of "defined", "started", "locked\_in", "active", "failed"
 
-"bit": xx, (numeric) the bit (0-28) in the block version field used to signal this softfork (only for "started" status)
+&#x20;       "bit": xx,              (numeric) the bit (0-28) in the block version field used to signal this softfork (only for "started" status)
 
-"startTime": xx, (numeric) the minimum median time past of a block at which the bit gains its meaning
+&#x20;       "startTime": xx,        (numeric) the minimum median time past of a block at which the bit gains its meaning
 
-"timeout": xx, (numeric) the median time past of a block at which the deployment is considered failed if not yet locked in
+&#x20;       "timeout": xx,          (numeric) the median time past of a block at which the deployment is considered failed if not yet locked in
 
-"since": xx, (numeric) height of the first block to which the status applies
+&#x20;       "since": xx,            (numeric) height of the first block to which the status applies
 
-"statistics": { (object) numeric statistics about BIP9 signalling for a softfork (only for "started" status)
+&#x20;       "statistics": {         (object) numeric statistics about BIP9 signalling for a softfork (only for "started" status)
 
-"period": xx, (numeric) the length in blocks of the BIP9 signalling period
+&#x20;          "period": xx,        (numeric) the length in blocks of the BIP9 signalling period
 
-"threshold": xx, (numeric) the number of blocks with the version bit set required to activate the feature
+&#x20;          "threshold": xx,     (numeric) the number of blocks with the version bit set required to activate the feature
 
-"elapsed": xx, (numeric) the number of blocks elapsed since the beginning of the current period
+&#x20;          "elapsed": xx,       (numeric) the number of blocks elapsed since the beginning of the current period
 
-"count": xx, (numeric) the number of blocks with the version bit set in the current period
+&#x20;          "count": xx,         (numeric) the number of blocks with the version bit set in the current period
 
-"possible": xx (boolean) returns false if there are not enough blocks left in this period to pass activation threshold
+&#x20;          "possible": xx       (boolean) returns false if there are not enough blocks left in this period to pass activation threshold
 
-}
+&#x20;       }
 
-}
+&#x20;    }
 
-}
+&#x20; }
 
-"warnings" : "...", (string) any network and blockchain warnings.
+&#x20; "warnings" : "...",           (string) any network and blockchain warnings.
 
 }
 
@@ -650,105 +654,105 @@ Returns an object containing various state info regarding blockchain processing.
 
 {
 
-"chain": "main",
+&#x20; "chain": "main",
 
-"blocks": 401574,
+&#x20; "blocks": 401574,
 
-"headers": 401574,
+&#x20; "headers": 401574,
 
-"bestblockhash": "be4cb62080f36d2c3a45127e016460aca82ea1de17af4166ad9341d1a18e00cc",
+&#x20; "bestblockhash": "be4cb62080f36d2c3a45127e016460aca82ea1de17af4166ad9341d1a18e00cc",
 
-"difficulty": 1699339.658646735,
+&#x20; "difficulty": 1699339.658646735,
 
-"moneysupply": 101586296,
+&#x20; "moneysupply": 101586296,
 
-"mediantime": 1562032592,
+&#x20; "mediantime": 1562032592,
 
-"verificationprogress": 0.9999994694221126,
+&#x20; "verificationprogress": 0.9999994694221126,
 
-"initialblockdownload": false,
+&#x20; "initialblockdownload": false,
 
-"chainwork": "000000000000000000000000000000000000000000000113f4c983f14834f842",
+&#x20; "chainwork": "000000000000000000000000000000000000000000000113f4c983f14834f842",
 
-"size\_on\_disk": 1939468044,
+&#x20; "size\_on\_disk": 1939468044,
 
-"pruned": false,
+&#x20; "pruned": false,
 
-"softforks": \[
+&#x20; "softforks": \[
 
-{
+&#x20; {
 
-"id": "bip34",
+&#x20;   "id": "bip34",
 
-"version": 2,
+&#x20;   "version": 2,
 
-"reject": {
+&#x20;   "reject": {
 
-"status": true
+&#x20;   "status": true
 
-}
+&#x20;   }
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"id": "bip66",
+&#x20;   "id": "bip66",
 
-"version": 3,
+&#x20;   "version": 3,
 
-"reject": {
+&#x20;   "reject": {
 
-"status": true
+&#x20;   "status": true
 
-}
+&#x20;   }
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"id": "bip65",
+&#x20;   "id": "bip65",
 
-"version": 4,
+&#x20;   "version": 4,
 
-"reject": {
+&#x20;   "reject": {
 
-"status": true
+&#x20;   "status": true
 
-}
+&#x20;   }
 
-}
+&#x20; }
 
-],
+&#x20; ],
 
-"bip9\_softforks": {
+&#x20; "bip9\_softforks": {
 
-"csv": {
+&#x20; "csv": {
 
-"status": "active",
+&#x20;   "status": "active",
 
-"startTime": 0,
+&#x20;   "startTime": 0,
 
-"timeout": 999999999999,
+&#x20;   "timeout": 999999999999,
 
-"since": 6048
+&#x20;   "since": 6048
 
-},
+&#x20; },
 
-"segwit": {
+&#x20; "segwit": {
 
-"status": "active",
+&#x20;   "status": "active",
 
-"startTime": 0,
+&#x20;   "startTime": 0,
 
-"timeout": 999999999999,
+&#x20;   "timeout": 999999999999,
 
-"since": 6048
+&#x20;   "since": 6048
 
-}
+&#x20; }
 
-},
+&#x20; },
 
-"warnings": ""
+&#x20; "warnings": ""
 
 }
 
@@ -763,6 +767,8 @@ n (numeric) The current block count
 **Examples:**
 
 \> Kalycoin -cli getblockcount
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockcount", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -780,15 +786,17 @@ n (numeric) The current block count
 
 **Arguments:**
 
-1\. height (numeric, required) The height index
+1\. height         (numeric, required) The height index
 
 **Result:**
 
-"hash" (string) The block hash
+"hash"         (string) The block hash&#x20;
 
 **Examples:**
 
-\> Kalycoin -cli getblockhash 1000
+\> Kalycoin -cli getblockhash 1000&#x20;
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockhash", "params": \[1000] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -806,7 +814,7 @@ Returns the corresponding block header information according to the given index 
 
 **Arguments:**
 
-1\. "hash" (string, required) The block hash
+1\. "hash"  (string, required) The block hash
 
 2\. verbose (boolean, optional, default=true) true for a json object, false for the hex encoded data
 
@@ -814,35 +822,35 @@ Returns the corresponding block header information according to the given index 
 
 {
 
-"hash" : "hash", (string) the block hash (same as provided)
+&#x20; "hash" : "hash",               (string) the block hash (same as provided)
 
-"confirmations" : n, (numeric) The number of confirmations, or -1 if the block is not on the main chain
+&#x20; "confirmations" : n,           (numeric) The number of confirmations, or -1 if the block is not on the main chain
 
-"height" : n, (numeric) The block height or index
+&#x20; "height" : n,                  (numeric) The block height or index
 
-"version" : n, (numeric) The block version
+&#x20; "version" : n,                 (numeric) The block version
 
-"versionHex" : "00000000", (string) The block version formatted in hexadecimal
+&#x20; "versionHex" : "00000000",     (string) The block version formatted in hexadecimal
 
-"merkleroot" : "xxxx", (string) The merkle root
+&#x20; "merkleroot" : "xxxx",         (string) The merkle root
 
-"time" : ttt, (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "time" : ttt,                  (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
 
-"mediantime" : ttt, (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "mediantime" : ttt,            (numeric) The median block time in seconds since epoch (Jan 1 1970 GMT)
 
-"nonce" : n, (numeric) The nonce
+&#x20; "nonce" : n,                   (numeric) The nonce
 
-"bits" : "1d00ffff", (string) The bits
+&#x20; "bits" : "1d00ffff",           (string) The bits
 
-"difficulty" : x.xxx, (numeric) The difficulty
+&#x20; "difficulty" : x.xxx,          (numeric) The difficulty
 
-"chainwork" : "0000...1f3" (string) Expected number of hashes required to produce the current chain (in hex)
+&#x20; "chainwork" : "0000...1f3"     (string) Expected number of hashes required to produce the current chain (in hex)
 
-"nTx" : n, (numeric) The number of transactions in the block.
+&#x20; "nTx" : n,                     (numeric) The number of transactions in the block.
 
-"previousblockhash" : "hash", (string) The hash of the previous block
+&#x20; "previousblockhash" : "hash",  (string) The hash of the previous block
 
-"nextblockhash" : "hash", (string) The hash of the next block
+&#x20; "nextblockhash" : "hash",      (string) The hash of the next block
 
 }
 
@@ -854,6 +862,8 @@ Returns the corresponding block header information according to the given index 
 
 \> Kalycoin -cli getblockheader "00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockheader", "params": \["00000000c937983704a73af28acdec37b049d214adbda81d7e2a3dd146f6ed09"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
@@ -864,47 +874,47 @@ Returns the corresponding block header information according to the given index 
 
 **Test result:**
 
-{
+&#x20;{
 
-"hash": "ebd10c9b338247a9ccfd45493b484ae5638a5d97ddaa68c44c6ef214ea443c19",
+&#x20;   "hash": "ebd10c9b338247a9ccfd45493b484ae5638a5d97ddaa68c44c6ef214ea443c19",
 
-"confirmations": -1,
+&#x20;   "confirmations": -1,
 
-"height": 388910,
+&#x20;   "height": 388910,
 
-"version": 536870912,
+&#x20;   "version": 536870912,
 
-"versionHex": "20000000",
+&#x20;   "versionHex": "20000000",
 
-"merkleroot": "b1a21dd48f978ea8671383f9454d058d2047d19666348340bea543cf89e31aca",
+&#x20;   "merkleroot": "b1a21dd48f978ea8671383f9454d058d2047d19666348340bea543cf89e31aca",
 
-"time": 1560222144,
+&#x20;   "time": 1560222144,
 
-"mediantime": 1560221568,
+&#x20;   "mediantime": 1560221568,
 
-"nonce": 0,
+&#x20;   "nonce": 0,
 
-"bits": "1a097561",
+&#x20;   "bits": "1a097561",
 
-"difficulty": 1773742.122273433,
+&#x20;   "difficulty": 1773742.122273433,
 
-"chainwork": "00000000000000000000000000000000000000000000010ca5944ed9b867aaef",
+&#x20;   "chainwork": "00000000000000000000000000000000000000000000010ca5944ed9b867aaef",
 
-"nTx": 7,
+&#x20;   "nTx": 7,
 
-"hashStateRoot": "10504057696a3ad9f96254b86424cc8f49f3ef2b271893f933b18174e538b828",
+&#x20;   "hashStateRoot": "10504057696a3ad9f96254b86424cc8f49f3ef2b271893f933b18174e538b828",
 
-"hashUTXORoot": "9e729950c184acd011471252a0c1a4bc279cd4c1e86d543bead4af6df787b2dd",
+&#x20;   "hashUTXORoot": "9e729950c184acd011471252a0c1a4bc279cd4c1e86d543bead4af6df787b2dd",
 
-"previousblockhash": "56044826105d66a95ab6f97f945a7cd18eef7109c59da64a7b6c57c377eaf4bb",
+&#x20;   "previousblockhash": "56044826105d66a95ab6f97f945a7cd18eef7109c59da64a7b6c57c377eaf4bb",
 
-"flags": "proof-of-stake",
+&#x20;   "flags": "proof-of-stake",
 
-"proofhash": "0000000000000000000000000000000000000000000000000000000000000000",
+&#x20;   "proofhash": "0000000000000000000000000000000000000000000000000000000000000000",
 
-"modifier": "1551ed22c1a43da60aebcb2d66a1e42d9bf6a007276367a4a189325ea37a1f91"
+&#x20;   "modifier": "1551ed22c1a43da60aebcb2d66a1e42d9bf6a007276367a4a189325ea37a1f91"
 
-}
+&#x20;}
 
 **getblockstats**
 
@@ -912,99 +922,101 @@ Compute per block statistics for a given window. All amounts are in satoshis. It
 
 **Arguments:**
 
-1\. "hash\_or\_height" (string or numeric, required) The block hash or height of the target block
+1\. "hash\_or\_height"     (string or numeric, required) The block hash or height of the target block
 
-2\. "stats" (array, optional) Values to plot, by default all values (see result below)
+2\. "stats"              (array,  optional) Values to plot, by default all values (see result below)
 
-\[
+&#x20;   \[
 
-"height", (string, optional) Selected statistic
+&#x20;     "height",         (string, optional) Selected statistic
 
-"time", (string, optional) Selected statistic
+&#x20;     "time",           (string, optional) Selected statistic
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
 **Result:**
 
-{
+&#x20;{                          &#x20;
 
-"avgfee": xxxxx, (numeric) Average fee in the block
+&#x20; "avgfee": xxxxx,          (numeric) Average fee in the block
 
-"avgfeerate": xxxxx, (numeric) Average feerate (in satoshis per virtual byte)
+&#x20; "avgfeerate": xxxxx,      (numeric) Average feerate (in satoshis per virtual byte)
 
-"avgtxsize": xxxxx, (numeric) Average transaction size
+&#x20; "avgtxsize": xxxxx,       (numeric) Average transaction size
 
-"blockhash": xxxxx, (string) The block hash (to check for potential reorgs)
+&#x20; "blockhash": xxxxx,       (string) The block hash (to check for potential reorgs)
 
-"feerate\_percentiles": \[ (array of numeric) Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit (in satoshis per virtual byte)
+&#x20; "feerate\_percentiles": \[  (array of numeric) Feerates at the 10th, 25th, 50th, 75th, and 90th percentile weight unit (in satoshis per virtual byte)
 
-"10th\_percentile\_feerate", (numeric) The 10th percentile feerate
+&#x20;     "10th\_percentile\_feerate",      (numeric) The 10th percentile feerate
 
-"25th\_percentile\_feerate", (numeric) The 25th percentile feerate
+&#x20;     "25th\_percentile\_feerate",      (numeric) The 25th percentile feerate
 
-"50th\_percentile\_feerate", (numeric) The 50th percentile feerate
+&#x20;     "50th\_percentile\_feerate",      (numeric) The 50th percentile feerate
 
-"75th\_percentile\_feerate", (numeric) The 75th percentile feerate
+&#x20;     "75th\_percentile\_feerate",      (numeric) The 75th percentile feerate
 
-"90th\_percentile\_feerate", (numeric) The 90th percentile feerate
+&#x20;     "90th\_percentile\_feerate",      (numeric) The 90th percentile feerate
 
-],
+&#x20; ],
 
-"height": xxxxx, (numeric) The height of the block
+&#x20; "height": xxxxx,          (numeric) The height of the block
 
-"ins": xxxxx, (numeric) The number of inputs (excluding coinbase)
+&#x20; "ins": xxxxx,             (numeric) The number of inputs (excluding coinbase)
 
-"maxfee": xxxxx, (numeric) Maximum fee in the block
+&#x20; "maxfee": xxxxx,          (numeric) Maximum fee in the block
 
-"maxfeerate": xxxxx, (numeric) Maximum feerate (in satoshis per virtual byte)
+&#x20; "maxfeerate": xxxxx,      (numeric) Maximum feerate (in satoshis per virtual byte)
 
-"maxtxsize": xxxxx, (numeric) Maximum transaction size
+&#x20; "maxtxsize": xxxxx,       (numeric) Maximum transaction size
 
-"medianfee": xxxxx, (numeric) Truncated median fee in the block
+&#x20; "medianfee": xxxxx,       (numeric) Truncated median fee in the block
 
-"mediantime": xxxxx, (numeric) The block median time past
+&#x20; "mediantime": xxxxx,      (numeric) The block median time past
 
-"mediantxsize": xxxxx, (numeric) Truncated median transaction size
+&#x20; "mediantxsize": xxxxx,    (numeric) Truncated median transaction size
 
-"minfee": xxxxx, (numeric) Minimum fee in the block
+&#x20; "minfee": xxxxx,          (numeric) Minimum fee in the block
 
-"minfeerate": xxxxx, (numeric) Minimum feerate (in satoshis per virtual byte)
+&#x20; "minfeerate": xxxxx,      (numeric) Minimum feerate (in satoshis per virtual byte)
 
-"mintxsize": xxxxx, (numeric) Minimum transaction size
+&#x20; "mintxsize": xxxxx,       (numeric) Minimum transaction size
 
-"outs": xxxxx, (numeric) The number of outputs
+&#x20; "outs": xxxxx,            (numeric) The number of outputs
 
-"subsidy": xxxxx, (numeric) The block subsidy
+&#x20; "subsidy": xxxxx,         (numeric) The block subsidy
 
-"swtotal\_size": xxxxx, (numeric) Total size of all segwit transactions
+&#x20; "swtotal\_size": xxxxx,    (numeric) Total size of all segwit transactions
 
-"swtotal\_weight": xxxxx, (numeric) Total weight of all segwit transactions divided by segwit scale factor (4)
+&#x20; "swtotal\_weight": xxxxx,  (numeric) Total weight of all segwit transactions divided by segwit scale factor (4)
 
-"swtxs": xxxxx, (numeric) The number of segwit transactions
+&#x20; "swtxs": xxxxx,           (numeric) The number of segwit transactions
 
-"time": xxxxx, (numeric) The block time
+&#x20; "time": xxxxx,            (numeric) The block time
 
-"total\_out": xxxxx, (numeric) Total amount in all outputs (excluding coinbase and thus reward \[ie subsidy + totalfee])
+&#x20; "total\_out": xxxxx,       (numeric) Total amount in all outputs (excluding coinbase and thus reward \[ie subsidy + totalfee])
 
-"total\_size": xxxxx, (numeric) Total size of all non-coinbase transactions
+&#x20; "total\_size": xxxxx,      (numeric) Total size of all non-coinbase transactions
 
-"total\_weight": xxxxx, (numeric) Total weight of all non-coinbase transactions divided by segwit scale factor (4)
+&#x20; "total\_weight": xxxxx,    (numeric) Total weight of all non-coinbase transactions divided by segwit scale factor (4)
 
-"totalfee": xxxxx, (numeric) The fee total
+&#x20; "totalfee": xxxxx,        (numeric) The fee total
 
-"txs": xxxxx, (numeric) The number of transactions (excluding coinbase)
+&#x20; "txs": xxxxx,             (numeric) The number of transactions (excluding coinbase)
 
-"utxo\_increase": xxxxx, (numeric) The increase/decrease in the number of unspent outputs
+&#x20; "utxo\_increase": xxxxx,   (numeric) The increase/decrease in the number of unspent outputs
 
-"utxo\_size\_inc": xxxxx, (numeric) The increase/decrease in size for the utxo index (not discounting op\_return and similar)
+&#x20; "utxo\_size\_inc": xxxxx,   (numeric) The increase/decrease in size for the utxo index (not discounting op\_return and similar)
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getblockstats 1000 '\["minfeerate","avgfeerate"]'
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getblockstats", "params": \[1000 '\["minfeerate","avgfeerate"]'] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1014,49 +1026,51 @@ Return information about all known tips in the block tree, including the main ch
 
 **Result:**
 
-\[
+&#x20;\[
 
-{
+&#x20;   {
 
-"height": xxxx, (numeric) height of the chain tip
+&#x20;     "height": xxxx,    (numeric) height of the chain tip
 
-"hash": "xxxx", (string) block hash of the tip
+&#x20;     "hash": "xxxx",    (string) block hash of the tip
 
-"branchlen": 0 (numeric) zero for main chain
+&#x20;     "branchlen": 0     (numeric) zero for main chain
 
-"status": "active" (string) "active" for the main chain
+&#x20;     "status": "active" (string) "active" for the main chain
 
-},
+&#x20;   },
 
-{
+&#x20;   {
 
-"height": xxxx,
+&#x20;     "height": xxxx,
 
-"hash": "xxxx",
+&#x20;     "hash": "xxxx",
 
-"branchlen": 1 (numeric) length of branch connecting the tip to the main chain
+&#x20;     "branchlen": 1     (numeric) length of branch connecting the tip to the main chain
 
-"status": "xxxx" (string) status of the chain (active, valid-fork, valid-headers, headers-only, invalid)
+&#x20;     "status": "xxxx"   (string) status of the chain (active, valid-fork, valid-headers, headers-only, invalid)
 
-}
+&#x20;   }
 
-]
+&#x20; ]
 
 **Possible values for status:**
 
-1\. "invalid" This branch contains at least one invalid block
+1\.    "invalid" This branch contains at least one invalid block
 
-2\. "headers-only" Not all blocks for this branch are available, but the headers are valid
+2\.    "headers-only" Not all blocks for this branch are available, but the headers are valid
 
-3\. "valid-headers" All blocks are available for this branch, but they were never fully validated
+3\.    "valid-headers" All blocks are available for this branch, but they were never fully validated
 
-4\. "valid-fork" This branch is not part of the active chain, but is fully validated
+4\.    "valid-fork" This branch is not part of the active chain, but is fully validated
 
-5\. "active" This is the tip of the active main chain, which is certainly valid
+5\.    "active" This is the tip of the active main chain, which is certainly valid
 
 **Examples:**
 
 \> Kalycoin -cli getchaintips
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintips", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1068,53 +1082,53 @@ Return information about all known tips in the block tree, including the main ch
 
 \[
 
-{
+&#x20; {
 
-"height": 353464,
+&#x20;   "height": 353464,
 
-"hash": "342e378ff153232fb08efe61ceb2fc00e28b1569aa0de97d031ba0bab98387be",
+&#x20;   "hash": "342e378ff153232fb08efe61ceb2fc00e28b1569aa0de97d031ba0bab98387be",
 
-"branchlen": 2,
+&#x20;   "branchlen": 2,
 
-"status": "invalid"
+&#x20;   "status": "invalid"
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"height": 353415,
+&#x20;   "height": 353415,
 
-"hash": "f1748f4c718cf5d36bab1dc7f4199e0e0379a338e6ea55fb18860daa0bc0c604",
+&#x20;   "hash": "f1748f4c718cf5d36bab1dc7f4199e0e0379a338e6ea55fb18860daa0bc0c604",
 
-"branchlen": 1,
+&#x20;   "branchlen": 1,
 
-"status": "valid-fork"
+&#x20;   "status": "valid-fork"
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"height": 353388,
+&#x20;   "height": 353388,
 
-"hash": "1fbd1234497731d8f3296c60e9d21cc5c8d57b19d4fe7f154b4aa17e47b526b8",
+&#x20;   "hash": "1fbd1234497731d8f3296c60e9d21cc5c8d57b19d4fe7f154b4aa17e47b526b8",
 
-"branchlen": 1,
+&#x20;   "branchlen": 1,
 
-"status": "valid-headers"
+&#x20;   "status": "valid-headers"
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"height": 353103,
+&#x20;   "height": 353103,
 
-"hash": "583b2cd790cc493390474306cb78de68e4ba2f0bfdae852ab36c240fb058c559",
+&#x20;   "hash": "583b2cd790cc493390474306cb78de68e4ba2f0bfdae852ab36c240fb058c559",
 
-"branchlen": 1,
+&#x20;   "branchlen": 1,
 
-"status": "valid-fork"
+&#x20;   "status": "valid-fork"
 
-},...
+&#x20; },...
 
 ]
 
@@ -1124,27 +1138,27 @@ Compute statistics about the total number and rate of transactions in the chain.
 
 **Arguments:**
 
-1\. nblocks (numeric, optional) Size of the window in number of blocks (default: one month).
+1\. nblocks     (numeric, optional) Size of the window in number of blocks (default: one month).
 
 2\. "blockhash" (string, optional) The hash of the block that ends the window.
 
 **Result:**
 
-{
+&#x20;{
 
-"time": xxxxx, (numeric) The timestamp for the final block in the window in UNIX format.
+&#x20; "time": xxxxx,                         (numeric) The timestamp for the final block in the window in UNIX format.
 
-"txcount": xxxxx, (numeric) The total number of transactions in the chain up to that point.
+&#x20; "txcount": xxxxx,                      (numeric) The total number of transactions in the chain up to that point.
 
-"window\_final\_block\_hash": "...", (string) The hash of the final block in the window.
+&#x20; "window\_final\_block\_hash": "...",      (string) The hash of the final block in the window.
 
-"window\_block\_count": xxxxx, (numeric) Size of the window in number of blocks.
+&#x20; "window\_block\_count": xxxxx,           (numeric) Size of the window in number of blocks.
 
-"window\_tx\_count": xxxxx, (numeric) The number of transactions in the window. Only returned if "window\_block\_count" is > 0.
+&#x20; "window\_tx\_count": xxxxx,              (numeric) The number of transactions in the window. Only returned if "window\_block\_count" is > 0.
 
-"window\_interval": xxxxx, (numeric) The elapsed time in the window in seconds. Only returned if "window\_block\_count" is > 0.
+&#x20; "window\_interval": xxxxx,              (numeric) The elapsed time in the window in seconds. Only returned if "window\_block\_count" is > 0.
 
-"txrate": x.xx, (numeric) The average rate of transactions per second in the window. Only returned if "window\_interval" is > 0.
+&#x20; "txrate": x.xx,                        (numeric) The average rate of transactions per second in the window. Only returned if "window\_interval" is > 0.
 
 }
 
@@ -1152,25 +1166,27 @@ Compute statistics about the total number and rate of transactions in the chain.
 
 \> Kalycoin -cli getchaintxstats
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getchaintxstats", "params": \[2016] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test result:**
 
 {
 
-"time": 1561602624,
+&#x20; "time": 1561602624,
 
-"txcount": 866823,
+&#x20; "txcount": 866823,
 
-"window\_final\_block\_hash": "ea6b26303facc34404da3174962a5c1d8d00369a3ff27aa50238ba8f24170280",
+&#x20; "window\_final\_block\_hash": "ea6b26303facc34404da3174962a5c1d8d00369a3ff27aa50238ba8f24170280",
 
-"window\_block\_count": 20250,
+&#x20; "window\_block\_count": 20250,
 
-"window\_tx\_count": 41012,
+&#x20; "window\_tx\_count": 41012,
 
-"window\_interval": 2655920,
+&#x20; "window\_interval": 2655920,
 
-"txrate": 0.01544173017259556
+&#x20; "txrate": 0.01544173017259556
 
 }
 
@@ -1188,6 +1204,8 @@ n.nnn (numeric) the proof-of-work difficulty as a multiple of the minimum diffic
 
 \> Kalycoin -cli getdifficulty
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getdifficulty", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
@@ -1198,9 +1216,9 @@ n.nnn (numeric) the proof-of-work difficulty as a multiple of the minimum diffic
 
 {
 
-"proof-of-work": 1.52587890625e-05,
+&#x20; "proof-of-work": 1.52587890625e-05,
 
-"proof-of-stake": 7022116.100551808
+&#x20; "proof-of-stake": 7022116.100551808
 
 }
 
@@ -1210,75 +1228,75 @@ If txid is in the mempool, returns all in-mempool ancestors.
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id (must be in mempool)
+1\. "txid"  (string, required) The transaction id (must be in mempool)
 
 2\. verbose (boolean, optional, default=false) True for a json object, false for array of transaction ids
 
 **Result (for verbose = false):**
 
-\[
+&#x20; \[
 
-"transactionid" (string) The transaction id of an in-mempool ancestor transaction
+&#x20;   "transactionid" (string) The transaction id of an in-mempool ancestor transaction
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 **Result (for verbose=true):**
 
-{
+{                         &#x20;
 
-"transactionid" : {
+&#x20; "transactionid" : {     &#x20;
 
-"size" : n, (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
+&#x20;   "size" : n,             (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
 
-"fee" : n, (numeric) transaction fee in KLC (DEPRECATED)
+&#x20;   "fee" : n,              (numeric) transaction fee in KLC (DEPRECATED)
 
-"modifiedfee" : n, (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
+&#x20;   "modifiedfee" : n,      (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
 
-"time" : n, (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
+&#x20;   "time" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
 
-"height" : n, (numeric) block height when transaction entered pool
+&#x20;   "height" : n,           (numeric) block height when transaction entered pool
 
-"descendantcount" : n, (numeric) number of in-mempool descendant transactions (including this one)
+&#x20;   "descendantcount" : n,  (numeric) number of in-mempool descendant transactions (including this one)
 
-"descendantsize" : n, (numeric) virtual transaction size of in-mempool descendants (including this one)
+&#x20;   "descendantsize" : n,   (numeric) virtual transaction size of in-mempool descendants (including this one)
 
-"descendantfees" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
+&#x20;   "descendantfees" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
 
-"ancestorcount" : n, (numeric) number of in-mempool ancestor transactions (including this one)
+&#x20;   "ancestorcount" : n,    (numeric) number of in-mempool ancestor transactions (including this one)
 
-"ancestorsize" : n, (numeric) virtual transaction size of in-mempool ancestors (including this one)
+&#x20;   "ancestorsize" : n,     (numeric) virtual transaction size of in-mempool ancestors (including this one)
 
-"ancestorfees" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
+&#x20;   "ancestorfees" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
 
-"wtxid" : hash, (string) hash of serialized transaction, including witness data
+&#x20;   "wtxid" : hash,         (string) hash of serialized transaction, including witness data
 
-"fees" : {
+&#x20;   "fees" : {
 
-"base" : n, (numeric) transaction fee in KLC
+&#x20;       "base" : n,         (numeric) transaction fee in KLC
 
-"modified" : n, (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
+&#x20;       "modified" : n,     (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
 
-"ancestor" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
+&#x20;       "ancestor" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
 
-"descendant" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
+&#x20;       "descendant" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
 
-}
+&#x20;   }
 
-"depends" : \[ (array) unconfirmed transactions used as inputs for this transaction
+&#x20;   "depends" : \[           (array) unconfirmed transactions used as inputs for this transaction
 
-"transactionid", (string) parent transaction id
+&#x20;       "transactionid",    (string) parent transaction id
 
-... ]
+&#x20;      ... ]
 
-"spentby" : \[ (array) unconfirmed transactions spending outputs from this transaction
+&#x20;   "spentby" : \[           (array) unconfirmed transactions spending outputs from this transaction
 
-"transactionid", (string) child transaction id
+&#x20;       "transactionid",    (string) child transaction id
 
-... ]
+&#x20;      ... ]
 
-}, ...
+&#x20; }, ...
 
 }
 
@@ -1286,17 +1304,19 @@ If txid is in the mempool, returns all in-mempool ancestors.
 
 \> Kalycoin -cli getmempoolancestors "mytxid"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolancestors", "params": \["mytxid"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
 
-./ Kalycoin -cli getmempoolancestors a957d309824b760814feb6426ba386d082f3b8bc95837e3e7ebada6538cf7e2c
+./ Kalycoin -cli getmempoolancestors a957d309824b760814feb6426ba386d082f3b8bc95837e3e7ebada6538cf7e2c   &#x20;
 
 **Test result:**
 
 \[
 
-"c3d044940534fd94fd0c901a895f62505e7beba0dfa44b1563c7aea980279135"
+&#x20; "c3d044940534fd94fd0c901a895f62505e7beba0dfa44b1563c7aea980279135"   &#x20;
 
 ]
 
@@ -1306,75 +1326,75 @@ If txid is in the mempool, returns all in-mempool descendants.
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id (must be in mempool)
+1\. "txid"   (string, required) The transaction id (must be in mempool)
 
-2\. verbose (boolean, optional, default=false) True for a json object, false for array of transaction ids
+2\.  verbose (boolean, optional, default=false) True for a json object, false for array of transaction ids
 
 **Result (for verbose = false):**
 
 \[
 
-"transactionid" (string) The transaction id of an in-mempool descendant transaction
+&#x20; "transactionid" (string) The transaction id of an in-mempool descendant transaction
 
-,...
+&#x20; ,...
 
 ]
 
 **Result (for verbose=true):**
 
-{
+&#x20;{                         &#x20;
 
-"transactionid" : {
+&#x20; "transactionid" : {     &#x20;
 
-"size" : n, (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
+&#x20;   "size" : n,             (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
 
-"fee" : n, (numeric) transaction fee in KLC (DEPRECATED)
+&#x20;   "fee" : n,              (numeric) transaction fee in KLC (DEPRECATED)
 
-"modifiedfee" : n, (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
+&#x20;   "modifiedfee" : n,      (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
 
-"time" : n, (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
+&#x20;   "time" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
 
-"height" : n, (numeric) block height when transaction entered pool
+&#x20;   "height" : n,           (numeric) block height when transaction entered pool
 
-"descendantcount" : n, (numeric) number of in-mempool descendant transactions (including this one)
+&#x20;   "descendantcount" : n,  (numeric) number of in-mempool descendant transactions (including this one)
 
-"descendantsize" : n, (numeric) virtual transaction size of in-mempool descendants (including this one)
+&#x20;   "descendantsize" : n,   (numeric) virtual transaction size of in-mempool descendants (including this one)
 
-"descendantfees" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
+&#x20;   "descendantfees" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
 
-"ancestorcount" : n, (numeric) number of in-mempool ancestor transactions (including this one)
+&#x20;   "ancestorcount" : n,    (numeric) number of in-mempool ancestor transactions (including this one)
 
-"ancestorsize" : n, (numeric) virtual transaction size of in-mempool ancestors (including this one)
+&#x20;   "ancestorsize" : n,     (numeric) virtual transaction size of in-mempool ancestors (including this one)
 
-"ancestorfees" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
+&#x20;   "ancestorfees" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
 
-"wtxid" : hash, (string) hash of serialized transaction, including witness data
+&#x20;   "wtxid" : hash,         (string) hash of serialized transaction, including witness data
 
-"fees" : {
+&#x20;   "fees" : {
 
-"base" : n, (numeric) transaction fee in KLC
+&#x20;       "base" : n,         (numeric) transaction fee in KLC
 
-"modified" : n, (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
+&#x20;       "modified" : n,     (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
 
-"ancestor" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
+&#x20;       "ancestor" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
 
-"descendant" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
+&#x20;       "descendant" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
 
-}
+&#x20;   }
 
-"depends" : \[ (array) unconfirmed transactions used as inputs for this transaction
+&#x20;   "depends" : \[           (array) unconfirmed transactions used as inputs for this transaction
 
-"transactionid", (string) parent transaction id
+&#x20;       "transactionid",    (string) parent transaction id
 
-... ]
+&#x20;      ... ]
 
-"spentby" : \[ (array) unconfirmed transactions spending outputs from this transaction
+&#x20;   "spentby" : \[           (array) unconfirmed transactions spending outputs from this transaction
 
-"transactionid", (string) child transaction id
+&#x20;       "transactionid",    (string) child transaction id
 
-... ]
+&#x20;      ... ]
 
-}, ...
+&#x20; }, ...
 
 }
 
@@ -1382,17 +1402,19 @@ If txid is in the mempool, returns all in-mempool descendants.
 
 \> Kalycoin -cli getmempooldescendants "mytxid"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempooldescendants", "params": \["mytxid"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test result:**
 
 \[
 
-"9d980a4fcdf13fb2c9a5c7769ad6f3e8668aba1f0608be09ef84a11afaf3d03f",
+&#x20; "9d980a4fcdf13fb2c9a5c7769ad6f3e8668aba1f0608be09ef84a11afaf3d03f",
 
-"89874d6f44bb3b8a526c50cecda1cbe06c6c6e8107623b79222ee75b79f91d5a",
+&#x20; "89874d6f44bb3b8a526c50cecda1cbe06c6c6e8107623b79222ee75b79f91d5a",
 
-"0c2d893fdc510a6fddb18fc3d441b02d5b6050b754dc6f5d5ddd251707c3d995"
+&#x20; "0c2d893fdc510a6fddb18fc3d441b02d5b6050b754dc6f5d5ddd251707c3d995"
 
 ]
 
@@ -1406,61 +1428,63 @@ Returns mempool data for given transaction
 
 **Result:**
 
-{
+{                         &#x20;
 
-"size" : n, (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
+&#x20;   "size" : n,             (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
 
-"fee" : n, (numeric) transaction fee in KLC (DEPRECATED)
+&#x20;   "fee" : n,              (numeric) transaction fee in KLC (DEPRECATED)
 
-"modifiedfee" : n, (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
+&#x20;   "modifiedfee" : n,      (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
 
-"time" : n, (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
+&#x20;   "time" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
 
-"height" : n, (numeric) block height when transaction entered pool
+&#x20;   "height" : n,           (numeric) block height when transaction entered pool
 
-"descendantcount" : n, (numeric) number of in-mempool descendant transactions (including this one)
+&#x20;   "descendantcount" : n,  (numeric) number of in-mempool descendant transactions (including this one)
 
-"descendantsize" : n, (numeric) virtual transaction size of in-mempool descendants (including this one)
+&#x20;   "descendantsize" : n,   (numeric) virtual transaction size of in-mempool descendants (including this one)
 
-"descendantfees" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
+&#x20;   "descendantfees" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
 
-"ancestorcount" : n, (numeric) number of in-mempool ancestor transactions (including this one)
+&#x20;   "ancestorcount" : n,    (numeric) number of in-mempool ancestor transactions (including this one)
 
-"ancestorsize" : n, (numeric) virtual transaction size of in-mempool ancestors (including this one)
+&#x20;   "ancestorsize" : n,     (numeric) virtual transaction size of in-mempool ancestors (including this one)
 
-"ancestorfees" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
+&#x20;   "ancestorfees" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
 
-"wtxid" : hash, (string) hash of serialized transaction, including witness data
+&#x20;   "wtxid" : hash,         (string) hash of serialized transaction, including witness data
 
-"fees" : {
+&#x20;   "fees" : {
 
-"base" : n, (numeric) transaction fee in KLC
+&#x20;       "base" : n,         (numeric) transaction fee in KLC
 
-"modified" : n, (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
+&#x20;       "modified" : n,     (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
 
-"ancestor" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
+&#x20;       "ancestor" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
 
-"descendant" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
+&#x20;       "descendant" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
 
-}
+&#x20;   }
 
-"depends" : \[ (array) unconfirmed transactions used as inputs for this transaction
+&#x20;   "depends" : \[           (array) unconfirmed transactions used as inputs for this transaction
 
-"transactionid", (string) parent transaction id
+&#x20;       "transactionid",    (string) parent transaction id
 
-... ]
+&#x20;      ... ]
 
-"spentby" : \[ (array) unconfirmed transactions spending outputs from this transaction
+&#x20;   "spentby" : \[           (array) unconfirmed transactions spending outputs from this transaction
 
-"transactionid", (string) child transaction id
+&#x20;       "transactionid",    (string) child transaction id
 
-... ]
+&#x20;      ... ]
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getmempoolentry "mytxid"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolentry", "params": \["mytxid"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1472,23 +1496,25 @@ Returns details on the active state of the TX memory pool.
 
 {
 
-"size": xxxxx, (numeric) Current tx count
+&#x20; "size": xxxxx, (numeric) Current tx count&#x20;
 
-"bytes": xxxxx, (numeric) Sum of all virtual transaction sizes as defined in BIP 141. Differs from actual serialized size because witness data is discounted
+&#x20; "bytes": xxxxx, (numeric) Sum of all virtual transaction sizes as defined in BIP 141. Differs from actual serialized size because witness data is discounted&#x20;
 
-"usage": xxxxx, (numeric) Total memory usage for the mempool
+&#x20; "usage": xxxxx, (numeric) Total memory usage for the mempool&#x20;
 
-"maxmempool": xxxxx, (numeric) Maximum memory usage for the mempool
+&#x20; "maxmempool": xxxxx, (numeric) Maximum memory usage for the mempool&#x20;
 
-"mempoolminfee": xxxxx (numeric) Minimum fee rate in KLC /kB for tx to be accepted. Is the maximum of minrelaytxfee and minimum mempool fee
+&#x20; "mempoolminfee": xxxxx (numeric) Minimum fee rate in KLC /kB for tx to be accepted. Is the maximum of minrelaytxfee and minimum mempool fee&#x20;
 
-"minrelaytxfee": xxxxx (numeric) Current minimum relay fee for transactions
+&#x20; "minrelaytxfee": xxxxx (numeric) Current minimum relay fee for transactions&#x20;
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getmempoolinfo
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmempoolinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1500,17 +1526,17 @@ Returns details on the active state of the TX memory pool.
 
 {
 
-"size": 10,
+&#x20; "size": 10,
 
-"bytes": 3582,
+&#x20; "bytes": 3582,
 
-"usage": 14176,
+&#x20; "usage": 14176,
 
-"maxmempool": 300000000,
+&#x20; "maxmempool": 300000000,
 
-"mempoolminfee": 0.00400000,
+&#x20; "mempoolminfee": 0.00400000,
 
-"minrelaytxfee": 0.00400000
+&#x20; "minrelaytxfee": 0.00400000
 
 }
 
@@ -1526,65 +1552,67 @@ Hint: use getmempoolentry to fetch a specific transaction from the mempool.
 
 **Result: (for verbose = false):**
 
-{
+{                         &#x20;
 
-"transactionid" : {
+&#x20; "transactionid" : {     &#x20;
 
-"size" : n, (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
+&#x20;   "size" : n,             (numeric) virtual transaction size as defined in BIP 141. This is different from actual serialized size for witness transactions as witness data is discounted.
 
-"fee" : n, (numeric) transaction fee in kLC (DEPRECATED)
+&#x20;   "fee" : n,              (numeric) transaction fee in kLC (DEPRECATED)
 
-"modifiedfee" : n, (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
+&#x20;   "modifiedfee" : n,      (numeric) transaction fee with fee deltas used for mining priority (DEPRECATED)
 
-"time" : n, (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
+&#x20;   "time" : n,             (numeric) local time transaction entered pool in seconds since 1 Jan 1970 GMT
 
-"height" : n, (numeric) block height when transaction entered pool
+&#x20;   "height" : n,           (numeric) block height when transaction entered pool
 
-"descendantcount" : n, (numeric) number of in-mempool descendant transactions (including this one)
+&#x20;   "descendantcount" : n,  (numeric) number of in-mempool descendant transactions (including this one)
 
-"descendantsize" : n, (numeric) virtual transaction size of in-mempool descendants (including this one)
+&#x20;   "descendantsize" : n,   (numeric) virtual transaction size of in-mempool descendants (including this one)
 
-"descendantfees" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
+&#x20;   "descendantfees" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) (DEPRECATED)
 
-"ancestorcount" : n, (numeric) number of in-mempool ancestor transactions (including this one)
+&#x20;   "ancestorcount" : n,    (numeric) number of in-mempool ancestor transactions (including this one)
 
-"ancestorsize" : n, (numeric) virtual transaction size of in-mempool ancestors (including this one)
+&#x20;   "ancestorsize" : n,     (numeric) virtual transaction size of in-mempool ancestors (including this one)
 
-"ancestorfees" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
+&#x20;   "ancestorfees" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) (DEPRECATED)
 
-"wtxid" : hash, (string) hash of serialized transaction, including witness data
+&#x20;   "wtxid" : hash,         (string) hash of serialized transaction, including witness data
 
-"fees" : {
+&#x20;   "fees" : {
 
-"base" : n, (numeric) transaction fee in KLC
+&#x20;       "base" : n,         (numeric) transaction fee in KLC
 
-"modified" : n, (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
+&#x20;       "modified" : n,     (numeric) transaction fee with fee deltas used for mining priority in Kalycoin
 
-"ancestor" : n, (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
+&#x20;       "ancestor" : n,     (numeric) modified fees (see above) of in-mempool ancestors (including this one) in Kalycoin
 
-"descendant" : n, (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
+&#x20;       "descendant" : n,   (numeric) modified fees (see above) of in-mempool descendants (including this one) in Kalycoin
 
-}
+&#x20;   }
 
-"depends" : \[ (array) unconfirmed transactions used as inputs for this transaction
+&#x20;   "depends" : \[           (array) unconfirmed transactions used as inputs for this transaction
 
-"transactionid", (string) parent transaction id
+&#x20;       "transactionid",    (string) parent transaction id
 
-... ]
+&#x20;      ... ]
 
-"spentby" : \[ (array) unconfirmed transactions spending outputs from this transaction
+&#x20;   "spentby" : \[           (array) unconfirmed transactions spending outputs from this transaction
 
-"transactionid", (string) child transaction id
+&#x20;       "transactionid",    (string) child transaction id
 
-... ]
+&#x20;      ... ]
 
-}, ...
+&#x20; }, ...
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getrawmempool true
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawmempool", "params": \[true] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1596,51 +1624,51 @@ Hint: use getmempoolentry to fetch a specific transaction from the mempool.
 
 \[
 
-"d4e995b2e0b5ef44f90659323e662f408f7938b5b97c345a40192ca6d0b06704",
+&#x20; "d4e995b2e0b5ef44f90659323e662f408f7938b5b97c345a40192ca6d0b06704",
 
-"9e41daae52ece96732305cb0873b8528e7011c866eb7c3c9bee2c22c03e5bf65",
+&#x20; "9e41daae52ece96732305cb0873b8528e7011c866eb7c3c9bee2c22c03e5bf65",
 
-"354297aef68f48044af17c3f01616597dad298304e34728fa9894b3ff73a0f33",
+&#x20; "354297aef68f48044af17c3f01616597dad298304e34728fa9894b3ff73a0f33",
 
-"e2c407e5468a3e885b73760e3c6115d6d493786fff5ec070e91ad9b4db58b2ef",
+&#x20; "e2c407e5468a3e885b73760e3c6115d6d493786fff5ec070e91ad9b4db58b2ef",
 
-"15f9f80b536041ebf5c3958c7b7d9bab72c800882235fc782925137c2addbdd2",
+&#x20; "15f9f80b536041ebf5c3958c7b7d9bab72c800882235fc782925137c2addbdd2",
 
-"109483b1b06746cf4215f3786907b26213adc71a14145acccbba4f0952a751a3",
+&#x20; "109483b1b06746cf4215f3786907b26213adc71a14145acccbba4f0952a751a3",
 
-"b49e03dd14a242803bf8108a10a9f82120e21e7d4b0a9255c632e7b92d879136",
+&#x20; "b49e03dd14a242803bf8108a10a9f82120e21e7d4b0a9255c632e7b92d879136",
 
-"40a295fa44931750c048feb817fad96e079ce193c4eda0770d68be6c1f7241c3",
+&#x20; "40a295fa44931750c048feb817fad96e079ce193c4eda0770d68be6c1f7241c3",
 
-"f1e4f8814a404adce808e9b0aed56f61ec151c745cba3a6ac1f0a917884adb59",
+&#x20; "f1e4f8814a404adce808e9b0aed56f61ec151c745cba3a6ac1f0a917884adb59",
 
-"b6772f160e21c4633f95b1c5831c6d0451cab1501c375730ea32de64860f1809",
+&#x20; "b6772f160e21c4633f95b1c5831c6d0451cab1501c375730ea32de64860f1809",
 
-"65894a5fcf0e19e13375ba0d0f2afa6e73f52512bc69cf8225c40af824f740d9",
+&#x20; "65894a5fcf0e19e13375ba0d0f2afa6e73f52512bc69cf8225c40af824f740d9",
 
-"8199c4f6c9f8be79fff4fc9664755bc0502de92d9856083112e55caaa2cb1974",
+&#x20; "8199c4f6c9f8be79fff4fc9664755bc0502de92d9856083112e55caaa2cb1974",
 
-"c3fb5ef13f87f2988c879c274cfbc1613240a12a66e9259388101d82364f1934",
+&#x20; "c3fb5ef13f87f2988c879c274cfbc1613240a12a66e9259388101d82364f1934",
 
-"ca78e53edcfba07d4eee2a1bbfc07e26e79e5677104399c794e51d098c735056",
+&#x20; "ca78e53edcfba07d4eee2a1bbfc07e26e79e5677104399c794e51d098c735056",
 
-"7f66e7f6443ebd0d3a3a8e6bd83e3a5ffc6d32ef5a1ee6487c7abb5cfae7d409",
+&#x20; "7f66e7f6443ebd0d3a3a8e6bd83e3a5ffc6d32ef5a1ee6487c7abb5cfae7d409",
 
-"97966a9f3baeac334cb547d553baf71bf7c68720f350444d7411e0855f39a574",
+&#x20; "97966a9f3baeac334cb547d553baf71bf7c68720f350444d7411e0855f39a574",
 
-"78285303f6deef553cd5fcd5084db0bae3ccf504ac66f614cb29a5a6f6b5e815",
+&#x20; "78285303f6deef553cd5fcd5084db0bae3ccf504ac66f614cb29a5a6f6b5e815",
 
-"e5ae989b9782c1afd2c6f71379e46d162ffbe804c5b8db70b7bc85d939df2efe",
+&#x20; "e5ae989b9782c1afd2c6f71379e46d162ffbe804c5b8db70b7bc85d939df2efe",
 
-"2f09732e25eab121a347471a91be55c798cde96aa7f8009da51c2a2d322e6410",
+&#x20; "2f09732e25eab121a347471a91be55c798cde96aa7f8009da51c2a2d322e6410",
 
-"c302d3177a64a4a3c7f2ba1ea196b69754475192afa8249eb18f6f055556c8e1",
+&#x20; "c302d3177a64a4a3c7f2ba1ea196b69754475192afa8249eb18f6f055556c8e1",
 
-"7f1de19f02347ea3744bcb11364c9883b91e4f4883b13f15e9e9f52595c1d3d6",
+&#x20; "7f1de19f02347ea3744bcb11364c9883b91e4f4883b13f15e9e9f52595c1d3d6",
 
-"c241f5896723fec65b3af4f94491679ae8a79c434b2e0749651cf416952abac0",
+&#x20; "c241f5896723fec65b3af4f94491679ae8a79c434b2e0749651cf416952abac0",
 
-"4d8932af7a7073e2c4a5527767215f7bf5b8c7759a5b49d976f0031d5184fd18"
+&#x20; "4d8932af7a7073e2c4a5527767215f7bf5b8c7759a5b49d976f0031d5184fd18"
 
 ]
 
@@ -1650,15 +1678,17 @@ Get data stored by smart contracts
 
 **Argument:**
 
-1\. "address" (string, required) The address to get the storage from
+&#x20;1\. "address"  (string, required) The address to get the storage from
 
-2\. "blockNum" (string, optional) Number of block to get state from, "latest" keyword supported. Latest if not passed.
+&#x20;2\. "blockNum" (string, optional) Number of block to get state from,  "latest" keyword supported. Latest if not passed.
 
-3\. "index" (number, optional) Zero-based index position of the storage
+&#x20;3\. "index"    (number, optional) Zero-based index position of the storage
 
 **Examples:**
 
 \> Kalycoin -cli getstorage “contract address”
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getstorage", "params": \["address"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1670,13 +1700,13 @@ getstorage "fdb9d0873ba524ef3ea67c1719666968e1eeb110"
 
 {
 
-"000756ed9982214a7ba55dbe32d0321f5891e75d3c3c467d4b575d55991e03b1":
+&#x20; "000756ed9982214a7ba55dbe32d0321f5891e75d3c3c467d4b575d55991e03b1":
 
-{
+&#x20; {
 
-"52adc13b5e472402f13052709f282024cc52e564f96b2183a5737c545229228d": "0000000000000000000000000000000000000000000000000000000000000001"
+&#x20;   "52adc13b5e472402f13052709f282024cc52e564f96b2183a5737c545229228d": "0000000000000000000000000000000000000000000000000000000000000001"
 
-},
+&#x20; },
 
 }
 
@@ -1692,27 +1722,27 @@ requires -logevents to be enabled
 
 {
 
-"blockHash": "XXX" (String), 32 bytes, the blockhash included this tx.
+&#x20; "blockHash":  "XXX"        (String), 32 bytes, the blockhash included this tx.
 
-"blockNumber": n (Number), the blocknumber included this transaction.
+&#x20; "blockNumber": n           (Number), the blocknumber included this transaction.
 
-"transaction": "XXX": (String), 32 bytes，the hash of this transaction.
+&#x20; "transaction": "XXX":      (String), 32 bytes，the hash of this transaction.
 
-"transactionIndex": n (numberic), the index in the block for this tx.
+&#x20; "transactionIndex": n      (numberic), the index in the block for this tx.
 
-"from": "XXX" (String), 20 bytes，the sender address of this tx.
+&#x20; "from": "XXX"              (String), 20 bytes，the sender address of this tx.
 
-"to" : "XXXX" (String), 20 bytes，the receiver address of this tx. if this address is created by a contract,return null.
+&#x20; "to"  : "XXXX"             (String), 20 bytes，the receiver address of this tx. if this  address is created by a contract,return null.
 
-"cumulativeGasUsed": n (numberic), The total amount of gas used after execution of the current transaction
+&#x20; "cumulativeGasUsed": n     (numberic), The total amount of gas used after execution of the current transaction
 
-"gasUsed": n (numberic), The gas cost alone to execute the current transaction。
+&#x20; "gasUsed": n (numberic), The gas cost alone to execute the current transaction。
 
-"contractAddress": "XXX" (String), 20 bytes，the created contract address.
+&#x20; "contractAddress": "XXX"   (String), 20 bytes，the created contract address.
 
-if this tx is created by the contract, return the contract address. else return null.
+&#x20;  if this tx is created by the contract, return the contract address. else return null.
 
-"logs": \[]
+&#x20; "logs": \[]
 
 }
 
@@ -1720,33 +1750,33 @@ if this tx is created by the contract, return the contract address. else return 
 
 \[
 
-{
+&#x20; {
 
-"blockHash": "1e34edb316f9c442d1db71ad5bd5376650387c6deb275c63c459b6624880180b",
+&#x20;   "blockHash": "1e34edb316f9c442d1db71ad5bd5376650387c6deb275c63c459b6624880180b",
 
-"blockNumber": 196529,
+&#x20;   "blockNumber": 196529,
 
-"transactionHash": "acccfb57aaeb94127560f4762d5372af3dcb4faddf9de3b2ce6bde0fdd1d57d5",
+&#x20;   "transactionHash": "acccfb57aaeb94127560f4762d5372af3dcb4faddf9de3b2ce6bde0fdd1d57d5",
 
-"transactionIndex": 2,
+&#x20;   "transactionIndex": 2,
 
-"from": "83c2436854450b0895d4c1d965720ef5e6a125be",
+&#x20;   "from": "83c2436854450b0895d4c1d965720ef5e6a125be",
 
-"to": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
+&#x20;   "to": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
 
-"cumulativeGasUsed": 23619,
+&#x20;   "cumulativeGasUsed": 23619,
 
-"gasUsed": 23619,
+&#x20;   "gasUsed": 23619,
 
-"contractAddress": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
+&#x20;   "contractAddress": "74045ec0dc26ec1861473828bc140ebc4c1f3eff",
 
-"excepted": "None",
+&#x20;   "excepted": "None",
 
-"log": \[
+&#x20;   "log": \[
 
-]
+&#x20;   ]
 
-}
+&#x20; }
 
 ]
 
@@ -1756,9 +1786,9 @@ Returns details about an unspent transaction output.
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id
+1\. "txid"            (string, required) The transaction id
 
-2\. "n" (numeric, required) vout number
+2\. "n"               (numeric, required) vout number
 
 3\. "include\_mempool" (boolean, optional) Whether to include the mempool. Default: true. Note that an unspent output that is spent in the mempool won't appear.
 
@@ -1766,35 +1796,35 @@ Returns details about an unspent transaction output.
 
 {
 
-"bestblock": "hash", (string) The hash of the block at the tip of the chain
+&#x20; "bestblock": "hash",    (string) The hash of the block at the tip of the chain
 
-"confirmations" : n, (numeric) The number of confirmations
+&#x20; "confirmations" : n,    (numeric) The number of confirmations
 
-"value" : x.xxx, (numeric) The transaction value in KLC
+&#x20; "value" : x.xxx,        (numeric) The transaction value in KLC
 
-"scriptPubKey" :
+&#x20; "scriptPubKey" :
 
-{
+&#x20; {
 
-"asm" : "code", (string)
+&#x20;   "asm" : "code",       (string)
 
-"hex" : "hex", (string)
+&#x20;   "hex" : "hex",        (string)
 
-"reqSigs" : n, (numeric) Number of required signatures
+&#x20;   "reqSigs" : n,        (numeric) Number of required signatures
 
-"type" : "pubkeyhash",(string) The type, eg pubkeyhash
+&#x20;   "type" : "pubkeyhash",(string) The type, eg pubkeyhash
 
-"addresses" : \[ (array of string) array of Kalycoin addresses
+&#x20;   "addresses" : \[ (array of string) array of Kalycoin addresses
 
-"address" (string) Kalycoin address
+&#x20;   "address"             (string) Kalycoin address
 
-,...
+&#x20;   ,...
 
-]
+&#x20;   ]
 
-},
+&#x20;  },
 
-"coinbase" : true|false (boolean) Coinbase or not
+&#x20; "coinbase" : true|false (boolean) Coinbase or not
 
 }
 
@@ -1822,13 +1852,13 @@ NOTE: By default this function only works sometimes. This is when there is an un
 
 1\. "txids" (string,required) A json array of txids to filter
 
-\[
+&#x20; \[
 
-"txid" (string) A transaction hash
+&#x20;   "txid" (string) A transaction hash
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 2\. "blockhash" (string, optional) If specified, looks for txid in the block with this hash
 
@@ -1852,27 +1882,29 @@ Returns statistics about the unspent transaction output set. Note this call may 
 
 {
 
-"height":n, (numeric) The current block height (index)
+&#x20; "height":n,                  (numeric) The current block height (index)
 
-"bestblock": "hex", (string) The hash of the block at the tip of the chain
+&#x20; "bestblock": "hex",          (string) The hash of the block at the tip of the chain
 
-"transactions": n, (numeric) The number of transactions with unspent outputs
+&#x20; "transactions": n,           (numeric) The number of transactions with unspent outputs
 
-"txouts": n, (numeric) The number of unspent transaction outputs
+&#x20; "txouts": n,                 (numeric) The number of unspent transaction outputs
 
-"bogosize": n, (numeric) A meaningless metric for UTXO set size
+&#x20; "bogosize": n,               (numeric) A meaningless metric for UTXO set size
 
-"hash\_serialized\_2": "hash", (string) The serialized hash
+&#x20; "hash\_serialized\_2": "hash", (string) The serialized hash
 
-"disk\_size": n, (numeric) The estimated size of the chainstate on disk
+&#x20; "disk\_size": n,              (numeric) The estimated size of the chainstate on disk
 
-"total\_amount": x.xxx (numeric) The total amount
+&#x20; "total\_amount": x.xxx        (numeric) The total amount
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli gettxoutsetinfo
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettxoutsetinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1892,17 +1924,17 @@ list all the contracts and default accounts is 20
 
 **Result:**
 
-{
+&#x20;{
 
-"82155d35dc1e0b5dc3d6ca7e536af42394a7003c": 0.00000000,
+&#x20; "82155d35dc1e0b5dc3d6ca7e536af42394a7003c": 0.00000000,
 
-"c50116ca622b4dbd12205fb9cc61a64f7b63cb8a": 0.00000000,
+&#x20; "c50116ca622b4dbd12205fb9cc61a64f7b63cb8a": 0.00000000,
 
-"28d1140499604664be0037272eb287e1742dcafe": 0.00000000,
+&#x20; "28d1140499604664be0037272eb287e1742dcafe": 0.00000000,
 
-"b9fe4ba102c33ba078d90a2cb6fe8fa94fd114a1": 0.00000000,
+&#x20; "b9fe4ba102c33ba078d90a2cb6fe8fa94fd114a1": 0.00000000,
 
-"954999d28fd46c6de806f9587a82321437771ab2": 0.00000000
+&#x20; "954999d28fd46c6de806f9587a82321437771ab2": 0.00000000
 
 }
 
@@ -1922,6 +1954,8 @@ The effects of preciousblock are not retained across restarts.
 
 \> Kalycoin -cli preciousblock "blockhash"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "preciousblock", "params": \["blockhash"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **pruneblockchain**
@@ -1940,6 +1974,8 @@ n (numeric) Height of the last block pruned.
 
 \> Kalycoin -cli pruneblockchain 1000
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "pruneblockchain", "params": \[1000] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **savemempool**
@@ -1949,6 +1985,8 @@ Dumps the mempool to disk. It will fail until the previous dump is fully loaded.
 **Examples:**
 
 \> Kalycoin -cli savemempool
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "savemempool", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -1962,55 +2000,55 @@ In the above, either refers to a fixed public key in hexadecimal notation, or to
 
 **Arguments:**
 
-1\. "action" (string, required) The action to execute
+1\. "action"                       (string, required) The action to execute
 
-"start" for starting a scan
+&#x20;                                     "start" for starting a scan
 
-"abort" for aborting the current scan (returns true when abort was successful)
+&#x20;                                     "abort" for aborting the current scan (returns true when abort was successful)
 
-"status" for progress report (in %) of the current scan
+&#x20;                                     "status" for progress report (in %) of the current scan
 
-2\. "scanobjects" (array, required) Array of scan objects
+2\. "scanobjects"                  (array, required) Array of scan objects
 
-\[ Every scan object is either a string descriptor or an object:
+&#x20;   \[                             Every scan object is either a string descriptor or an object:
 
-"descriptor", (string, optional) An output descriptor
+&#x20;       "descriptor",             (string, optional) An output descriptor
 
-{ (object, optional) An object with output descriptor and metadata
+&#x20;       {                         (object, optional) An object with output descriptor and metadata
 
-"desc": "descriptor", (string, required) An output descriptor
+&#x20;         "desc": "descriptor",   (string, required) An output descriptor
 
-"range": n, (numeric, optional) Up to what child index HD chains should be explored (default: 1000)
+&#x20;         "range": n,             (numeric, optional) Up to what child index HD chains should be explored (default: 1000)
 
-},
+&#x20;       },
 
-...
+&#x20;       ...
 
-]
+&#x20;   ]
 
 **Result:**
 
-{
+&#x20;{
 
-"unspents": \[
+&#x20; "unspents": \[
 
-{
+&#x20;   {
 
-"txid" : "transactionid", (string) The transaction id
+&#x20;   "txid" : "transactionid",     (string) The transaction id
 
-"vout": n, (numeric) the vout value
+&#x20;   "vout": n,                    (numeric) the vout value
 
-"scriptPubKey" : "script", (string) the script key
+&#x20;   "scriptPubKey" : "script",    (string) the script key
 
-"amount" : x.xxx, (numeric) The total amount in KLC of the unspent output
+&#x20;   "amount" : x.xxx,             (numeric) The total amount in KLC of the unspent output
 
-"height" : n, (numeric) Height of the unspent transaction output
+&#x20;   "height" : n,                 (numeric) Height of the unspent transaction output
 
-}
+&#x20;  }
 
-,...],
+&#x20;  ,...],
 
-"total\_amount" : x.xxx, (numeric) The total amount of all found unspent outputs in KLC
+&#x20;"total\_amount" : x.xxx,          (numeric) The total amount of all found unspent outputs in KLC
 
 ]
 
@@ -2020,19 +2058,21 @@ requires -logevents to be enabled
 
 **Arguments:**
 
-1\. "fromBlock" (numeric, required) The number of the earliest block (latest may be given to mean the most recent block).
+1\. "fromBlock"        (numeric, required) The number of the earliest block (latest may be given to mean the most recent block).
 
-2\. "toBlock" (string, required) The number of the latest block (-1 may be given to mean the most recent block).
+2\. "toBlock"          (string, required) The number of the latest block (-1 may be given to mean the most recent block).
 
-3\. "address" (string, optional) An address or a list of addresses to only get logs from particular account(s).
+3\. "address"          (string, optional) An address or a list of addresses to only get logs from particular account(s).
 
-4\. "topics" (string, optional) An array of values from which at least one must appear in the log entries. The order is important, if you want to leave topics out use null, e.g. \["null", "0x00..."].
+4\. "topics"           (string, optional) An array of values from which at least one must appear in the log entries. The order is important, if you want to leave topics out use null, e.g. \["null", "0x00..."].
 
-5\. "minconf" (uint, optional, default=0) Minimal number of confirmations before a log is returned
+5\. "minconf"          (uint, optional, default=0) Minimal number of confirmations before a log is returned
 
 **Examples:**
 
 \> Kalycoin -cli searchlogs 0 100 '{"addresses": \["12ae42729af478ca92c8c66773a3e32115717be4"]}' '{"topics": \["null","b436c2bf863ccd7b8f63171201efd4792066b4ce8e543dde9c3e9e9ab98e216c"]}'
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "searchlogs", "params": \[0 100 {"addresses": \["12ae42729af478ca92c8c66773a3e32115717be4"]} {"topics": \["null","b436c2bf863ccd7b8f63171201efd4792066b4ce8e543dde9c3e9e9ab98e216c"]}] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2044,7 +2084,7 @@ Verifies blockchain database.
 
 1\. checklevel (numeric, optional, 0-4, default=3) How thorough the block verification is.
 
-2\. nblocks (numeric, optional, default=6, 0=all) The number of blocks to check.
+2\. nblocks    (numeric, optional, default=6, 0=all) The number of blocks to check.
 
 **Result:**
 
@@ -2053,6 +2093,8 @@ true|false (boolean) Verified or not
 **Examples:**
 
 \> Kalycoin -cli verifychain
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "verifychain", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2076,7 +2118,7 @@ verifytxoutproof "0000002081d3145a457b724b725171603a991b8d8186f0506c65722e436a6a
 
 \[
 
-"5caa24c8c78f441a5c37dff602cdacc27b4530b03c09569f62dc3cd20e674918"
+&#x20; "5caa24c8c78f441a5c37dff602cdacc27b4530b03c09569f62dc3cd20e674918"
 
 ]
 
@@ -2092,11 +2134,11 @@ This call is different from the similarly named waitforlogs. This call returns i
 
 1\. fromBlock (int | "latest", optional, default=null) The block number to start looking for logs. ()
 
-2\. toBlock (int | "latest", optional, default=null) The block number to stop looking for logs. If null, will wait indefinitely into the future.
+2\. toBlock   (int | "latest", optional, default=null) The block number to stop looking for logs. If null, will wait indefinitely into the future.
 
-3\. filter ({ addresses?: Hex160String\[], topics?: Hex256String\[] }, optional default={}) Filter conditions for logs. Addresses and topics are specified as array of hexadecimal strings
+3\. filter    ({ addresses?: Hex160String\[], topics?: Hex256String\[] }, optional default={}) Filter conditions for logs. Addresses and topics are specified as array of hexadecimal strings
 
-4\. minconf (uint, optional, default=6) Minimal number of confirmations before a log is returned
+4\. minconf   (uint, optional, default=6) Minimal number of confirmations before a log is returned
 
 **Result:**
 
@@ -2162,29 +2204,29 @@ Returns an object containing information about memory usage.
 
 1\. "mode" determines what kind of information is returned. This argument is optional, the default mode is "stats".
 
-\- "stats" returns general statistics about memory usage in the daemon.
+&#x20; \- "stats" returns general statistics about memory usage in the daemon.
 
-\- "mallocinfo" returns an XML string describing low-level heap state (only available if compiled with glibc 2.10+).
+&#x20; \- "mallocinfo" returns an XML string describing low-level heap state (only available if compiled with glibc 2.10+).
 
 **Result (mode "stats"):**
 
 {
 
-"locked": { (json object) Information about locked memory manager
+&#x20; "locked": {               (json object) Information about locked memory manager
 
-"used": xxxxx, (numeric) Number of bytes used
+&#x20;   "used": xxxxx,          (numeric) Number of bytes used
 
-"free": xxxxx, (numeric) Number of bytes available in current arenas
+&#x20;   "free": xxxxx,          (numeric) Number of bytes available in current arenas
 
-"total": xxxxxxx, (numeric) Total number of bytes managed
+&#x20;   "total": xxxxxxx,       (numeric) Total number of bytes managed
 
-"locked": xxxxxx, (numeric) Amount of bytes that succeeded locking. If this number is smaller than total, locking pages failed at some point and key data could be swapped to disk.
+&#x20;   "locked": xxxxxx,       (numeric) Amount of bytes that succeeded locking. If this number is smaller than total, locking pages failed at some point and key data could be swapped to disk.
 
-"chunks\_used": xxxxx, (numeric) Number allocated chunks
+&#x20;   "chunks\_used": xxxxx,   (numeric) Number allocated chunks
 
-"chunks\_free": xxxxx, (numeric) Number unused chunks
+&#x20;   "chunks\_free": xxxxx,   (numeric) Number unused chunks
 
-}
+&#x20; }
 
 }
 
@@ -2196,6 +2238,8 @@ Returns an object containing information about memory usage.
 
 \> Kalycoin -cli getmemoryinfo
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmemoryinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **help**
@@ -2204,11 +2248,11 @@ List all commands, or get help for a specified command.
 
 **Arguments:**
 
-1\. "command" (string, optional) The command to get help on
+1\. "command"     (string, optional) The command to get help on
 
 **Result:**
 
-"text" (string) The help text
+"text"     (string) The help text
 
 **logging**
 
@@ -2224,45 +2268,47 @@ The valid logging categories are: net, tor, mempool, http, bench, zmq, db, rpc, 
 
 In addition, the following are available as category names with special meanings:
 
-· "all", "1" : represent all logging categories.
+·         "all", "1" : represent all logging categories.
 
-· "none", "0" : even if other logging categories are specified, ignore all of them.
+·         "none", "0" : even if other logging categories are specified, ignore all of them.
 
 **Arguments:**
 
-1\. "include" (array of strings, optional) A json array of categories to add debug logging
+1\. "include"        (array of strings, optional) A json array of categories to add debug logging
 
-\[
+&#x20;    \[
 
-"category" (string) the valid logging category
+&#x20;      "category"   (string) the valid logging category
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
-2\. "exclude" (array of strings, optional) A json array of categories to remove debug logging
+2\. "exclude"        (array of strings, optional) A json array of categories to remove debug logging
 
-\[
+&#x20;    \[
 
-"category" (string) the valid logging category
+&#x20;      "category"   (string) the valid logging category
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
 **Result:**
 
-{
+{                &#x20;
 
-"category": 0|1, (numeric) if being debug logged or not. 0:inactive, 1:active
+&#x20; "category": 0|1,  (numeric) if being debug logged or not. 0:inactive, 1:active
 
-...
+&#x20; ...
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli logging "\[\\"all\\"]" "\[\\"http\\"]"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "logging", "params": \[\["all"], "\[libevent]"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2282,6 +2328,8 @@ ttt (numeric) The number of seconds that the server has been running
 
 \> Kalycoin -cli uptime
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "uptime", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Generating**
@@ -2292,7 +2340,7 @@ Mine up to nblocks blocks immediately (before the RPC call returns) to an addres
 
 **Arguments:**
 
-1\. nblocks (numeric, required) How many blocks are generated immediately.
+1\. nblocks  (numeric, required) How many blocks are generated immediately.
 
 2\. maxtries (numeric, optional) How many iterations to try (default = 1000000).
 
@@ -2304,7 +2352,7 @@ Mine up to nblocks blocks immediately (before the RPC call returns) to an addres
 
 Generate 11 blocks
 
-\> Kalycoin -cli generate 11
+&#x20;\> Kalycoin -cli generate 11
 
 **generatetoaddress**
 
@@ -2312,9 +2360,9 @@ Mine blocks immediately to a specified address (before the RPC call returns)
 
 **Arguments:**
 
-1\. nblocks (numeric, required) How many blocks are generated immediately.
+1\. nblocks  (numeric, required) How many blocks are generated immediately.
 
-2\. address (string, required) The address to send the newly generated Kalycoin to.
+2\. address  (string, required) The address to send the newly generated Kalycoin to.
 
 3\. maxtries (numeric, optional) How many iterations to try (default = 1000000).
 
@@ -2325,6 +2373,8 @@ Mine blocks immediately to a specified address (before the RPC call returns)
 **Examples:**
 
 Generate 11 blocks to myaddress
+
+&#x20;
 
 \> Kalycoin -cli generatetoaddress 11 "myaddress"
 
@@ -2340,27 +2390,27 @@ If the request parameters include a 'mode' key, that is used to explicitly selec
 
 {
 
-"mode":"template" (string, optional) This must be set to "template", "proposal" (see BIP 23), or omitted
+&#x20; "mode":"template" (string, optional) This must be set to "template", "proposal" (see BIP 23), or omitted
 
-"capabilities":\[ (array, optional) A list of strings
+&#x20; "capabilities":\[ (array, optional) A list of strings
 
-"support" (string) client side supported feature, 'longpoll', 'coinbasetxn', 'coinbasevalue', 'proposal', 'serverlist', 'workid'
+&#x20; "support" (string) client side supported feature, 'longpoll', 'coinbasetxn', 'coinbasevalue', 'proposal', 'serverlist', 'workid'
 
-,...
+&#x20;  ,...
 
-],
+&#x20;   ],
 
-"rules":
+&#x20; "rules":
 
-\[
+&#x20;\[
 
-(array, optional) A list of strings
+&#x20;   (array, optional) A list of strings
 
-"support" (string) client side supported softfork deployment
+&#x20;   "support" (string) client side supported softfork deployment
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 }
 
@@ -2368,89 +2418,89 @@ If the request parameters include a 'mode' key, that is used to explicitly selec
 
 {
 
-"version" : n, (numeric) The preferred block version
+&#x20; "version" : n,                    (numeric) The preferred block version
 
-"rules" : \[ "rulename", ... ], (array of strings) specific block rules that are to be enforced
+&#x20; "rules" : \[ "rulename", ... ],    (array of strings) specific block rules that are to be enforced
 
-"vbavailable" : { (json object) set of pending, supported versionbit (BIP 9) softfork deployments
+&#x20; "vbavailable" : {                 (json object) set of pending, supported versionbit (BIP 9) softfork deployments
 
-"rulename" : bitnumber (numeric) identifies the bit number as indicating acceptance and readiness for the named softfork rule
+&#x20;     "rulename" : bitnumber          (numeric) identifies the bit number as indicating acceptance and readiness for the named softfork rule
 
-,...
+&#x20;     ,...
 
-},
+&#x20; },
 
-"vbrequired" : n, (numeric) bit mask of versionbits the server requires set in submissions
+&#x20; "vbrequired" : n,                 (numeric) bit mask of versionbits the server requires set in submissions
 
-"previousblockhash" : "xxxx", (string) The hash of current highest block
+&#x20; "previousblockhash" : "xxxx",     (string) The hash of current highest block
 
-"transactions" : \[ (array) contents of non-coinbase transactions that should be included in the next block
+&#x20; "transactions" : \[                (array) contents of non-coinbase transactions that should be included in the next block
 
-{
+&#x20;     {
 
-"data" : "xxxx", (string) transaction data encoded in hexadecimal (byte-for-byte)
+&#x20;        "data" : "xxxx",             (string) transaction data encoded in hexadecimal (byte-for-byte)
 
-"txid" : "xxxx", (string) transaction id encoded in little-endian hexadecimal
+&#x20;        "txid" : "xxxx",             (string) transaction id encoded in little-endian hexadecimal
 
-"hash" : "xxxx", (string) hash encoded in little-endian hexadecimal (including witness data)
+&#x20;        "hash" : "xxxx",             (string) hash encoded in little-endian hexadecimal (including witness data)
 
-"depends" : \[ (array) array of numbers
+&#x20;        "depends" : \[                (array) array of numbers
 
-n (numeric) transactions before this one (by 1-based index in 'transactions' list) that must be present in the final block if this one is
+&#x20;            n                          (numeric) transactions before this one (by 1-based index in 'transactions' list) that must be present in the final block if this one is
 
-,...
+&#x20;            ,...
 
-],
+&#x20;        ],
 
-"fee": n, (numeric) difference in value between transaction inputs and outputs (in satoshis); for coinbase transactions, this is a negative Number of the total collected block fees (ie, not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one
+&#x20;        "fee": n,                    (numeric) difference in value between transaction inputs and outputs (in satoshis); for coinbase transactions, this is a negative Number of the total collected block fees (ie, not including the block subsidy); if key is not present, fee is unknown and clients MUST NOT assume there isn't one
 
-"sigops" : n, (numeric) total SigOps cost, as counted for purposes of block limits; if key is not present, sigop cost is unknown and clients MUST NOT assume it is zero
+&#x20;        "sigops" : n,                (numeric) total SigOps cost, as counted for purposes of block limits; if key is not present, sigop cost is unknown and clients MUST NOT assume it is zero
 
-"weight" : n, (numeric) total transaction weight, as counted for purposes of block limits
+&#x20;        "weight" : n,                (numeric) total transaction weight, as counted for purposes of block limits
 
-}
+&#x20;     }
 
-,...
+&#x20;     ,...
 
-],
+&#x20; ],
 
-"coinbaseaux" : { (json object) data that should be included in the coinbase's scriptSig content
+&#x20; "coinbaseaux" : {                 (json object) data that should be included in the coinbase's scriptSig content
 
-"flags" : "xx" (string) key name is to be ignored, and value included in scriptSig
+&#x20;     "flags" : "xx"                  (string) key name is to be ignored, and value included in scriptSig
 
-},
+&#x20; },
 
-"coinbasevalue" : n, (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in satoshis)
+&#x20; "coinbasevalue" : n,              (numeric) maximum allowable input to coinbase transaction, including the generation award and transaction fees (in satoshis)
 
-"coinbasetxn" : { ... }, (json object) information for coinbase transaction
+&#x20; "coinbasetxn" : { ... },          (json object) information for coinbase transaction
 
-"target" : "xxxx", (string) The hash target
+&#x20; "target" : "xxxx",                (string) The hash target
 
-"mintime" : xxx, (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "mintime" : xxx,                  (numeric) The minimum timestamp appropriate for next block time in seconds since epoch (Jan 1 1970 GMT)
 
-"mutable" : \[ (array of string) list of ways the block template may be changed
+&#x20; "mutable" : \[                     (array of string) list of ways the block template may be changed
 
-"value" (string) A way the block template may be changed, e.g. 'time', 'transactions', 'prevblock'
+&#x20;    "value"                          (string) A way the block template may be changed, e.g. 'time', 'transactions', 'prevblock'
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
-"noncerange" : "00000000ffffffff",(string) A range of valid nonces
+&#x20; "noncerange" : "00000000ffffffff",(string) A range of valid nonces
 
-"sigoplimit" : n, (numeric) limit of sigops in blocks
+&#x20; "sigoplimit" : n,                 (numeric) limit of sigops in blocks
 
-"sizelimit" : n, (numeric) limit of block size
+&#x20; "sizelimit" : n,                  (numeric) limit of block size
 
-"weightlimit" : n, (numeric) limit of block weight
+&#x20; "weightlimit" : n,                (numeric) limit of block weight
 
-"curtime" : ttt, (numeric) current timestamp in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "curtime" : ttt,                  (numeric) current timestamp in seconds since epoch (Jan 1 1970 GMT)
 
-"bits" : "xxxxxxxx", (string) compressed target of next block
+&#x20; "bits" : "xxxxxxxx",              (string) compressed target of next block
 
-"height" : n (numeric) The height of the next block
+&#x20; "height" : n                      (numeric) The height of the next block
 
-}
+}  &#x20;
 
 **getmininginfo**
 
@@ -2458,29 +2508,31 @@ Returns a json object containing mining-related information.
 
 **Examples:**
 
-\> Kalycoin -cli getmininginfo
+&#x20;\> Kalycoin -cli getmininginfo&#x20;
 
-\>curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmininginfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+&#x20;
+
+&#x20;\>curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getmininginfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Result:**
 
 {
 
-"blocks": nnn, (numeric) The current block
+&#x20; "blocks": nnn,             (numeric) The current block
 
-"currentblockweight": nnn, (numeric) The last block weight
+&#x20; "currentblockweight": nnn, (numeric) The last block weight
 
-"currentblocktx": nnn, (numeric) The last block transaction
+&#x20; "currentblocktx": nnn,     (numeric) The last block transaction
 
-"difficulty": xxx.xxxxx (numeric) The current difficulty
+&#x20; "difficulty": xxx.xxxxx    (numeric) The current difficulty
 
-"networkhashps": nnn, (numeric) The network hashes per second
+&#x20; "networkhashps": nnn,      (numeric) The network hashes per second
 
-"pooledtx": n (numeric) The size of the mempool
+&#x20; "pooledtx": n              (numeric) The size of the mempool
 
-"chain": "xxxx", (string) current network name as defined in BIP70 (main, test, regtest)
+&#x20; "chain": "xxxx",           (string) current network name as defined in BIP70 (main, test, regtest)
 
-"warnings": "..." (string) any network and blockchain warnings
+&#x20; "warnings": "..."          (string) any network and blockchain warnings
 
 }
 
@@ -2490,49 +2542,49 @@ Returns a json object containing mining-related information.
 
 **Test result:**
 
-{
+&#x20;{
 
-"blocks": 401661,
+&#x20; "blocks": 401661,
 
-"currentblockweight": 4000,
+&#x20; "currentblockweight": 4000,
 
-"currentblocktx": 0,
+&#x20; "currentblocktx": 0,
 
-"difficulty": {
+&#x20; "difficulty": {
 
-"proof-of-work": 1.52587890625e-005,
+&#x20;   "proof-of-work": 1.52587890625e-005,
 
-"proof-of-stake": 2798173.863126792,
+&#x20;   "proof-of-stake": 2798173.863126792,
 
-"search-interval": 0
+&#x20;   "search-interval": 0
 
-},
+&#x20; },
 
-"blockvalue": 400000000,
+&#x20; "blockvalue": 400000000,
 
-"netmhashps": 0,
+&#x20; "netmhashps": 0,
 
-"netstakeweight": 1335439448399970,
+&#x20; "netstakeweight": 1335439448399970,
 
-"errors": "",
+&#x20; "errors": "",
 
-"networkhashps": 76789015825010.86,
+&#x20; "networkhashps": 76789015825010.86,
 
-"pooledtx": 2,
+&#x20; "pooledtx": 2,
 
-"stakeweight": {
+&#x20; "stakeweight": {
 
-"minimum": 568351000,
+&#x20;   "minimum": 568351000,
 
-"maximum": 0,
+&#x20;   "maximum": 0,
 
-"combined": 568351000
+&#x20;   "combined": 568351000
 
-},
+&#x20; },
 
-"chain": "main",
+&#x20; "chain": "main",
 
-"warnings": ""
+&#x20; "warnings": ""
 
 }
 
@@ -2544,7 +2596,7 @@ Returns the estimated network hashes per second based on the last n blocks (for 
 
 1\. nblocks (numeric, optional, default=120) The number of blocks, or -1 for blocks since last difficulty change.
 
-2\. height (numeric, optional, default=-1) To estimate at the time of the given height.
+2\. height  (numeric, optional, default=-1) To estimate at the time of the given height.
 
 **Result:**
 
@@ -2553,6 +2605,8 @@ x (numeric) Hashes per second estimated
 **Examples:**
 
 \> Kalycoin -cli getnetworkhashps
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkhashps", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2572,25 +2626,25 @@ Returns an object containing staking-related information.
 
 {
 
-"enabled": true or false,(bool),if HD key is enabled, the value if true,else is false.
+&#x20; "enabled": true or false,(bool),if HD key is enabled, the value if true,else is false.
 
-"staking": true or false,(bool),if wallet staking token or not.
+&#x20; "staking": true or false,(bool),if wallet staking token or not.
 
-"errors": "XXX", (string), any network and blockchain errors
+&#x20; "errors": "XXX",         (string), any network and blockchain errors
 
-"currentblocktx": n, (numberic),the last block transaction
+&#x20; "currentblocktx": n,     (numberic),the last block transaction
 
-"pooledtx": n, (numberic), The size of the mempool
+&#x20; "pooledtx": n,           (numberic), The size of the mempool
 
-"difficulty": n, (numberic),the current proof-of-work difficulty
+&#x20; "difficulty": n,         (numberic),the current proof-of-work difficulty
 
-"search-interval": n,
+&#x20; "search-interval": n,
 
-"weight": n, (numberic), the total staking token number
+&#x20; "weight": n,             (numberic), the total staking token number
 
-"netstakeweight": n, (numberic), the total numbers of staking in the network
+&#x20; "netstakeweight": n,     (numberic), the total numbers of staking in the network
 
-"expectedtime": n, (numberic), the time that to get the rights to cast the block
+&#x20; "expectedtime": n,       (numberic), the time that to get the rights to cast the block
 
 }
 
@@ -2602,25 +2656,25 @@ Returns an object containing staking-related information.
 
 {
 
-"enabled": true,
+&#x20; "enabled": true,
 
-"staking": false,
+&#x20; "staking": false,
 
-"errors": "",
+&#x20; "errors": "",
 
-"currentblocktx": 0,
+&#x20; "currentblocktx": 0,
 
-"pooledtx": 0,
+&#x20; "pooledtx": 0,
 
-"difficulty": 4.656542373906925e-010,
+&#x20; "difficulty": 4.656542373906925e-010,
 
-"search-interval": 0,
+&#x20; "search-interval": 0,
 
-"weight": 0,
+&#x20; "weight": 0,
 
-"netstakeweight": 0,
+&#x20; "netstakeweight": 0,
 
-"expectedtime": 0
+&#x20; "expectedtime": 0
 
 }
 
@@ -2634,19 +2688,19 @@ Accepts the transaction into mined blocks at a higher (or lower) priority
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id.
+1\. "txid"         (string, required) The transaction id.
 
-2\. dummy (numeric, optional) API-Compatibility for previous API. Must be zero or null.
+2\. dummy          (numeric, optional) API-Compatibility for previous API. Must be zero or null.
 
-DEPRECATED. For forward compatibility use named arguments and omit this parameter.
+&#x20;                 DEPRECATED. For forward compatibility use named arguments and omit this parameter.
 
-3\. fee\_delta (numeric, required) The fee value (in satoshis) to add (or subtract, if negative).
+3\. fee\_delta      (numeric, required) The fee value (in satoshis) to add (or subtract, if negative).
 
-Note, that this value is not a fee rate. It is a value to modify absolute fee of the TX.
+&#x20;                 Note, that this value is not a fee rate. It is a value to modify absolute fee of the TX.
 
-The fee is not actually paid, only the algorithm for selecting transactions into a block
+&#x20;                 The fee is not actually paid, only the algorithm for selecting transactions into a block
 
-considers the transaction as it would have paid a higher (or lower) fee.
+&#x20;                 considers the transaction as it would have paid a higher (or lower) fee.
 
 **Result:**
 
@@ -2655,6 +2709,8 @@ true (boolean) Returns true
 **Examples:**
 
 \> Kalycoin -cli prioritisetransaction "txid" 0.0 10000
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "prioritisetransaction", "params": \["txid", 0.0, 10000] }' -H 'content-type: text/plain;' http://127.0.0.1:3889
 
@@ -2672,6 +2728,8 @@ Attempts to submit new block to network. See [https://en.bitcoin.it/wiki/BIP\_00
 
 \> Kalycoin -cli submitblock "mydata"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "submitblock", "params": \["mydata"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Network**
@@ -2684,13 +2742,19 @@ Attempts to add or remove a node from the addnode list. Or try a connection to a
 
 1\. "node" (string, required) The node (see getpeerinfo for nodes)
 
+&#x20;
+
 2\. "command" (string, required) 'add' to add a node to the list, 'remove' to remove a node from the list, 'onetry' to try a connection to the node once
 
 **Examples:**
 
 \- Mainnet port 3888, Testnet port 13888, Regtest port 23888:
 
+&#x20;
+
 \> Kalycoin -cli addnode "192.168.0.6:3888" "onetry"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "addnode", "params": \["192.168.0.6:3888", "onetry"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2701,6 +2765,8 @@ Clear all banned IPs.
 **Examples:**
 
 \> Kalycoin -cli clearbanned
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "clearbanned", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2714,9 +2780,9 @@ To disconnect by nodeid, either set 'address' to the empty string, or call using
 
 **Arguments:**
 
-1\. "address" (string, optional) The IP address/port of the node
+1\. "address"     (string, optional) The IP address/port of the node
 
-2\. "nodeid" (number, optional) The node ID (see getpeerinfo for node IDs)
+2\. "nodeid"      (number, optional) The node ID (see getpeerinfo for node IDs)
 
 **Examples:**
 
@@ -2726,9 +2792,15 @@ To disconnect by nodeid, either set 'address' to the empty string, or call using
 
 \> Kalycoin -cli disconnectnode "192.168.0.6:3888"
 
+&#x20;
+
 \> Kalycoin -cli disconnectnode "" 1
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "disconnectnode", "params": \["192.168.0.6:3888"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "disconnectnode", "params": \["", 1] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2744,7 +2816,7 @@ Estimates the approximate fee per kilobyte needed for a transaction to begin con
 
 1\. conf\_target (numeric) Confirmation target in blocks (1 - 1008)
 
-2\. threshold (numeric, optional) The proportion of transactions in a given feerate range that must have been
+2\. threshold   (numeric, optional) The proportion of transactions in a given feerate range that must have been
 
 confirmed within conf\_target in order to consider those feerates as high enough and proceed to check
 
@@ -2754,41 +2826,43 @@ lower buckets. Default: 0.95
 
 {
 
-"short" : { estimate for short time horizon
+&#x20; "short" : {                 estimate for short time horizon
 
-"feerate" : x.x, (numeric, optional) estimate fee rate in KLC /kB
+&#x20;     "feerate" : x.x,        (numeric, optional) estimate fee rate in KLC /kB
 
-"decay" : x.x, (numeric) exponential decay (per block) for historical moving average of confirmation data
+&#x20;     "decay" : x.x,          (numeric) exponential decay (per block) for historical moving average of confirmation data
 
-"scale" : x, (numeric) The resolution of confirmation targets at this time horizon
+&#x20;     "scale" : x,            (numeric) The resolution of confirmation targets at this time horizon
 
-"pass" : { (json object, optional) information about the lowest range of feerates to succeed in meeting the threshold
+&#x20;     "pass" : {              (json object, optional) information about the lowest range of feerates to succeed in meeting the threshold
 
-"startrange" : x.x, (numeric) start of feerate range
+&#x20;         "startrange" : x.x,     (numeric) start of feerate range
 
-"endrange" : x.x, (numeric) end of feerate range
+&#x20;         "endrange" : x.x,       (numeric) end of feerate range
 
-"withintarget" : x.x, (numeric) number of txs over history horizon in the feerate range that were confirmed within target
+&#x20;         "withintarget" : x.x,   (numeric) number of txs over history horizon in the feerate range that were confirmed within target
 
-"totalconfirmed" : x.x, (numeric) number of txs over history horizon in the feerate range that were confirmed at any point
+&#x20;         "totalconfirmed" : x.x, (numeric) number of txs over history horizon in the feerate range that were confirmed at any point
 
-"inmempool" : x.x, (numeric) current number of txs in mempool in the feerate range unconfirmed for at least target blocks
+&#x20;         "inmempool" : x.x,      (numeric) current number of txs in mempool in the feerate range unconfirmed for at least target blocks
 
-"leftmempool" : x.x, (numeric) number of txs over history horizon in the feerate range that left mempool unconfirmed after target
+&#x20;         "leftmempool" : x.x,    (numeric) number of txs over history horizon in the feerate range that left mempool unconfirmed after target
 
-},
+&#x20;     },
 
-"fail" : { ... }, (json object, optional) information about the highest range of feerates to fail to meet the threshold
+&#x20;     "fail" : { ... },       (json object, optional) information about the highest range of feerates to fail to meet the threshold
 
-"errors": \[ str... ] (json array of strings, optional) Errors encountered during processing
+&#x20;     "errors":  \[ str... ]   (json array of strings, optional) Errors encountered during processing
 
-},
+&#x20; },
 
-"medium" : { ... }, (json object, optional) estimate for medium time horizon
+&#x20; "medium" : { ... },    (json object, optional) estimate for medium time horizon
 
-"long" : { ... } (json object) estimate for long time horizon
+&#x20; "long" : { ... }       (json object) estimate for long time horizon
 
 }
+
+&#x20;
 
 Results are returned for any horizon which tracks blocks up to the confirmation target.
 
@@ -2806,35 +2880,37 @@ Returns information about the given added node, or all added nodes (note that on
 
 **Result:**
 
-\[
+&#x20;\[
 
-{
+&#x20; {
 
-"addednode" : "192.168.0.201", (string) The node IP address or name (as provided to addnode)
+&#x20;   "addednode" : "192.168.0.201",          (string) The node IP address or name (as provided to addnode)
 
-"connected" : true|false, (boolean) If connected
+&#x20;   "connected" : true|false,               (boolean) If connected
 
-"addresses" : \[ (list of objects) Only when connected = true
+&#x20;   "addresses" : \[                         (list of objects) Only when connected = true
 
-{
+&#x20;      {
 
-"address" : "192.168.0.201:3888", (string) The Kalycoin server IP and port we're connected to
+&#x20;        "address" : "192.168.0.201:3888",  (string) The Kalycoin server IP and port we're connected to
 
-"connected" : "outbound" (string) connection, inbound or outbound
+&#x20;        "connected" : "outbound"           (string) connection, inbound or outbound
 
-}
+&#x20;      }
 
-]
+&#x20;    ]
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli getaddednodeinfo "192.168.0.201"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddednodeinfo", "params": \["192.168.0.201"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2849,6 +2925,8 @@ n (numeric) The connection count
 **Examples:**
 
 \> Kalycoin -cli getconnectioncount
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getconnectioncount", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2868,35 +2946,37 @@ Returns information about network traffic, including bytes in, bytes out, and cu
 
 {
 
-"totalbytesrecv": n, (numeric) Total bytes received
+&#x20; "totalbytesrecv": n,                     (numeric) Total bytes received
 
-"totalbytessent": n, (numeric) Total bytes sent
+&#x20; "totalbytessent": n,                     (numeric) Total bytes sent
 
-"timemillis": t, (numeric) Current UNIX time in milliseconds
+&#x20; "timemillis": t,                         (numeric) Current UNIX time in milliseconds
 
-"uploadtarget":
+&#x20; "uploadtarget":
 
-{
+&#x20; {
 
-"timeframe": n, (numeric) Length of the measuring timeframe in seconds
+&#x20;   "timeframe": n,                        (numeric) Length of the measuring timeframe in seconds
 
-"target": n, (numeric) Target in bytes
+&#x20;   "target": n,                           (numeric) Target in bytes
 
-"target\_reached": true|false, (boolean) True if target is reached
+&#x20;   "target\_reached": true|false,          (boolean) True if target is reached
 
-"serve\_historical\_blocks": true|false, (boolean) True if serving historical blocks
+&#x20;   "serve\_historical\_blocks": true|false, (boolean) True if serving historical blocks
 
-"bytes\_left\_in\_cycle": t, (numeric) Bytes left in current time cycle
+&#x20;   "bytes\_left\_in\_cycle": t,              (numeric) Bytes left in current time cycle
 
-"time\_left\_in\_cycle": t (numeric) Seconds left in current time cycle
+&#x20;   "time\_left\_in\_cycle": t                (numeric) Seconds left in current time cycle
 
-}
+&#x20; }
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getnettotals
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnettotals", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2908,69 +2988,71 @@ Returns an object containing various state info regarding P2P networking.
 
 {
 
-"version": xxxxx, (numeric) the server version
+&#x20; "version": xxxxx,                      (numeric) the server version
 
-"subversion": "/Satoshi:x.x.x/", (string) the server subversion string
+&#x20; "subversion": "/Satoshi:x.x.x/",       (string) the server subversion string
 
-"protocolversion": xxxxx, (numeric) the protocol version
+&#x20; "protocolversion": xxxxx,              (numeric) the protocol version
 
-"localservices": "xxxxxxxxxxxxxxxx", (string) the services we offer to the network
+&#x20; "localservices": "xxxxxxxxxxxxxxxx",   (string) the services we offer to the network
 
-"localrelay": true|false, (bool) true if transaction relay is requested from peers
+&#x20; "localrelay": true|false,              (bool) true if transaction relay is requested from peers
 
-"timeoffset": xxxxx, (numeric) the time offset
+&#x20; "timeoffset": xxxxx,                   (numeric) the time offset
 
-"connections": xxxxx, (numeric) the number of connections
+&#x20; "connections": xxxxx,                  (numeric) the number of connections
 
-"networkactive": true|false, (bool) whether p2p networking is enabled
+&#x20; "networkactive": true|false,           (bool) whether p2p networking is enabled
 
-"networks": \[ (array) information per network
+&#x20; "networks": \[                          (array) information per network
 
-{
+&#x20; {
 
-"name": "xxx", (string) network (ipv4, ipv6 or onion)
+&#x20;   "name": "xxx",                       (string) network (ipv4, ipv6 or onion)
 
-"limited": true|false, (boolean) is the network limited using -onlynet?
+&#x20;   "limited": true|false,               (boolean) is the network limited using -onlynet?
 
-"reachable": true|false, (boolean) is the network reachable?
+&#x20;   "reachable": true|false,             (boolean) is the network reachable?
 
-"proxy": "host:port" (string) the proxy that is used for this network, or empty if none
+&#x20;   "proxy": "host:port"                 (string) the proxy that is used for this network, or empty if none
 
-"proxy\_randomize\_credentials": true|false, (string) Whether randomized credentials are used
+&#x20;   "proxy\_randomize\_credentials": true|false,  (string) Whether randomized credentials are used
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
-],
+&#x20; ],
 
-"relayfee": x.xxxxxxxx, (numeric) minimum relay fee for transactions in KLC /kB
+&#x20; "relayfee": x.xxxxxxxx,                (numeric) minimum relay fee for transactions in KLC /kB
 
-"incrementalfee": x.xxxxxxxx, (numeric) minimum fee increment for mempool limiting or BIP 125 replacement in Kalycoin /kB
+&#x20; "incrementalfee": x.xxxxxxxx,          (numeric) minimum fee increment for mempool limiting or BIP 125 replacement in Kalycoin /kB
 
-"localaddresses": \[ (array) list of local addresses
+&#x20; "localaddresses": \[                    (array) list of local addresses
 
-{
+&#x20; {
 
-"address": "xxxx", (string) network address
+&#x20;   "address": "xxxx",                   (string) network address
 
-"port": xxx, (numeric) network port
+&#x20;   "port": xxx,                         (numeric) network port
 
-"score": xxx (numeric) relative score
+&#x20;   "score": xxx                         (numeric) relative score
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
-]
+&#x20; ]
 
-"warnings": "..." (string) any network and blockchain warnings
+&#x20; "warnings": "..."                      (string) any network and blockchain warnings
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getnetworkinfo
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnetworkinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -2982,89 +3064,91 @@ Returns data about each connected network node as a json array of objects.
 
 \[
 
-{
+&#x20; {
 
-"id": n, (numeric) Peer index
+&#x20;   "id": n,                   (numeric) Peer index
 
-"addr":"host:port", (string) The IP address and port of the peer
+&#x20;   "addr":"host:port",        (string) The IP address and port of the peer
 
-"addrbind":"ip:port", (string) Bind address of the connection to the peer
+&#x20;   "addrbind":"ip:port",      (string) Bind address of the connection to the peer
 
-"addrlocal":"ip:port", (string) Local address as reported by the peer
+&#x20;   "addrlocal":"ip:port",     (string) Local address as reported by the peer
 
-"services":"xxxxxxxxxxxxxxxx", (string) The services offered
+&#x20;   "services":"xxxxxxxxxxxxxxxx",   (string) The services offered
 
-"relaytxes":true|false, (boolean) Whether peer has asked us to relay transactions to it
+&#x20;   "relaytxes":true|false,    (boolean) Whether peer has asked us to relay transactions to it
 
-"lastsend": ttt, (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last send
+&#x20;   "lastsend": ttt,           (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last send
 
-"lastrecv": ttt, (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last receive
+&#x20;   "lastrecv": ttt,           (numeric) The time in seconds since epoch (Jan 1 1970 GMT) of the last receive
 
-"bytessent": n, (numeric) The total bytes sent
+&#x20;   "bytessent": n,            (numeric) The total bytes sent
 
-"bytesrecv": n, (numeric) The total bytes received
+&#x20;   "bytesrecv": n,            (numeric) The total bytes received
 
-"conntime": ttt, (numeric) The connection time in seconds since epoch (Jan 1 1970 GMT)
+&#x20;   "conntime": ttt,           (numeric) The connection time in seconds since epoch (Jan 1 1970 GMT)
 
-"timeoffset": ttt, (numeric) The time offset in seconds
+&#x20;   "timeoffset": ttt,         (numeric) The time offset in seconds
 
-"pingtime": n, (numeric) ping time (if available)
+&#x20;   "pingtime": n,             (numeric) ping time (if available)
 
-"minping": n, (numeric) minimum observed ping time (if any at all)
+&#x20;   "minping": n,              (numeric) minimum observed ping time (if any at all)
 
-"pingwait": n, (numeric) ping wait (if non-zero)
+&#x20;   "pingwait": n,             (numeric) ping wait (if non-zero)
 
-"version": v, (numeric) The peer version, such as 70001
+&#x20;   "version": v,              (numeric) The peer version, such as 70001
 
-"subver": "/Satoshi:0.8.5/", (string) The string version
+&#x20;   "subver": "/Satoshi:0.8.5/",  (string) The string version
 
-"inbound": true|false, (boolean) Inbound (true) or Outbound (false)
+&#x20;   "inbound": true|false,     (boolean) Inbound (true) or Outbound (false)
 
-"addnode": true|false, (boolean) Whether connection was due to addnode/-connect or if it was an automatic/inbound connection
+&#x20;   "addnode": true|false,     (boolean) Whether connection was due to addnode/-connect or if it was an automatic/inbound connection
 
-"startingheight": n, (numeric) The starting height (block) of the peer
+&#x20;   "startingheight": n,       (numeric) The starting height (block) of the peer
 
-"banscore": n, (numeric) The ban score
+&#x20;   "banscore": n,             (numeric) The ban score
 
-"synced\_headers": n, (numeric) The last header we have in common with this peer
+&#x20;   "synced\_headers": n,       (numeric) The last header we have in common with this peer
 
-"synced\_blocks": n, (numeric) The last block we have in common with this peer
+&#x20;   "synced\_blocks": n,        (numeric) The last block we have in common with this peer
 
-"inflight": \[
+&#x20;   "inflight": \[
 
-n, (numeric) The heights of blocks we're currently asking from this peer
+&#x20;      n,                      (numeric) The heights of blocks we're currently asking from this peer
 
-...
+&#x20;      ...
 
-],
+&#x20;   ],
 
-"whitelisted": true|false, (boolean) Whether the peer is whitelisted
+&#x20;   "whitelisted": true|false, (boolean) Whether the peer is whitelisted
 
-"bytessent\_per\_msg": {
+&#x20;   "bytessent\_per\_msg": {
 
-"addr": n, (numeric) The total bytes sent aggregated by message type
+&#x20;      "addr": n,              (numeric) The total bytes sent aggregated by message type
 
-...
+&#x20;      ...
 
-},
+&#x20;   },
 
-"bytesrecv\_per\_msg": {
+&#x20;   "bytesrecv\_per\_msg": {
 
-"addr": n, (numeric) The total bytes received aggregated by message type
+&#x20;      "addr": n,              (numeric) The total bytes received aggregated by message type
 
-...
+&#x20;      ...
 
-}
+&#x20;   }
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli getpeerinfo
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getpeerinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -3074,141 +3158,141 @@ n, (numeric) The heights of blocks we're currently asking from this peer
 
 **Test result:**：
 
-{
+&#x20;{
 
-"id": 1479,
+&#x20;   "id": 1479,
 
-"addr": "171.96.72.225:63736",
+&#x20;   "addr": "171.96.72.225:63736",
 
-"addrlocal": "59.46.230.210:3888",
+&#x20;   "addrlocal": "59.46.230.210:3888",
 
-"addrbind": "59.46.230.210:3888",
+&#x20;   "addrbind": "59.46.230.210:3888",
 
-"services": "000000000000000d",
+&#x20;   "services": "000000000000000d",
 
-"relaytxes": true,
+&#x20;   "relaytxes": true,
 
-"lastsend": 1562045310,
+&#x20;   "lastsend": 1562045310,
 
-"lastrecv": 1562045263,
+&#x20;   "lastrecv": 1562045263,
 
-"bytessent": 405234,
+&#x20;   "bytessent": 405234,
 
-"bytesrecv": 404534,
+&#x20;   "bytesrecv": 404534,
 
-"conntime": 1561978028,
+&#x20;   "conntime": 1561978028,
 
-"timeoffset": -2,
+&#x20;   "timeoffset": -2,
 
-"pingtime": 0.609372,
+&#x20;   "pingtime": 0.609372,
 
-"minping": 0.140614,
+&#x20;   "minping": 0.140614,
 
-"version": 70016,
+&#x20;   "version": 70016,
 
-"subver": "/Satoshi:0.14.16/",
+&#x20;   "subver": "/Satoshi:0.14.16/",
 
-"inbound": true,
+&#x20;   "inbound": true,
 
-"addnode": false,
+&#x20;   "addnode": false,
 
-"startingheight": 401184,
+&#x20;   "startingheight": 401184,
 
-"banscore": 0,
+&#x20;   "banscore": 0,
 
-"synced\_headers": 401655,
+&#x20;   "synced\_headers": 401655,
 
-"synced\_blocks": 401650,
+&#x20;   "synced\_blocks": 401650,
 
-"inflight": \[
+&#x20;   "inflight": \[
 
-],
+&#x20;   ],
 
-"whitelisted": false,
+&#x20;   "whitelisted": false,
 
-"bytessent\_per\_msg": {
+&#x20;   "bytessent\_per\_msg": {
 
-"addr": 40437,
+&#x20;     "addr": 40437,
 
-"blocktxn": 21843,
+&#x20;     "blocktxn": 21843,
 
-"cmpctblock": 77441,
+&#x20;     "cmpctblock": 77441,
 
-"feefilter": 32,
+&#x20;     "feefilter": 32,
 
-"getblocktxn": 58,
+&#x20;     "getblocktxn": 58,
 
-"getdata": 13753,
+&#x20;     "getdata": 13753,
 
-"getheaders": 1021,
+&#x20;     "getheaders": 1021,
 
-"headers": 63150,
+&#x20;     "headers": 63150,
 
-"inv": 58072,
+&#x20;     "inv": 58072,
 
-"notfound": 61,
+&#x20;     "notfound": 61,
 
-"ping": 17952,
+&#x20;     "ping": 17952,
 
-"pong": 17952,
+&#x20;     "pong": 17952,
 
-"reject": 78,
+&#x20;     "reject": 78,
 
-"sendcmpct": 132,
+&#x20;     "sendcmpct": 132,
 
-"sendheaders": 24,
+&#x20;     "sendheaders": 24,
 
-"tx": 93042,
+&#x20;     "tx": 93042,
 
-"verack": 24,
+&#x20;     "verack": 24,
 
-"version": 162
+&#x20;     "version": 162
 
-},
+&#x20;   },
 
-"bytesrecv\_per\_msg": {
+&#x20;   "bytesrecv\_per\_msg": {
 
-"addr": 11595,
+&#x20;     "addr": 11595,
 
-"blocktxn": 16722,
+&#x20;     "blocktxn": 16722,
 
-"cmpctblock": 4544,
+&#x20;     "cmpctblock": 4544,
 
-"feefilter": 32,
+&#x20;     "feefilter": 32,
 
-"getaddr": 24,
+&#x20;     "getaddr": 24,
 
-"getblocktxn": 2146,
+&#x20;     "getblocktxn": 2146,
 
-"getdata": 14398,
+&#x20;     "getdata": 14398,
 
-"getheaders": 1021,
+&#x20;     "getheaders": 1021,
 
-"headers": 101655,
+&#x20;     "headers": 101655,
 
-"inv": 97978,
+&#x20;     "inv": 97978,
 
-"notfound": 10071,
+&#x20;     "notfound": 10071,
 
-"ping": 17952,
+&#x20;     "ping": 17952,
 
-"pong": 17952,
+&#x20;     "pong": 17952,
 
-"reject": 140,
+&#x20;     "reject": 140,
 
-"sendcmpct": 1320,
+&#x20;     "sendcmpct": 1320,
 
-"sendheaders": 24,
+&#x20;     "sendheaders": 24,
 
-"tx": 106809,
+&#x20;     "tx": 106809,
 
-"verack": 24,
+&#x20;     "verack": 24,
 
-"version": 127
+&#x20;     "version": 127
 
-},...
+&#x20;   },...
 
-}
+&#x20; }
 
 **listbanned**
 
@@ -3217,6 +3301,8 @@ List all banned IPs/Subnets.
 **Examples:**
 
 \> Kalycoin -cli listbanned
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listbanned", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -3228,6 +3314,8 @@ Requests that a ping be sent to all other nodes, to measure ping time. Results p
 
 \> Kalycoin -cli ping
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "ping", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **setban**
@@ -3238,19 +3326,23 @@ Attempts to add or remove an IP/Subnet from the banned list.
 
 **Arguments:**
 
-1\. "subnet" (string, required) The IP/Subnet (see getpeerinfo for nodes IP) with an optional netmask (default is /32 = single IP)
+1\. "subnet"       (string, required) The IP/Subnet (see getpeerinfo for nodes IP) with an optional netmask (default is /32 = single IP)
 
-2\. "command" (string, required) 'add' to add an IP/Subnet to the list, 'remove' to remove an IP/Subnet from the list
+2\. "command"      (string, required) 'add' to add an IP/Subnet to the list, 'remove' to remove an IP/Subnet from the list
 
-3\. "bantime" (numeric, optional) time in seconds how long (or until when if \[absolute] is set) the IP is banned (0 or empty means using the default time of 24h which can also be overwritten by the -bantime startup argument)
+3\. "bantime"      (numeric, optional) time in seconds how long (or until when if \[absolute] is set) the IP is banned (0 or empty means using the default time of 24h which can also be overwritten by the -bantime startup argument)
 
-4\. "absolute" (boolean, optional) If set, the bantime must be an absolute timestamp in seconds since epoch (Jan 1 1970 GMT)
+4\. "absolute"     (boolean, optional) If set, the bantime must be an absolute timestamp in seconds since epoch (Jan 1 1970 GMT)
 
 **Examples:**
 
 \> Kalycoin -cli setban "192.168.0.6" "add" 86400
 
+&#x20;
+
 \> Kalycoin -cli setban "192.168.0.0/24" "add"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "setban", "params": \["192.168.0.6", "add", 86400] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -3274,9 +3366,9 @@ Combine multiple partially signed Kalycoin transactions into one transaction. Im
 
 \[
 
-"psbt" (string) A base64 string of a PSBT
+&#x20; "psbt" (string) A base64 string of a PSBT
 
-,...
+&#x20; ,...
 
 ]
 
@@ -3298,9 +3390,9 @@ Combine multiple partially signed transactions into one transaction. The combine
 
 \[
 
-"hexstring" (string) A transaction hash
+&#x20; "hexstring" (string) A transaction hash
 
-,...
+&#x20; ,...
 
 ]
 
@@ -3318,13 +3410,13 @@ Converts a network serialized transaction to a PSBT. This should be used only wi
 
 **Arguments:**
 
-1\. "hexstring" (string, required) The hex string of a raw transaction
+1\. "hexstring"   (string, required) The hex string of a raw transaction
 
 2\. permitsigdata (boolean, optional, default=false) If true, any signatures in the input will be discarded and conversion.
 
 will continue. If false, RPC will fail if any signatures are present.
 
-3\. iswitness (boolean, optional) Whether the transaction hex is a serialized witness transaction.
+3\. iswitness     (boolean, optional) Whether the transaction hex is a serialized witness transaction.
 
 If iswitness is not present, heuristic tests will be used in decoding. If true, only witness deserializaion
 
@@ -3352,51 +3444,51 @@ Creates a transaction in the Partially Signed Transaction format. Implements the
 
 **Arguments:**
 
-1\. "inputs" (array, required) A json array of json objects
+1\. "inputs"           (array, required) A json array of json objects
 
 \[
 
-{
+&#x20; {
 
-"txid":"id", (string, required) The transaction id
+&#x20;   "txid":"id",      (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;   "vout":n,         (numeric, required) The output number
 
-"sequence":n (numeric, optional) The sequence number
+&#x20;   "sequence":n      (numeric, optional) The sequence number
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
-2\. "outputs" (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
+2\. "outputs"          (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
 
 That is, each address can only appear once and there can only be one 'data' object.
 
 \[
 
-{
+&#x20; {
 
-"address": x.xxx, (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in Kalycoin
+&#x20;   "address": x.xxx, (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in Kalycoin
 
-},
+&#x20; },
 
-{
+&#x20; {
 
-"data": "hex" (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
+&#x20;   "data": "hex"     (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
 
-},...
+&#x20; },...
 
-More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
+&#x20; More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
 
 accepted as second parameter.
 
 ]
 
-3\. locktime (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
+3\. locktime           (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
 
-4\. replaceable (boolean, optional, default=false) Marks this transaction as BIP125 replaceable.
+4\. replaceable        (boolean, optional, default=false) Marks this transaction as BIP125 replaceable.
 
 Allows this transaction to be replaced by a transaction with higher fees. If provided, it is an error if explicit sequence numbers are incompatible.
 
@@ -3416,71 +3508,71 @@ Create a transaction spending the given inputs and creating new outputs. Outputs
 
 **Arguments:**
 
-1\. "inputs" (array, required) A json array of json objects
+&#x20;1\. "inputs"               (array, required) A json array of json objects
 
-\[
+&#x20;    \[
 
-{
+&#x20;      {
 
-"txid":"id", (string, required) The transaction id
+&#x20;        "txid":"id",      (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;        "vout":n,         (numeric, required) The output number
 
-"sequence":n (numeric, optional) The sequence number
+&#x20;        "sequence":n      (numeric, optional) The sequence number
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
-2\. "outputs" (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
+2\. "outputs"               (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
 
 That is, each address can only appear once and there can only be one 'data' object.
 
-\[
+&#x20;  \[
 
-{
+&#x20;   {
 
-"address": x.xxx, (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in Kalycoin
+&#x20;     "address": x.xxx,    (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in Kalycoin
 
-},
+&#x20;   },
 
-{
+&#x20;   {
 
-"data": "hex" (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
+&#x20;     "data": "hex"        (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
 
-},
+&#x20;   },
 
-{
+&#x20;   {
 
-"contract":{
+&#x20;     "contract":{
 
-"contractAddress":"address", (string, required) Valid contract address (valid hash160 hex data)
+&#x20;        "contractAddress":"address",   (string, required) Valid contract address (valid hash160 hex data)
 
-"data":"hex", (string, required) Hex data to add in the call output
+&#x20;        "data":"hex",                  (string, required) Hex data to add in the call output
 
-"amount":x.xxx, (numeric, optional) Value in KLC to send with the call, should be a valid amount, default 0
+&#x20;        "amount":x.xxx,                (numeric, optional) Value in KLC to send with the call, should be a valid amount, default 0
 
-"gasLimit":x, (numeric, optional) The gas limit for the transaction
+&#x20;        "gasLimit":x,                  (numeric, optional) The gas limit for the transaction
 
-"gasPrice":x.xxx (numeric, optional) The gas price for the transaction
+&#x20;        "gasPrice":x.xxx               (numeric, optional) The gas price for the transaction
 
-}
+&#x20;      }
 
-{
+&#x20;   {
 
-,... More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
+&#x20;   ,...                     More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
 
-accepted as second parameter.
+&#x20;                            accepted as second parameter.
 
-]
+&#x20;  ]
 
-3\. locktime (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
+3\. locktime                  (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
 
-4\. replaceable (boolean, optional, default=false) Marks this transaction as BIP125 replaceable.
+4\. replaceable               (boolean, optional, default=false) Marks this transaction as BIP125 replaceable.
 
-Allows this transaction to be replaced by a transaction with higher fees. If provided, it is an error if explicit sequence numbers are incompatible.
+&#x20;                            Allows this transaction to be replaced by a transaction with higher fees. If provided, it is an error if explicit sequence numbers are incompatible.
 
 **Result:**
 
@@ -3490,13 +3582,23 @@ Allows this transaction to be replaced by a transaction with higher fees. If pro
 
 \> Kalycoin -cli createrawtransaction "\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]" "\[{\\"address\\":0.01}]"
 
+&#x20;
+
 \> Kalycoin -cli createrawtransaction "\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]" "\[{\\"data\\":\\"00010203\\"}]"
+
+&#x20;
 
 \> Kalycoin -cli createrawtransaction "\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]" "\[{\\"contract\\":{\\"contractAddress\\":\\"mycontract\\",\\"data\\":\\"00\\", \\"gasLimit\\":250000, \\"gasPrice\\":0.00000040, \\"amount\\":0\}}]"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": \["\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]", "\[{\\"address\\":0.01}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": \["\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]", "\[{\\"data\\":\\"00010203\\"}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createrawtransaction", "params": \["\[{\\"txid\\":\\"myid\\",\\"vout\\":0}]", "\[{\\"contract\\":{\\"contractAddress\\":\\"mycontract\\",\\"data\\":\\"00\\", \\"gasLimit\\":250000, \\"gasPrice\\":0.00000040, \\"amount\\":0\}}]"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -3512,173 +3614,173 @@ Return a JSON object representing the serialized, base64-encoded partially signe
 
 {
 
-"tx" : { (json object) The decoded network-serialized unsigned transaction.
+&#x20; "tx" : {                   (json object) The decoded network-serialized unsigned transaction.
 
-... The layout is the same as the output of decoderawtransaction.
+&#x20;   ...                                      The layout is the same as the output of decoderawtransaction.
 
-},
+&#x20; },
 
-"unknown" : { (json object) The unknown global fields
+&#x20; "unknown" : {                (json object) The unknown global fields
 
-"key" : "value" (key-value pair) An unknown key-value pair
+&#x20;   "key" : "value"            (key-value pair) An unknown key-value pair
 
-...
+&#x20;    ...
 
-},
+&#x20; },
 
-"inputs" : \[ (array of json objects)
+&#x20; "inputs" : \[                 (array of json objects)
 
-{
+&#x20;   {
 
-"non\_witness\_utxo" : { (json object, optional) Decoded network transaction for non-witness UTXOs
+&#x20;     "non\_witness\_utxo" : {   (json object, optional) Decoded network transaction for non-witness UTXOs
 
-...
+&#x20;       ...
 
-},
+&#x20;     },
 
-"witness\_utxo" : { (json object, optional) Transaction output for witness UTXOs
+&#x20;     "witness\_utxo" : {            (json object, optional) Transaction output for witness UTXOs
 
-"amount" : x.xxx, (numeric) The value in KLC
+&#x20;       "amount" : x.xxx,           (numeric) The value in KLC
 
-"scriptPubKey" : { (json object)
+&#x20;       "scriptPubKey" : {          (json object)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;         "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-"address" : "address" (string) Kalycoin address if there is one
+&#x20;         "address" : "address"     (string) Kalycoin address if there is one
 
-}
+&#x20;       }
 
-},
+&#x20;     },
 
-"partial\_signatures" : { (json object, optional)
+&#x20;     "partial\_signatures" : {             (json object, optional)
 
-"pubkey" : "signature", (string) The public key and signature that corresponds to it.
+&#x20;       "pubkey" : "signature",           (string) The public key and signature that corresponds to it.
 
-,...
+&#x20;       ,...
 
-}
+&#x20;     }
 
-"sighash" : "type", (string, optional) The sighash type to be used
+&#x20;     "sighash" : "type",                  (string, optional) The sighash type to be used
 
-"redeem\_script" : { (json object, optional)
+&#x20;     "redeem\_script" : {       (json object, optional)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;         "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-}
+&#x20;       }
 
-"witness\_script" : { (json object, optional)
+&#x20;     "witness\_script" : {       (json object, optional)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;         "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-}
+&#x20;       }
 
-"bip32\_derivs" : { (json object, optional)
+&#x20;     "bip32\_derivs" : {          (json object, optional)
 
-"pubkey" : { (json object, optional) The public key with the derivation path as the value.
+&#x20;       "pubkey" : {                     (json object, optional) The public key with the derivation path as the value.
 
-"master\_fingerprint" : "fingerprint" (string) The fingerprint of the master key
+&#x20;         "master\_fingerprint" : "fingerprint"     (string) The fingerprint of the master key
 
-"path" : "path", (string) The path
+&#x20;         "path" : "path",                         (string) The path
 
-}
+&#x20;       }
 
-,...
+&#x20;       ,...
 
-}
+&#x20;     }
 
-"final\_scriptsig" : { (json object, optional)
+&#x20;     "final\_scriptsig" : {       (json object, optional)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-}
+&#x20;       }
 
-"final\_scriptwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
+&#x20;      "final\_scriptwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
 
-"unknown" : { (json object) The unknown global fields
+&#x20;     "unknown" : {                (json object) The unknown global fields
 
-"key" : "value" (key-value pair) An unknown key-value pair
+&#x20;       "key" : "value"            (key-value pair) An unknown key-value pair
 
-...
+&#x20;        ...
 
-},
+&#x20;     },
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
-"outputs" : \[ (array of json objects)
+&#x20; "outputs" : \[                 (array of json objects)
 
-{
+&#x20;   {
 
-"redeem\_script" : { (json object, optional)
+&#x20;     "redeem\_script" : {       (json object, optional)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;         "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-}
+&#x20;       }
 
-"witness\_script" : { (json object, optional)
+&#x20;     "witness\_script" : {       (json object, optional)
 
-"asm" : "asm", (string) The asm
+&#x20;         "asm" : "asm",            (string) The asm
 
-"hex" : "hex", (string) The hex
+&#x20;         "hex" : "hex",            (string) The hex
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;         "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-}
+&#x20;     }
 
-"bip32\_derivs" : \[ (array of json objects, optional)
+&#x20;     "bip32\_derivs" : \[          (array of json objects, optional)
 
-{
+&#x20;       {
 
-"pubkey" : "pubkey", (string) The public key this path corresponds to
+&#x20;         "pubkey" : "pubkey",                     (string) The public key this path corresponds to
 
-"master\_fingerprint" : "fingerprint" (string) The fingerprint of the master key
+&#x20;         "master\_fingerprint" : "fingerprint"     (string) The fingerprint of the master key
 
-"path" : "path", (string) The path
+&#x20;         "path" : "path",                         (string) The path
 
-}
+&#x20;         }
 
-}
+&#x20;       }
 
-,...
+&#x20;       ,...
 
-],
+&#x20;     ],
 
-"unknown" : { (json object) The unknown global fields
+&#x20;     "unknown" : {                (json object) The unknown global fields
 
-"key" : "value" (key-value pair) An unknown key-value pair
+&#x20;       "key" : "value"            (key-value pair) An unknown key-value pair
 
-...
+&#x20;        ...
 
-},
+&#x20;     },
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
-"fee" : fee (numeric, optional) The transaction fee paid if all UTXOs slots in the PSBT have been filled.
+&#x20; "fee" : fee                      (numeric, optional) The transaction fee paid if all UTXOs slots in the PSBT have been filled.
 
 }
 
@@ -3694,7 +3796,7 @@ Return a JSON object representing the serialized, hex-encoded transaction.
 
 1\. "hexstring" (string, required) The transaction hex string
 
-2\. iswitness (boolean, optional) Whether the transaction hex is a serialized witness transaction
+2\. iswitness   (boolean, optional) Whether the transaction hex is a serialized witness transaction
 
 If iswitness is not present, heuristic tests will be used in decoding
 
@@ -3702,85 +3804,87 @@ If iswitness is not present, heuristic tests will be used in decoding
 
 {
 
-"txid" : "id", (string) The transaction id
+&#x20; "txid" : "id",          (string) The transaction id
 
-"hash" : "id", (string) The transaction hash (differs from txid for witness transactions)
+&#x20; "hash" : "id",          (string) The transaction hash (differs from txid for witness transactions)
 
-"size" : n, (numeric) The transaction size
+&#x20; "size" : n,             (numeric) The transaction size
 
-"vsize" : n, (numeric) The virtual transaction size (differs from size for witness transactions)
+&#x20; "vsize" : n,            (numeric) The virtual transaction size (differs from size for witness transactions)
 
-"weight" : n, (numeric) The transaction's weight (between vsize\*4 - 3 and vsize\*4)
+&#x20; "weight" : n,           (numeric) The transaction's weight (between vsize\*4 - 3 and vsize\*4)
 
-"version" : n, (numeric) The version
+&#x20; "version" : n,          (numeric) The version
 
-"locktime" : ttt, (numeric) The lock time
+&#x20; "locktime" : ttt,       (numeric) The lock time
 
-"vin" : \[ (array of json objects)
+&#x20; "vin" : \[               (array of json objects)
 
-{
+&#x20;    {
 
-"txid": "id", (string) The transaction id
+&#x20;      "txid": "id",      (string) The transaction id
 
-"vout": n, (numeric) The output number
+&#x20;      "vout": n,         (numeric) The output number
 
-"scriptSig": { (json object) The script
+&#x20;      "scriptSig": {     (json object) The script
 
-"asm": "asm", (string) asm
+&#x20;        "asm": "asm",  (string) asm
 
-"hex": "hex" (string) hex
+&#x20;        "hex": "hex"   (string) hex
 
-},
+&#x20;      },
 
-"txinwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
+&#x20;      "txinwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
 
-"sequence": n (numeric) The script sequence number
+&#x20;      "sequence": n     (numeric) The script sequence number
 
-}
+&#x20;    }
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
-"vout" : \[ (array of json objects)
+&#x20; "vout" : \[             (array of json objects)
 
-{
+&#x20;    {
 
-"value" : x.xxx, (numeric) The value in KLC
+&#x20;      "value" : x.xxx,            (numeric) The value in KLC
 
-"n" : n, (numeric) index
+&#x20;      "n" : n,                    (numeric) index
 
-"scriptPubKey" : { (json object)
+&#x20;      "scriptPubKey" : {          (json object)
 
-"asm" : "asm", (string) the asm
+&#x20;        "asm" : "asm",          (string) the asm
 
-"hex" : "hex", (string) the hex
+&#x20;        "hex" : "hex",          (string) the hex
 
-"reqSigs" : n, (numeric) The required sigs
+&#x20;        "reqSigs" : n,            (numeric) The required sigs
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;        "type" : "pubkeyhash",  (string) The type, eg 'pubkeyhash'
 
-"addresses" : \[ (json array of string)
+&#x20;        "addresses" : \[           (json array of string)
 
-"Q2tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc" (string) Kalycoin address
+&#x20;          "Q2tvKAXCxZjSmdNbao16dKXC8tRWfcF5oc"   (string) Kalycoin address
 
-,...
+&#x20;          ,...
 
-]
+&#x20;        ]
 
-}
+&#x20;      }
 
-}
+&#x20;    }
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli decoderawtransaction "hexstring"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "decoderawtransaction", "params": \["hexstring"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -3792,97 +3896,97 @@ If iswitness is not present, heuristic tests will be used in decoding
 
 {
 
-"txid": "27f5f35b447e219d0b3a3ac55f9dc6aacf2d4145fbd930207ef5b7710c47d883",
+&#x20; "txid": "27f5f35b447e219d0b3a3ac55f9dc6aacf2d4145fbd930207ef5b7710c47d883",
 
-"hash": "27f5f35b447e219d0b3a3ac55f9dc6aacf2d4145fbd930207ef5b7710c47d883",
+&#x20; "hash": "27f5f35b447e219d0b3a3ac55f9dc6aacf2d4145fbd930207ef5b7710c47d883",
 
-"version": 1,
+&#x20; "version": 1,
 
-"size": 225,
+&#x20; "size": 225,
 
-"vsize": 225,
+&#x20; "vsize": 225,
 
-"weight": 900,
+&#x20; "weight": 900,
 
-"locktime": 503133,
+&#x20; "locktime": 503133,
 
-"vin": \[
+&#x20; "vin": \[
 
-{
+&#x20;   {
 
-"txid": "6e04bab68f8896615c75d7a07c8cfa8366c9b8b2319a1184d1b7bb04c0987f69",
+&#x20;     "txid": "6e04bab68f8896615c75d7a07c8cfa8366c9b8b2319a1184d1b7bb04c0987f69",
 
-"vout": 1,
+&#x20;     "vout": 1,
 
-"scriptSig": {
+&#x20;     "scriptSig": {
 
-"asm": "3044022077de54191ae91b502d03a83bd1d580a8b4467fc3d205c7bce169f13e6abc1c91022064f759845c960b04ddf9dd5a635da5f8b990fc934fced06747d52f2658603735\[ALL] 03c426034f05b3b66700f151991e6e45f2d63545a73b36c0a8e8c4200c53f7fd2c",
+&#x20;       "asm": "3044022077de54191ae91b502d03a83bd1d580a8b4467fc3d205c7bce169f13e6abc1c91022064f759845c960b04ddf9dd5a635da5f8b990fc934fced06747d52f2658603735\[ALL] 03c426034f05b3b66700f151991e6e45f2d63545a73b36c0a8e8c4200c53f7fd2c",
 
-"hex": "473044022077de54191ae91b502d03a83bd1d580a8b4467fc3d205c7bce169f13e6abc1c91022064f759845c960b04ddf9dd5a635da5f8b990fc934fced06747d52f2658603735012103c426034f05b3b66700f151991e6e45f2d63545a73b36c0a8e8c4200c53f7fd2c"
+&#x20;       "hex": "473044022077de54191ae91b502d03a83bd1d580a8b4467fc3d205c7bce169f13e6abc1c91022064f759845c960b04ddf9dd5a635da5f8b990fc934fced06747d52f2658603735012103c426034f05b3b66700f151991e6e45f2d63545a73b36c0a8e8c4200c53f7fd2c"
 
-},
+&#x20;     },
 
-"sequence": 4294967294
+&#x20;     "sequence": 4294967294
 
-}
+&#x20;   }
 
-],
+&#x20; ],
 
-"vout": \[
+&#x20; "vout": \[
 
-{
+&#x20;   {
 
-"value": 3.22500000,
+&#x20;     "value": 3.22500000,
 
-"n": 0,
+&#x20;     "n": 0,
 
-"scriptPubKey": {
+&#x20;     "scriptPubKey": {
 
-"asm": "OP\_DUP OP\_HASH160 e85324d4402d9758122c5498de80d1cfcc6330cb OP\_EQUALVERIFY OP\_CHECKSIG",
+&#x20;       "asm": "OP\_DUP OP\_HASH160 e85324d4402d9758122c5498de80d1cfcc6330cb OP\_EQUALVERIFY OP\_CHECKSIG",
 
-"hex": "76a914e85324d4402d9758122c5498de80d1cfcc6330cb88ac",
+&#x20;       "hex": "76a914e85324d4402d9758122c5498de80d1cfcc6330cb88ac",
 
-"reqSigs": 1,
+&#x20;       "reqSigs": 1,
 
-"type": "pubkeyhash",
+&#x20;       "type": "pubkeyhash",
 
-"addresses": \[
+&#x20;       "addresses": \[
 
-"QhnQUjuCK7PANDqE7tCdf5DVjKmHoykeSY"
+&#x20;         "QhnQUjuCK7PANDqE7tCdf5DVjKmHoykeSY"
 
-]
+&#x20;       ]
 
-}
+&#x20;     }
 
-},
+&#x20;   },
 
-{
+&#x20;   {
 
-"value": 9.12695200,
+&#x20;     "value": 9.12695200,
 
-"n": 1,
+&#x20;     "n": 1,
 
-"scriptPubKey": {
+&#x20;     "scriptPubKey": {
 
-"asm": "OP\_DUP OP\_HASH160 093f4c533deb449f6bd0a427bddb0f02c2971013 OP\_EQUALVERIFY OP\_CHECKSIG",
+&#x20;       "asm": "OP\_DUP OP\_HASH160 093f4c533deb449f6bd0a427bddb0f02c2971013 OP\_EQUALVERIFY OP\_CHECKSIG",
 
-"hex": "76a914093f4c533deb449f6bd0a427bddb0f02c297101388ac",
+&#x20;       "hex": "76a914093f4c533deb449f6bd0a427bddb0f02c297101388ac",
 
-"reqSigs": 1,
+&#x20;       "reqSigs": 1,
 
-"type": "pubkeyhash",
+&#x20;       "type": "pubkeyhash",
 
-"addresses": \[
+&#x20;       "addresses": \[
 
-"QMSt24HzDcBQmsqCybzYQmfVPQFvNjK6ax"
+&#x20;         "QMSt24HzDcBQmsqCybzYQmfVPQFvNjK6ax"
 
-]
+&#x20;       ]
 
-}
+&#x20;     }
 
-}
+&#x20;   }
 
-]
+&#x20; ]
 
 }
 
@@ -3898,23 +4002,23 @@ Decode a hex-encoded script.
 
 {
 
-"asm":"asm", (string) Script public key
+&#x20; "asm":"asm",   (string) Script public key
 
-"hex":"hex", (string) hex encoded public key
+&#x20; "hex":"hex",   (string) hex encoded public key
 
-"type":"type", (string) The output type
+&#x20; "type":"type", (string) The output type
 
-"reqSigs": n, (numeric) The required signatures
+&#x20; "reqSigs": n,  (numeric) The required signatures
 
-"addresses": \[ (json array of string)
+&#x20; "addresses": \[ (json array of string)
 
-"address" (string) Kalycoin address
+&#x20; "address"      (string) Kalycoin address
 
-,...
+&#x20; ,...
 
-],
+&#x20; ],
 
-"p2sh","address" (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).
+&#x20; "p2sh","address" (string) address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH).
 
 }
 
@@ -3922,7 +4026,11 @@ Decode a hex-encoded script.
 
 \> Kalycoin -cli decodescript "hexstring"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "decodescript", "params": \["hexstring"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+
+&#x20;
 
 \### finalizepsbt
 
@@ -3930,7 +4038,7 @@ Finalize the inputs of a PSBT. If the transaction is fully signed, it will produ
 
 **Arguments:**
 
-1\. "psbt" (string) A base64 string of a PSBT
+1\. "psbt"    (string) A base64 string of a PSBT
 
 2\. "extract" (boolean, optional, default=true) If true and the transaction is complete, extract and return the complete transaction in normal network serialization instead of the PSBT.
 
@@ -3938,11 +4046,11 @@ Finalize the inputs of a PSBT. If the transaction is fully signed, it will produ
 
 {
 
-"psbt" : "value", (string) The base64-encoded partially signed transaction if not extracted
+&#x20; "psbt" : "value",           (string) The base64-encoded partially signed transaction if not extracted
 
-"hex" : "value", (string) The hex-encoded network transaction if extracted
+&#x20; "hex"  : "value",           (string) The hex-encoded network transaction if extracted
 
-"complete" : true|false, (boolean) If the transaction has a complete set of signatures
+&#x20; "complete" : true|false,    (boolean) If the transaction has a complete set of signatures
 
 }
 
@@ -3966,6 +4074,8 @@ Converts a raw hex address to a base58 pubkeyhash address
 
 \> Kalycoin -cli fromhexaddress "hexaddress"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "fromhexaddress", "params": \["hexaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
@@ -3982,67 +4092,67 @@ Add inputs to a transaction until it has enough in value to meet its out value. 
 
 **Arguments:**
 
-1\. "hexstring" (string, required) The hex string of the raw transaction
+1\. "hexstring"                (string, required) The hex string of the raw transaction
 
-2\. options (object, optional)
+2\. options                    (object, optional)
 
-{
+&#x20;  {
 
-"changeAddress" (string, optional, default pool address) The Kalycoin address to receive the change
+&#x20;    "changeAddress"          (string, optional, default pool address) The Kalycoin address to receive the change
 
-"changePosition" (numeric, optional, default random) The index of the change output
+&#x20;    "changePosition"         (numeric, optional, default random) The index of the change output
 
-"change\_type" (string, optional) The output type to use. Only valid if changeAddress is not specified. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
+&#x20;    "change\_type"            (string, optional) The output type to use. Only valid if changeAddress is not specified. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
 
-"includeWatching" (boolean, optional, default false) Also select inputs which are watch only
+&#x20;    "includeWatching"        (boolean, optional, default false) Also select inputs which are watch only
 
-"lockUnspents" (boolean, optional, default false) Lock selected unspent outputs
+&#x20;    "lockUnspents"           (boolean, optional, default false) Lock selected unspent outputs
 
-"feeRate" (numeric, optional, default not set: makes wallet determine the fee) Set a specific fee rate in Kalycoin /kB
+&#x20;    "feeRate"                (numeric, optional, default not set: makes wallet determine the fee) Set a specific fee rate in Kalycoin /kB
 
-"subtractFeeFromOutputs" (array, optional) A json array of integers.
+&#x20;    "subtractFeeFromOutputs" (array, optional) A json array of integers.
 
-The fee will be equally deducted from the amount of each specified output.
+&#x20;                             The fee will be equally deducted from the amount of each specified output.
 
-The outputs are specified by their zero-based index, before any change output is added.
+&#x20;                             The outputs are specified by their zero-based index, before any change output is added.
 
-Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
+&#x20;                             Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
 
-If no outputs are specified here, the sender pays the fee.
+&#x20;                             If no outputs are specified here, the sender pays the fee.
 
-\[vout\_index,...]
+&#x20;                                 \[vout\_index,...]
 
-"replaceable" (boolean, optional) Marks this transaction as BIP125 replaceable.
+&#x20;    "replaceable"            (boolean, optional) Marks this transaction as BIP125 replaceable.
 
-Allows this transaction to be replaced by a transaction with higher fees
+&#x20;                             Allows this transaction to be replaced by a transaction with higher fees
 
-"conf\_target" (numeric, optional) Confirmation target (in blocks)
+&#x20;    "conf\_target"            (numeric, optional) Confirmation target (in blocks)
 
-"estimate\_mode" (string, optional, default=UNSET) The fee estimate mode, must be one of:
+&#x20;    "estimate\_mode"          (string, optional, default=UNSET) The fee estimate mode, must be one of:
 
-"UNSET"
+&#x20;        "UNSET"
 
-"ECONOMICAL"
+&#x20;        "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;        "CONSERVATIVE"
 
-}
+&#x20;  }
 
-for backward compatibility: passing in a true instead of an object will result in {"includeWatching":true}
+&#x20;                             for backward compatibility: passing in a true instead of an object will result in {"includeWatching":true}
 
-3\. iswitness (boolean, optional) Whether the transaction hex is a serialized witness transaction
+3\. iswitness                  (boolean, optional) Whether the transaction hex is a serialized witness transaction
 
-If iswitness is not present, heuristic tests will be used in decoding
+&#x20;                             If iswitness is not present, heuristic tests will be used in decoding
 
 **Result:**
 
 {
 
-"hex": "value", (string) The resulting raw transaction (hex-encoded string)
+&#x20; "hex": "value", (string) The resulting raw transaction (hex-encoded string)
 
-"fee": n, (numeric) Fee in KLC the resulting transaction pays
+&#x20; "fee": n,       (numeric) Fee in KLC the resulting transaction pays
 
-"changepos": n (numeric) The position of the added change output, or -1
+&#x20; "changepos": n  (numeric) The position of the added change output, or -1
 
 }
 
@@ -4080,6 +4190,8 @@ Converts a base58 pubkeyhash address to a hex address for use in smart contracts
 
 \> Kalycoin -cli gethexaddress "address"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gethexaddress", "params": \["address"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
@@ -4100,105 +4212,109 @@ If verbose is 'true', returns an Object with information about 'txid'. If verbos
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id
+1\. "txid"      (string, required) The transaction id
 
-2\. verbose (bool, optional, default=false) If false, return a string, otherwise return a json object
+2\. verbose     (bool, optional, default=false) If false, return a string, otherwise return a json object
 
 3\. "blockhash" (string, optional) The block in which to look for the transaction
 
+&#x20;
+
 Result (if verbose is not set or set to false):
 
-"data" (string) The serialized, hex-encoded data for 'txid'
+"data"         (string) The serialized, hex-encoded data for 'txid'
+
+&#x20;
 
 Result (if verbose is set to true):
 
 {
 
-"in\_active\_chain": b, (bool) Whether specified block is in the active chain or not (only present with explicit "blockhash" argument)
+&#x20; "in\_active\_chain": b,   (bool) Whether specified block is in the active chain or not (only present with explicit "blockhash" argument)
 
-"hex" : "data", (string) The serialized, hex-encoded data for 'txid'
+&#x20; "hex" : "data",         (string) The serialized, hex-encoded data for 'txid'
 
-"txid" : "id", (string) The transaction id (same as provided)
+&#x20; "txid" : "id",          (string) The transaction id (same as provided)
 
-"hash" : "id", (string) The transaction hash (differs from txid for witness transactions)
+&#x20; "hash" : "id",          (string) The transaction hash (differs from txid for witness transactions)
 
-"size" : n, (numeric) The serialized transaction size
+&#x20; "size" : n,             (numeric) The serialized transaction size
 
-"vsize" : n, (numeric) The virtual transaction size (differs from size for witness transactions)
+&#x20; "vsize" : n,            (numeric) The virtual transaction size (differs from size for witness transactions)
 
-"weight" : n, (numeric) The transaction's weight (between vsize\*4-3 and vsize\*4)
+&#x20; "weight" : n,           (numeric) The transaction's weight (between vsize\*4-3 and vsize\*4)
 
-"version" : n, (numeric) The version
+&#x20; "version" : n,          (numeric) The version
 
-"locktime" : ttt, (numeric) The lock time
+&#x20; "locktime" : ttt,       (numeric) The lock time
 
-"vin" : \[ (array of json objects)
+&#x20; "vin" : \[               (array of json objects)
 
-{
+&#x20;    {
 
-"txid": "id", (string) The transaction id
+&#x20;      "txid": "id",      (string) The transaction id
 
-"vout": n, (numeric)
+&#x20;      "vout": n,         (numeric)
 
-"scriptSig": { (json object) The script
+&#x20;      "scriptSig": {     (json object) The script
 
-"asm": "asm", (string) asm
+&#x20;        "asm": "asm",    (string) asm
 
-"hex": "hex" (string) hex
+&#x20;        "hex": "hex"     (string) hex
 
-},
+&#x20;      },
 
-"sequence": n (numeric) The script sequence number
+&#x20;      "sequence": n      (numeric) The script sequence number
 
-"txinwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
+&#x20;      "txinwitness": \["hex", ...] (array of string) hex-encoded witness data (if any)
 
-}
+&#x20;    }
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
-"vout" : \[
+&#x20; "vout" : \[            &#x20;
 
-{
+&#x20;    {
 
-"value" : x.xxx, (numeric) The value in Kalycoin
+&#x20;      "value" : x.xxx,            (numeric) The value in Kalycoin
 
-"n" : n, (numeric) index
+&#x20;      "n" : n,                    (numeric) index
 
-"scriptPubKey" : { (json object)
+&#x20;      "scriptPubKey" : {          (json object)
 
-"asm" : "asm", (string) the asm
+&#x20;        "asm" : "asm",            (string) the asm
 
-"hex" : "hex", (string) the hex
+&#x20;        "hex" : "hex",            (string) the hex
 
-"reqSigs" : n, (numeric) The required sigs
+&#x20;        "reqSigs" : n,            (numeric) The required sigs
 
-"type" : "pubkeyhash", (string) The type, eg 'pubkeyhash'
+&#x20;        "type" : "pubkeyhash",    (string) The type, eg 'pubkeyhash'
 
-"addresses" : \[ (json array of string)
+&#x20;        "addresses" : \[           (json array of string)
 
-"address" (string) Kalycoin address
+&#x20;          "address"               (string) Kalycoin address
 
-,...
+&#x20;          ,...
 
-]
+&#x20;        ]
 
-}
+&#x20;      }
 
-}
+&#x20;    }
 
-,...
+&#x20;    ,...
 
-],
+&#x20; ],
 
-"blockhash" : "hash", (string) the block hash
+&#x20; "blockhash" : "hash",     (string) the block hash
 
-"confirmations" : n, (numeric) The confirmations
+&#x20; "confirmations" : n,      (numeric) The confirmations
 
-"time" : ttt, (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "time" : ttt,             (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT)
 
-"blocktime" : ttt (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "blocktime" : ttt         (numeric) The block time in seconds since epoch (Jan 1 1970 GMT)
 
 }
 
@@ -4206,11 +4322,19 @@ Result (if verbose is set to true):
 
 \> Kalycoin -cli getrawtransaction "mytxid"
 
+&#x20;
+
 \> Kalycoin -cli getrawtransaction "mytxid" true
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawtransaction", "params": \["mytxid", true] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
+&#x20;
+
 \> Kalycoin -cli getrawtransaction "mytxid" false "myblockhash"
+
+&#x20;
 
 \> Kalycoin -cli getrawtransaction "mytxid" true "myblockhash"
 
@@ -4254,81 +4378,81 @@ As a json rpc call
 
 **Arguments:**
 
-1\. "hexstring" (string, required) The transaction hex string
+1\. "hexstring"                      (string, required) The transaction hex string
 
-2\. "prevtxs" (string, optional) An json array of previous dependent transaction outputs
+2\. "prevtxs"       (string, optional) An json array of previous dependent transaction outputs
 
-\[ (json array of json objects, or 'null' if none provided)
+&#x20;    \[                              (json array of json objects, or 'null' if none provided)
 
-{
+&#x20;      {
 
-"txid":"id", (string, required) The transaction id
+&#x20;        "txid":"id",               (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;        "vout":n,                  (numeric, required) The output number
 
-"scriptPubKey": "hex", (string, required) script key
+&#x20;        "scriptPubKey": "hex",     (string, required) script key
 
-"redeemScript": "hex", (string, required for P2SH or P2WSH) redeem script
+&#x20;        "redeemScript": "hex",     (string, required for P2SH or P2WSH) redeem script
 
-"amount": value (numeric, required) The amount spent
+&#x20;        "amount": value            (numeric, required) The amount spent
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;   ]
 
-3\. "privkeys" (string, optional) A json array of base58-encoded private keys for signing
+3\. "privkeys"                       (string, optional) A json array of base58-encoded private keys for signing
 
-\[ (json array of strings, or 'null' if none provided)
+&#x20;   \[                               (json array of strings, or 'null' if none provided)
 
-"privatekey" (string) private key in base58-encoding
+&#x20;     "privatekey"                  (string) private key in base58-encoding
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
-4\. "sighashtype" (string, optional, default=ALL) The signature hash type. Must be one of
+4\. "sighashtype"                    (string, optional, default=ALL) The signature hash type. Must be one of
 
-"ALL"
+&#x20;      "ALL"
 
-"NONE"
+&#x20;      "NONE"
 
-"SINGLE"
+&#x20;      "SINGLE"
 
-"ALL|ANYONECANPAY"
+&#x20;      "ALL|ANYONECANPAY"
 
-"NONE|ANYONECANPAY"
+&#x20;      "NONE|ANYONECANPAY"
 
-"SINGLE|ANYONECANPAY"
+&#x20;      "SINGLE|ANYONECANPAY"
 
 **Result:**
 
 {
 
-"hex" : "value", (string) The hex-encoded raw transaction with signature(s)
+&#x20; "hex" : "value",               (string) The hex-encoded raw transaction with signature(s)
 
-"complete" : true|false, (boolean) If the transaction has a complete set of signatures
+&#x20; "complete" : true|false,       (boolean) If the transaction has a complete set of signatures
 
-"errors" : \[ (json array of objects) Script verification errors (if there are any)
+&#x20; "errors" : \[                   (json array of objects) Script verification errors (if there are any)
 
-{
+&#x20;   {
 
-"txid" : "hash", (string) The hash of the referenced, previous transaction
+&#x20;     "txid" : "hash",           (string) The hash of the referenced, previous transaction
 
-"vout" : n, (numeric) The index of the output to spent and used as input
+&#x20;     "vout" : n,                (numeric) The index of the output to spent and used as input
 
-"scriptSig" : "hex", (string) The hex-encoded signature script
+&#x20;     "scriptSig" : "hex",       (string) The hex-encoded signature script
 
-"sequence" : n, (numeric) Script sequence number
+&#x20;     "sequence" : n,            (numeric) Script sequence number
 
-"error" : "text" (string) Verification or signing error related to the input
+&#x20;     "error" : "text"           (string) Verification or signing error related to the input
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 }
 
@@ -4338,87 +4462,89 @@ Sign inputs for raw transaction (serialized, hex-encoded). The second argument i
 
 **Arguments:**
 
-1\. "hexstring" (string, required) The transaction hex string
+1\. "hexstring"                      (string, required) The transaction hex string
 
-2\. "privkeys" (string, required) A json array of base58-encoded private keys for signing
+2\. "privkeys"                       (string, required) A json array of base58-encoded private keys for signing
 
-\[ (json array of strings)
+&#x20;   \[                               (json array of strings)
 
-"privatekey" (string) private key in base58-encoding
+&#x20;     "privatekey"                  (string) private key in base58-encoding
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
-3\. "prevtxs" (string, optional) An json array of previous dependent transaction outputs
+3\. "prevtxs"                        (string, optional) An json array of previous dependent transaction outputs
 
-\[ (json array of json objects, or 'null' if none provided)
+&#x20;   \[                               (json array of json objects, or 'null' if none provided)
 
-{
+&#x20;      {
 
-"txid":"id", (string, required) The transaction id
+&#x20;        "txid":"id",               (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;        "vout":n,                  (numeric, required) The output number
 
-"scriptPubKey": "hex", (string, required) script key
+&#x20;        "scriptPubKey": "hex",     (string, required) script key
 
-"redeemScript": "hex", (string, required for P2SH or P2WSH) redeem script
+&#x20;        "redeemScript": "hex",     (string, required for P2SH or P2WSH) redeem script
 
-"amount": value (numeric, required) The amount spent
+&#x20;        "amount": value            (numeric, required) The amount spent
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;   ]
 
-4\. "sighashtype" (string, optional, default=ALL) The signature hash type. Must be one of
+4\. "sighashtype"                    (string, optional, default=ALL) The signature hash type. Must be one of
 
-"ALL"
+&#x20;      "ALL"
 
-"NONE"
+&#x20;      "NONE"
 
-"SINGLE"
+&#x20;      "SINGLE"
 
-"ALL|ANYONECANPAY"
+&#x20;      "ALL|ANYONECANPAY"
 
-"NONE|ANYONECANPAY"
+&#x20;      "NONE|ANYONECANPAY"
 
-"SINGLE|ANYONECANPAY"
+&#x20;      "SINGLE|ANYONECANPAY"
 
 **Result:**
 
 {
 
-"hex" : "value", (string) The hex-encoded raw transaction with signature(s)
+&#x20; "hex" : "value",                  (string) The hex-encoded raw transaction with signature(s)
 
-"complete" : true|false, (boolean) If the transaction has a complete set of signatures
+&#x20; "complete" : true|false,          (boolean) If the transaction has a complete set of signatures
 
-"errors" : \[ (json array of objects) Script verification errors (if there are any)
+&#x20; "errors" : \[                      (json array of objects) Script verification errors (if there are any)
 
-{
+&#x20;   {
 
-"txid" : "hash", (string) The hash of the referenced, previous transaction
+&#x20;     "txid" : "hash",              (string) The hash of the referenced, previous transaction
 
-"vout" : n, (numeric) The index of the output to spent and used as input
+&#x20;     "vout" : n,                   (numeric) The index of the output to spent and used as input
 
-"scriptSig" : "hex", (string) The hex-encoded signature script
+&#x20;     "scriptSig" : "hex",          (string) The hex-encoded signature script
 
-"sequence" : n, (numeric) Script sequence number
+&#x20;     "sequence" : n,               (numeric) Script sequence number
 
-"error" : "text" (string) Verification or signing error related to the input
+&#x20;     "error" : "text"              (string) Verification or signing error related to the input
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli signrawtransactionwithkey "myhex"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransactionwithkey", "params": \["myhex"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -4438,19 +4564,19 @@ See sendrawtransaction call.
 
 **Result:**
 
-\[ (array) The result of the mempool acceptance test for each raw transaction in the input array.
+\[                  (array) The result of the mempool acceptance test for each raw transaction in the input array.
 
-Length is exactly one for now.
+&#x20;                           Length is exactly one for now.
 
-{
+&#x20;{
 
-"txid" (string) The transaction hash in hex
+&#x20; "txid"           (string) The transaction hash in hex
 
-"allowed" (boolean) If the mempool allows this tx to be inserted
+&#x20; "allowed"        (boolean) If the mempool allows this tx to be inserted
 
-"reject-reason" (string) Rejection string (only present when 'allowed' is false)
+&#x20; "reject-reason"  (string) Rejection string (only present when 'allowed' is false)
 
-}
+&#x20;}
 
 ]
 
@@ -4459,6 +4585,8 @@ Length is exactly one for now.
 Create a transaction
 
 \> Kalycoin -cli createrawtransaction "\[{\\"txid\\" : \\"mytxid\\",\\"vout\\":0}]" "{\\"myaddress\\":0.01}" Sign the transaction, and get back the hex
+
+&#x20;
 
 \> Kalycoin -cli signrawtransaction "myhex"
 
@@ -4478,27 +4606,27 @@ Creates a multi-signature address with n signature of m keys required. It return
 
 **Arguments:**
 
-1\. nrequired (numeric, required) The number of required signatures out of the n keys.
+1\. nrequired                    (numeric, required) The number of required signatures out of the n keys.
 
-2\. "keys" (string, required) A json array of keys which are Kalycoin addresses or hex-encoded public keys
+2\. "keys"                       (string, required) A json array of keys which are Kalycoin addresses or hex-encoded public keys
 
-\[
+&#x20;    \[
 
-"key" (string) Kalycoin address or hex-encoded public key
+&#x20;      "key"                    (string) Kalycoin address or hex-encoded public key
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
-3\. "address\_type" (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is legacy.
+3\. "address\_type"               (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is legacy.
 
 **Result:**
 
 {
 
-"address":"multisigaddress", (string) The value of the new multisig address.
+&#x20; "address":"multisigaddress",  (string) The value of the new multisig address.
 
-"redeemScript":"script" (string) The string value of the hex-encoded redemption script.
+&#x20; "redeemScript":"script"       (string) The string value of the hex-encoded redemption script.
 
 }
 
@@ -4518,35 +4646,35 @@ Estimates the approximate fee per kilobyte needed for a transaction to begin con
 
 **Arguments:**
 
-1\. conf\_target (numeric) Confirmation target in blocks (1 - 1008)
+1\. conf\_target     (numeric) Confirmation target in blocks (1 - 1008)
 
 2\. "estimate\_mode" (string, optional, default=CONSERVATIVE) The fee estimate mode.
 
-Whether to return a more conservative estimate which also satisfies
+&#x20;                  Whether to return a more conservative estimate which also satisfies
 
-a longer history. A conservative estimate potentially returns a
+&#x20;                  a longer history. A conservative estimate potentially returns a
 
-higher feerate and is more likely to be sufficient for the desired
+&#x20;                  higher feerate and is more likely to be sufficient for the desired
 
-target, but is not as responsive to short term drops in the
+&#x20;                  target, but is not as responsive to short term drops in the
 
-prevailing fee market. Must be one of:
+&#x20;                  prevailing fee market.  Must be one of:
 
-"UNSET" (defaults to CONSERVATIVE)
+&#x20;      "UNSET" (defaults to CONSERVATIVE)
 
-"ECONOMICAL"
+&#x20;      "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;      "CONSERVATIVE"
 
 **Result:**
 
 {
 
-"feerate" : x.x, (numeric, optional) estimate fee-per-kilobyte (in KLC)
+&#x20; "feerate" : x.x,     (numeric, optional) estimate fee-per-kilobyte (in KLC)
 
-"errors": \[ str... ] (json array of strings, optional) Errors encountered during processing
+&#x20; "errors": \[ str... ] (json array of strings, optional) Errors encountered during processing
 
-"blocks" : n (numeric) block number where estimate was found
+&#x20; "blocks" : n         (numeric) block number where estimate was found
 
 }
 
@@ -4562,13 +4690,13 @@ Sign a message with the private key of an address
 
 **Arguments:**
 
-1\. "privkey" (string, required) The private key to sign the message with.
+1\. "privkey"         (string, required) The private key to sign the message with.
 
-2\. "message" (string, required) The message to create a signature of.
+2\. "message"         (string, required) The message to create a signature of.
 
 **Result:**
 
-"signature" (string) The signature of the message encoded in base 64
+"signature"          (string) The signature of the message encoded in base 64
 
 **Examples:**
 
@@ -4598,25 +4726,27 @@ Return information about the given Kalycoin address.
 
 {
 
-"isvalid" : true|false, (boolean) If the address is valid or not. If not, this is the only property returned.
+&#x20; "isvalid" : true|false,       (boolean) If the address is valid or not. If not, this is the only property returned.
 
-"address" : "address", (string) The Kalycoin address validated
+&#x20; "address" : "address",        (string) The Kalycoin address validated
 
-"scriptPubKey" : "hex", (string) The hex encoded scriptPubKey generated by the address
+&#x20; "scriptPubKey" : "hex",       (string) The hex encoded scriptPubKey generated by the address
 
-"isscript" : true|false, (boolean) If the key is a script
+&#x20; "isscript" : true|false,      (boolean) If the key is a script
 
-"iswitness" : true|false, (boolean) If the address is a witness address
+&#x20; "iswitness" : true|false,     (boolean) If the address is a witness address
 
-"witness\_version" : version (numeric, optional) The version number of the witness program
+&#x20; "witness\_version" : version   (numeric, optional) The version number of the witness program
 
-"witness\_program" : "hex" (string, optional) The hex value of the witness program
+&#x20; "witness\_program" : "hex"     (string, optional) The hex value of the witness program
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli validateaddress "QPSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "validateaddress", "params": \["QPSSGeFHDnKNxiEyFrD1wcEaHr9hrQDDWc"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -4668,6 +4798,8 @@ Mark in-wallet transaction as abandoned This will mark this transaction and all 
 
 \> Kalycoin -cli abandontransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "abandontransaction", "params": \["1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **abortrescan**
@@ -4702,29 +4834,29 @@ Add a nrequired-to-sign multisignature address to the wallet. Requires a new wal
 
 **Arguments:**
 
-1\. nrequired (numeric, required) The number of required signatures out of the n keys or addresses.
+1\. nrequired                      (numeric, required) The number of required signatures out of the n keys or addresses.
 
-2\. "keys" (string, required) A json array of Kalycoin addresses or hex-encoded public keys
+2\. "keys"                         (string, required) A json array of Kalycoin addresses or hex-encoded public keys
 
-\[
+&#x20;    \[
 
-"address" (string) Kalycoin address or hex-encoded public key
+&#x20;      "address"                  (string) Kalycoin address or hex-encoded public key
 
-...,
+&#x20;      ...,
 
-]
+&#x20;    ]
 
-3\. "label" (string, optional) A label to assign the addresses to.
+3\. "label"                        (string, optional) A label to assign the addresses to.
 
-4\. "address\_type" (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -addresstype
+4\. "address\_type"                 (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -addresstype
 
 **Result:**
 
 {
 
-"address":"multisigaddress", (string) The value of the new multisig address.
+&#x20; "address":"multisigaddress", (string) The value of the new multisig address.
 
-"redeemScript":"script" (string) The string value of the hex-encoded redemption script.
+&#x20; "redeemScript":"script"      (string) The string value of the hex-encoded redemption script.
 
 }
 
@@ -4750,6 +4882,8 @@ Safely copies current wallet file to destination, which can be a directory or a 
 
 \> Kalycoin -cli backupwallet "backup.dat"
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "backupwallet", "params": \["backup.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **bumpfee**
@@ -4758,63 +4892,65 @@ Bumps the fee of an opt-in-RBF transaction T, replacing it with a new transactio
 
 **Arguments:**
 
-1\. txid (string, required) The txid to be bumped
+1\. txid                  (string, required) The txid to be bumped
 
-2\. options (object, optional)
+2\. options               (object, optional)
 
-{
+&#x20;  {
 
-"confTarget" (numeric, optional) Confirmation target (in blocks)
+&#x20;    "confTarget"        (numeric, optional) Confirmation target (in blocks)
 
-"totalFee" (numeric, optional) Total fee (NOT feerate) to pay, in satoshis.
+&#x20;    "totalFee"          (numeric, optional) Total fee (NOT feerate) to pay, in satoshis.
 
-In rare cases, the actual fee paid might be slightly higher than the specified
+&#x20;                        In rare cases, the actual fee paid might be slightly higher than the specified
 
-totalFee if the tx change output has to be removed because it is too close to
+&#x20;                        totalFee if the tx change output has to be removed because it is too close to
 
-the dust threshold.
+&#x20;                        the dust threshold.
 
-"replaceable" (boolean, optional, default true) Whether the new transaction should still be
+&#x20;    "replaceable"       (boolean, optional, default true) Whether the new transaction should still be
 
-marked bip-125 replaceable. If true, the sequence numbers in the transaction will
+&#x20;                        marked bip-125 replaceable. If true, the sequence numbers in the transaction will
 
-be left unchanged from the original. If false, any input sequence numbers in the
+&#x20;                        be left unchanged from the original. If false, any input sequence numbers in the
 
-original transaction that were less than 0xfffffffe will be increased to 0xfffffffe
+&#x20;                        original transaction that were less than 0xfffffffe will be increased to 0xfffffffe
 
-so the new transaction will not be explicitly bip-125 replaceable (though it may
+&#x20;                        so the new transaction will not be explicitly bip-125 replaceable (though it may
 
-still be replaceable in practice, for example if it has unconfirmed ancestors which
+&#x20;                        still be replaceable in practice, for example if it has unconfirmed ancestors which
 
-are replaceable).
+&#x20;                        are replaceable).
 
-"estimate\_mode" (string, optional, default=UNSET) The fee estimate mode, must be one of:
+&#x20;    "estimate\_mode"     (string, optional, default=UNSET) The fee estimate mode, must be one of:
 
-"UNSET"
+&#x20;        "UNSET"
 
-"ECONOMICAL"
+&#x20;        "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;        "CONSERVATIVE"
 
-}
+&#x20;  }
 
 **Result:**
 
 {
 
-"txid": "value", (string) The id of the new transaction
+&#x20; "txid": "value",     (string) The id of the new transaction
 
-"origfee": n, (numeric) Fee of the replaced transaction
+&#x20; "origfee": n,        (numeric) Fee of the replaced transaction
 
-"fee": n, (numeric) Fee of the new transaction
+&#x20; "fee": n,            (numeric) Fee of the new transaction
 
-"errors": \[ str... ] (json array of strings) Errors encountered during processing (may be empty)
+&#x20; "errors": \[ str... ] (json array of strings) Errors encountered during processing (may be empty)
 
 }
 
 **Examples:**
 
 Bump the fee, get the new transaction's txid
+
+&#x20;
 
 \> Kalycoin -cli bumpfee \<txid>
 
@@ -4824,15 +4960,15 @@ Create a contract with bytcode.
 
 **Arguments:**
 
-1\. "bytecode" (string, required) contract bytcode.
+1\. "bytecode"       (string, required) contract bytcode.
 
-2\. gasLimit (numeric or string, optional) gasLimit, default: 2500000, max: 40000000
+2\. gasLimit         (numeric or string, optional) gasLimit, default: 2500000, max: 40000000
 
-3\. gasPrice (numeric or string, optional) gasPrice KLC price per gas unit, default: 0.0000004, min:0.0000004
+3\. gasPrice         (numeric or string, optional) gasPrice KLC price per gas unit, default: 0.0000004, min:0.0000004
 
-4\. "senderaddress" (string, optional) The Kalycoin address that will be used to create the contract.
+4\. "senderaddress"  (string, optional) The Kalycoin address that will be used to create the contract.
 
-5\. "broadcast" (bool, optional, default=true) Whether to broadcast the transaction or not.
+5\. "broadcast"      (bool, optional, default=true) Whether to broadcast the transaction or not.
 
 6\. "changeToSender" (bool, optional, default=true) Return the change to the sender.
 
@@ -4840,15 +4976,15 @@ Create a contract with bytcode.
 
 \[
 
-{
+&#x20; {
 
-"txid" : (string) The transaction id.
+&#x20;   "txid" :    (string) The transaction id.
 
-"sender" : (string) KLC address of the sender.
+&#x20;   "sender" :  (string) KLC address of the sender.
 
-"hash160" : (string) ripemd-160 hash of the sender.
+&#x20;   "hash160" : (string) ripemd-160 hash of the sender.
 
-"address" : (string) expected contract address.
+&#x20;   "address" : (string) expected contract address.
 
 }
 
@@ -4858,6 +4994,8 @@ Create a contract with bytcode.
 
 \> Kalycoin -cli createcontract "60606040525b33600060006101000a81548173ffffffffffffffffffffffffffffffffffffffff02191690836c010000000000000000000000009081020402179055506103786001600050819055505b600c80605b6000396000f360606040526008565b600256"
 
+&#x20;
+
 \> Kalycoin -cli createcontract "60606040525b33600060006101000a81548173ffffffffffffffffffffffffffffffffffffffff02191690836c010000000000000000000000009081020402179055506103786001600050819055505b600c80605b6000396000f360606040526008565b600256" 6000000 0.0000004 "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" true
 
 **createwallet**
@@ -4866,7 +5004,7 @@ Creates and loads a new wallet.
 
 **Arguments:**
 
-1\. "wallet\_name" (string, required) The name for the new wallet. If this is a path, the wallet will be created at the path location.
+1\. "wallet\_name"        (string, required) The name for the new wallet. If this is a path, the wallet will be created at the path location.
 
 2\. disable\_private\_keys (boolean, optional, default: false) Disable the possibility of private keys (only watchonlys are possible in this mode).
 
@@ -4874,15 +5012,17 @@ Creates and loads a new wallet.
 
 {
 
-"name" : \<wallet\_name>, (string) The wallet name if created successfully. If the wallet was created using a full path, the wallet\_name will be the full path.
+&#x20; "name" :    \<wallet\_name>, (string) The wallet name if created successfully. If the wallet was created using a full path, the wallet\_name will be the full path.
 
-"warning" : \<warning>, (string) Warning message if wallet was not loaded cleanly.
+&#x20; "warning" : \<warning>,     (string) Warning message if wallet was not loaded cleanly.
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli createwallet "testwallet"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "createwallet", "params": \["testwallet"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -4892,13 +5032,13 @@ createwallet “ancd”
 
 **Test result:**
 
-{
+&#x20; {
 
-"name": "ancd",
+&#x20;   "name": "ancd",
 
-"warning": ""
+&#x20;   "warning": ""
 
-}
+&#x20; }
 
 **dumpprivkey**
 
@@ -4906,17 +5046,21 @@ Reveals the private key corresponding to 'address'. Then the importprivkey can b
 
 **Arguments:**
 
-1\. "address" (string, required) The Kalycoin address for the private key
+1\. "address"   (string, required) The Kalycoin address for the private key
 
 **Result:**
 
-"key" (string) The private key
+"key"                (string) The private key
 
 **Examples:**
 
 \> Kalycoin -cli dumpprivkey "myaddress"
 
+&#x20;
+
 \> Kalycoin -cli importprivkey "mykey"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpprivkey", "params": \["myaddress"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -4926,19 +5070,25 @@ Dumps all wallet keys in a human-readable format to a server-side file. This doe
 
 **Arguments:**
 
-1\. "filename" (string, required) The filename with path (either absolute or relative to Kalycoin d)
+1\. "filename"    (string, required) The filename with path (either absolute or relative to Kalycoin d)
 
 **Result:**
 
 {
 
-"filename" : (string) The filename with full absolute path
+&#x20;
+
+&#x20; "filename" :  (string) The filename with full absolute path
+
+&#x20;
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli dumpwallet "test"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "dumpwallet", "params": \["test"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -4984,19 +5134,21 @@ Returns the list of addresses assigned the specified label.
 
 {
 
-"address":
+&#x20; "address":
 
-{
+&#x20; {
 
-"purpose": "string" (string) Purpose of address ("send" for sending address, "receive" for receiving address)
+&#x20;   "purpose": "string" (string) Purpose of address ("send" for sending address, "receive" for receiving address)
 
-},...
+&#x20; },...
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getaddressesbylabel "tabby"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressesbylabel", "params": \["tabby"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5008,21 +5160,21 @@ Returns the list of addresses assigned the specified label.
 
 {
 
-"QUTYNrXYMQUzZyUekmfakR8bzTuLqYcLtf":
+&#x20;   "QUTYNrXYMQUzZyUekmfakR8bzTuLqYcLtf":
 
-{
+&#x20;   {
 
-"purpose": "receive"
+&#x20;     "purpose": "receive"
 
-},
+&#x20;   },
 
-"QZmURd7wViLVKjUu8b3mvdXeSJjFmH7hf2":
+&#x20;   "QZmURd7wViLVKjUu8b3mvdXeSJjFmH7hf2":
 
-{
+&#x20;   {
 
-"purpose": "receive"
+&#x20;     "purpose": "receive"
 
-}
+&#x20;   }
 
 }
 
@@ -5032,81 +5184,83 @@ Return information about the given Kalycoin address. Some information requires t
 
 **Arguments:**
 
-1\. "address" (string, required) The Kalycoin address to get the information of.
+1\. "address"                    (string, required) The Kalycoin address to get the information of.
 
 **Result:**
 
 {
 
-"address" : "address", (string) The Kalycoin address validated
+&#x20; "address" : "address",        (string) The Kalycoin address validated
 
-"scriptPubKey" : "hex", (string) The hex encoded scriptPubKey generated by the address
+&#x20; "scriptPubKey" : "hex",       (string) The hex encoded scriptPubKey generated by the address
 
-"ismine" : true|false, (boolean) If the address is yours or not
+&#x20; "ismine" : true|false,        (boolean) If the address is yours or not
 
-"iswatchonly" : true|false, (boolean) If the address is watchonly
+&#x20; "iswatchonly" : true|false,   (boolean) If the address is watchonly
 
-"isscript" : true|false, (boolean) If the key is a script
+&#x20; "isscript" : true|false,      (boolean) If the key is a script
 
-"iswitness" : true|false, (boolean) If the address is a witness address
+&#x20; "iswitness" : true|false,     (boolean) If the address is a witness address
 
-"witness\_version" : version (numeric, optional) The version number of the witness program
+&#x20; "witness\_version" : version   (numeric, optional) The version number of the witness program
 
-"witness\_program" : "hex" (string, optional) The hex value of the witness program
+&#x20; "witness\_program" : "hex"     (string, optional) The hex value of the witness program
 
-"script" : "type" (string, optional) The output script type. Only if "isscript" is true and the redeemscript is known. Possible types: nonstandard, pubkey, pubkeyhash, scripthash, multisig, nulldata, witness\_v0\_keyhash, witness\_v0\_scripthash, witness\_unknown
+&#x20; "script" : "type"             (string, optional) The output script type. Only if "isscript" is true and the redeemscript is known. Possible types: nonstandard, pubkey, pubkeyhash, scripthash, multisig, nulldata, witness\_v0\_keyhash, witness\_v0\_scripthash, witness\_unknown
 
-"hex" : "hex", (string, optional) The redeemscript for the p2sh address
+&#x20; "hex" : "hex",                (string, optional) The redeemscript for the p2sh address
 
-"pubkeys" (string, optional) Array of pubkeys associated with the known redeemscript (only if "script" is "multisig")
+&#x20; "pubkeys"                     (string, optional) Array of pubkeys associated with the known redeemscript (only if "script" is "multisig")
 
-\[
+&#x20;   \[
 
-"pubkey"
+&#x20;     "pubkey"
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
-"sigsrequired" : xxxxx (numeric, optional) Number of signatures required to spend multisig output (only if "script" is "multisig")
+&#x20; "sigsrequired" : xxxxx        (numeric, optional) Number of signatures required to spend multisig output (only if "script" is "multisig")
 
-"pubkey" : "publickeyhex", (string, optional) The hex value of the raw public key, for single-key addresses (possibly embedded in P2SH or P2WSH)
+&#x20; "pubkey" : "publickeyhex",    (string, optional) The hex value of the raw public key, for single-key addresses (possibly embedded in P2SH or P2WSH)
 
-"embedded" : {...}, (object, optional) Information about the address embedded in P2SH or P2WSH, if relevant and known. It includes all getaddressinfo output fields for the embedded address, excluding metadata ("timestamp", "hdkeypath", "hdseedid") and relation to the wallet ("ismine", "iswatchonly", "account").
+&#x20; "embedded" : {...},           (object, optional) Information about the address embedded in P2SH or P2WSH, if relevant and known. It includes all getaddressinfo output fields for the embedded address, excluding metadata ("timestamp", "hdkeypath", "hdseedid") and relation to the wallet ("ismine", "iswatchonly", "account").
 
-"iscompressed" : true|false, (boolean) If the address is compressed
+&#x20; "iscompressed" : true|false,  (boolean) If the address is compressed
 
-"label" : "label" (string) The label associated with the address, "" is the default account
+&#x20; "label" :  "label"            (string) The label associated with the address, "" is the default account
 
-"account" : "account" (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account associated with the address, "" is the default account
+&#x20; "account" : "account"         (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account associated with the address, "" is the default account
 
-"timestamp" : timestamp, (number, optional) The creation time of the key if available in seconds since epoch (Jan 1 1970 GMT)
+&#x20; "timestamp" : timestamp,      (number, optional) The creation time of the key if available in seconds since epoch (Jan 1 1970 GMT)
 
-"hdkeypath" : "keypath" (string, optional) The HD keypath if the key is HD and available
+&#x20; "hdkeypath" : "keypath"       (string, optional) The HD keypath if the key is HD and available
 
-"hdseedid" : "\<hash160>" (string, optional) The Hash160 of the HD seed
+&#x20; "hdseedid" : "\<hash160>"      (string, optional) The Hash160 of the HD seed
 
-"hdmasterkeyid" : "\<hash160>" (string, optional) alias for hdseedid maintained for backwards compatibility. Will be removed in V0.18.
+&#x20; "hdmasterkeyid" : "\<hash160>" (string, optional) alias for hdseedid maintained for backwards compatibility. Will be removed in V0.18.
 
-"labels" (object) Array of labels associated with the address.
+&#x20; "labels"                      (object) Array of labels associated with the address.
 
-\[
+&#x20;   \[
 
-{ (json object of label data)
+&#x20;     { (json object of label data)
 
-"name": "labelname" (string) The label
+&#x20;       "name": "labelname"     (string) The label
 
-"purpose": "string" (string) Purpose of address ("send" for sending address, "receive" for receiving address)
+&#x20;       "purpose": "string"     (string) Purpose of address ("send" for sending address, "receive" for receiving address)
 
-},...
+&#x20;     },...
 
-]
+&#x20;   ]
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli getaddressinfo "QZCAJ4qLJpNW74Cbgtnav18wYxQ9wX4V3h"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getaddressinfo", "params": \["QZCAJ4qLJpNW74Cbgtnav18wYxQ9wX4V3h"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5118,43 +5272,43 @@ Return information about the given Kalycoin address. Some information requires t
 
 {
 
-"address": "QZCAJ4qLJpNW74Cbgtnav18wYxQ9wX4V3h",
+&#x20; "address": "QZCAJ4qLJpNW74Cbgtnav18wYxQ9wX4V3h",
 
-"scriptPubKey": "76a9148a1827980248580e401055e52c9617cfbbe7efbf88ac",
+&#x20; "scriptPubKey": "76a9148a1827980248580e401055e52c9617cfbbe7efbf88ac",
 
-"ismine": true,
+&#x20; "ismine": true,
 
-"iswatchonly": false,
+&#x20; "iswatchonly": false,
 
-"isscript": false,
+&#x20; "isscript": false,
 
-"iswitness": false,
+&#x20; "iswitness": false,
 
-"pubkey": "0397a9f2710a0ac5a1ee1345893be6d903fc9e7c79479ab6a4067064731d009a73",
+&#x20; "pubkey": "0397a9f2710a0ac5a1ee1345893be6d903fc9e7c79479ab6a4067064731d009a73",
 
-"iscompressed": true,
+&#x20; "iscompressed": true,
 
-"label": "",
+&#x20; "label": "",
 
-"timestamp": 1562060128,
+&#x20; "timestamp": 1562060128,
 
-"hdkeypath": "m/88'/0'/0'",
+&#x20; "hdkeypath": "m/88'/0'/0'",
 
-"hdseedid": "96d04ecdab5e6ddeb20b8c62c98cf3a7548ab07d",
+&#x20; "hdseedid": "96d04ecdab5e6ddeb20b8c62c98cf3a7548ab07d",
 
-"hdmasterkeyid": "96d04ecdab5e6ddeb20b8c62c98cf3a7548ab07d",
+&#x20; "hdmasterkeyid": "96d04ecdab5e6ddeb20b8c62c98cf3a7548ab07d",
 
-"labels": \[
+&#x20; "labels": \[
 
-{
+&#x20;   {
 
-"name": "",
+&#x20;     "name": "",
 
-"purpose": "receive"
+&#x20;     "purpose": "receive"
 
-}
+&#x20;   }
 
-]
+&#x20; ]
 
 }
 
@@ -5164,15 +5318,15 @@ Returns the total available balance. The available balance is what the wallet co
 
 **Arguments:**
 
-1\. (dummy) (string, optional) Remains for backward compatibility. Must be excluded or set to "\*".
+1\. (dummy)           (string, optional) Remains for backward compatibility. Must be excluded or set to "\*".
 
-2\. minconf (numeric, optional, default=0) Only include transactions confirmed at least this many times.
+2\. minconf           (numeric, optional, default=0) Only include transactions confirmed at least this many times.
 
 3\. include\_watchonly (bool, optional, default=false) Also include balance in watch-only addresses (see 'importaddress')
 
 **Result:**
 
-amount (numeric) The total amount in KLC received for this account.
+amount              (numeric) The total amount in KLC received for this account.
 
 **Examples:**
 
@@ -5214,6 +5368,8 @@ Returns a new Kalycoin address for receiving payments. If 'label' is specified, 
 
 \> Kalycoin -cli getnewaddress
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getnewaddress", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **Test example:**
@@ -5230,15 +5386,17 @@ Returns a new Kalycoin address, for receiving change. This is for use with raw t
 
 **Arguments:**
 
-1\. "address\_type" (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
+1\. "address\_type"           (string, optional) The address type to use. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
 
 **Result:**
 
-"address" (string) The address
+"address"    (string) The address
 
 **Examples:**
 
 \> Kalycoin -cli getrawchangeaddress
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getrawchangeaddress", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5256,9 +5414,9 @@ Returns the total amount received by the given address in transactions with at l
 
 **Arguments:**
 
-1\. "address" (string, required) The Kalycoin address for transactions.
+1\. "address"         (string, required) The Kalycoin address for transactions.
 
-2\. minconf (numeric, optional, default=1) Only include transactions confirmed at least this many times.
+2\. minconf             (numeric, optional, default=1) Only include transactions confirmed at least this many times.
 
 **Result:**
 
@@ -5288,71 +5446,71 @@ Get detailed information about in-wallet transaction
 
 **Arguments:**
 
-1\. "txid" (string, required) The transaction id
+1\. "txid"                  (string, required) The transaction id
 
-2\. "include\_watchonly" (bool, optional, default=false) Whether to include watch-only addresses in balance calculation and details\[]
+2\. "include\_watchonly"     (bool, optional, default=false) Whether to include watch-only addresses in balance calculation and details\[]
 
-3\. "waitconf" (int, optional, default=0) Wait for enough confirmations before returning
+3\. "waitconf"              (int, optional, default=0) Wait for enough confirmations before returning
 
 **Result:**
 
 {
 
-"amount" : x.xxx, (numeric) The transaction amount in KLC
+&#x20; "amount" : x.xxx,        (numeric) The transaction amount in KLC
 
-"fee": x.xxx, (numeric) The amount of the fee in KKC. This is negative and only available for the
+&#x20; "fee": x.xxx,            (numeric) The amount of the fee in KKC. This is negative and only available for the
 
-'send' category of transactions.
+&#x20;                             'send' category of transactions.
 
-"confirmations" : n, (numeric) The number of confirmations
+&#x20; "confirmations" : n,     (numeric) The number of confirmations
 
-"blockhash" : "hash", (string) The block hash
+&#x20; "blockhash" : "hash",    (string) The block hash
 
-"blockindex" : xx, (numeric) The index of the transaction in the block that includes it
+&#x20; "blockindex" : xx,       (numeric) The index of the transaction in the block that includes it
 
-"blocktime" : ttt, (numeric) The time in seconds since epoch (1 Jan 1970 GMT)
+&#x20; "blocktime" : ttt,       (numeric) The time in seconds since epoch (1 Jan 1970 GMT)
 
-"txid" : "transactionid", (string) The transaction id.
+&#x20; "txid" : "transactionid",   (string) The transaction id.
 
-"time" : ttt, (numeric) The transaction time in seconds since epoch (1 Jan 1970 GMT)
+&#x20; "time" : ttt,            (numeric) The transaction time in seconds since epoch (1 Jan 1970 GMT)
 
-"timereceived" : ttt, (numeric) The time received in seconds since epoch (1 Jan 1970 GMT)
+&#x20; "timereceived" : ttt,    (numeric) The time received in seconds since epoch (1 Jan 1970 GMT)
 
-"bip125-replaceable": "yes|no|unknown", (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
+&#x20; "bip125-replaceable": "yes|no|unknown",  (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
 
-may be unknown for unconfirmed transactions not in the mempool
+&#x20;                                                  may be unknown for unconfirmed transactions not in the mempool
 
-"details" : \[
+&#x20; "details" : \[
 
-{
+&#x20;   {
 
-"account" : "accountname", (string) DEPRECATED. This field will be removed in a V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account name involved in the transaction, can be "" for the default account.
+&#x20;     "account" : "accountname",        (string) DEPRECATED. This field will be removed in a V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account name involved in the transaction, can be "" for the default account.
 
-"address" : "address", (string) The Kalycoin address involved in the transaction
+&#x20;     "address" : "address",            (string) The Kalycoin address involved in the transaction
 
-"category" : "send|receive", (string) The category, either 'send' or 'receive'
+&#x20;     "category" : "send|receive",      (string) The category, either 'send' or 'receive'
 
-"amount" : x.xxx, (numeric) The amount in KLC
+&#x20;     "amount" : x.xxx,                 (numeric) The amount in KLC
 
-"label" : "label", (string) A comment for the address/transaction, if any
+&#x20;     "label" : "label",                (string) A comment for the address/transaction, if any
 
-"vout" : n, (numeric) the vout value
+&#x20;     "vout" : n,                       (numeric) the vout value
 
-"fee": x.xxx, (numeric) The amount of the fee in KLC. This is negative and only available for the
+&#x20;     "fee": x.xxx,                     (numeric) The amount of the fee in KLC. This is negative and only available for the
 
-'send' category of transactions.
+&#x20;                                          'send' category of transactions.
 
-"abandoned": xxx (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the
+&#x20;     "abandoned": xxx                  (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the
 
-'send' category of transactions.
+&#x20;                                          'send' category of transactions.
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-],
+&#x20; ],
 
-"hex" : "data" (string) Raw data for transaction
+&#x20; "hex" : "data"                        (string) Raw data for transaction
 
 }
 
@@ -5360,7 +5518,11 @@ may be unknown for unconfirmed transactions not in the mempool
 
 \> Kalycoin -cli gettransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"
 
+&#x20;
+
 \> Kalycoin -cli gettransaction "1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d" true
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "gettransaction", "params": \["1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5376,43 +5538,45 @@ Returns an object containing various wallet state info.
 
 {
 
-"walletname": xxxxx, (string) the wallet name
+&#x20; "walletname": xxxxx,               (string) the wallet name
 
-"walletversion": xxxxx, (numeric) the wallet version
+&#x20; "walletversion": xxxxx,            (numeric) the wallet version
 
-"balance": xxxxxxx, (numeric) the total confirmed balance of the wallet in KLC
+&#x20; "balance": xxxxxxx,                (numeric) the total confirmed balance of the wallet in KLC
 
-"stake": xxxxxxx, (numeric) the total stake balance of the wallet in KLC
+&#x20; "stake": xxxxxxx,                  (numeric) the total stake balance of the wallet in KLC
 
-"unconfirmed\_balance": xxx, (numeric) the total unconfirmed balance of the wallet in KLC
+&#x20; "unconfirmed\_balance": xxx,        (numeric) the total unconfirmed balance of the wallet in KLC
 
-"immature\_balance": xxxxxx, (numeric) the total immature balance of the wallet in KLC
+&#x20; "immature\_balance": xxxxxx,        (numeric) the total immature balance of the wallet in KLC
 
-"txcount": xxxxxxx, (numeric) the total number of transactions in the wallet
+&#x20; "txcount": xxxxxxx,                (numeric) the total number of transactions in the wallet
 
-"keypoololdest": xxxxxx, (numeric) the timestamp (seconds since Unix epoch) of the oldest pre-generated key in the key pool
+&#x20; "keypoololdest": xxxxxx,           (numeric) the timestamp (seconds since Unix epoch) of the oldest pre-generated key in the key pool
 
-"keypoolsize": xxxx, (numeric) how many new keys are pre-generated (only counts external keys)
+&#x20; "keypoolsize": xxxx,               (numeric) how many new keys are pre-generated (only counts external keys)
 
-"keypoolsize\_hd\_internal": xxxx, (numeric) how many new keys are pre-generated for internal use (used for change outputs, only appears if the wallet is using this feature, otherwise external keys are used)
+&#x20; "keypoolsize\_hd\_internal": xxxx,   (numeric) how many new keys are pre-generated for internal use (used for change outputs, only appears if the wallet is using this feature, otherwise external keys are used)
 
-"unlocked\_until": ttt, (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked
+&#x20; "unlocked\_until": ttt,             (numeric) the timestamp in seconds since epoch (midnight Jan 1 1970 GMT) that the wallet is unlocked for transfers, or 0 if the wallet is locked
 
-"paytxfee": x.xxxx, (numeric) the transaction fee configuration, set in KLC /kB
+&#x20; "paytxfee": x.xxxx,                (numeric) the transaction fee configuration, set in KLC /kB
 
-"hdseedid": "\<hash160>" (string, optional) the Hash160 of the HD seed (only present when HD is enabled)
+&#x20; "hdseedid": "\<hash160>"            (string, optional) the Hash160 of the HD seed (only present when HD is enabled)
 
-"hdmasterkeyid": "\<hash160>" (string, optional) alias for hdseedid retained for backwards-compatibility. Will be removed in V0.18.
+&#x20; "hdmasterkeyid": "\<hash160>"       (string, optional) alias for hdseedid retained for backwards-compatibility. Will be removed in V0.18.
 
-"private\_keys\_enabled": true|false (boolean) false if privatekeys are disabled for this wallet (enforced watch-only wallet)
+&#x20; "private\_keys\_enabled": true|false (boolean) false if privatekeys are disabled for this wallet (enforced watch-only wallet)
 
 }
 
 **Examples:**
 
-\> Kalycoin -cli getwalletinfo
+&#x20; \> Kalycoin -cli getwalletinfo
 
-\> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+&#x20;
+
+&#x20; \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getwalletinfo", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **importaddress**
 
@@ -5420,13 +5584,13 @@ Adds an address or script (in hex) that can be watched as if it were in your wal
 
 **Arguments:**
 
-1\. "address" (string, required) The Bitcoin address (or hex-encoded script)
+1\. "address"            (string, required) The Bitcoin address (or hex-encoded script)
 
-2\. "label" (string, optional, default="") An optional label
+2\. "label"              (string, optional, default="") An optional label
 
-3\. rescan (boolean, optional, default=true) Rescan the wallet for transactions
+3\. rescan               (boolean, optional, default=true) Rescan the wallet for transactions
 
-4\. p2sh (boolean, optional, default=false) Add the P2SH version of the script as well
+4\. p2sh                 (boolean, optional, default=false) Add the P2SH version of the script as well
 
 Note: This call can take over an hour to complete if rescan is true, during that time, other rpc calls may report that the imported address exists but related transactions are still missing, leading to temporarily incorrect/bogus balances and unspent outputs until rescan completes. If you have the full public key, you should call importpubkey instead of this.
 
@@ -5452,51 +5616,53 @@ Import addresses/scripts (with private or public keys, redeem script (P2SH)), re
 
 **Arguments:**
 
-1\. requests (array, required) Data to be imported
+1\. requests                                                   (array, required) Data to be imported
 
-\[
+&#x20; \[   &#x20;
 
-{
+&#x20;   {
 
-"scriptPubKey": "\<script>" | { "address":"\<address>" }, (string / json, required) Type of scriptPubKey (string for script, json for address)
+&#x20;     "scriptPubKey": "\<script>" | { "address":"\<address>" }, (string / json, required) Type of scriptPubKey (string for script, json for address)
 
-"timestamp": timestamp | "now" , (integer / string, required) Creation time of the key in seconds since epoch (Jan 1 1970 GMT),
+&#x20;     "timestamp": timestamp | "now"                        , (integer / string, required) Creation time of the key in seconds since epoch (Jan 1 1970 GMT),
 
-or the string "now" to substitute the current synced blockchain time. The timestamp of the oldest
+&#x20;                                                             or the string "now" to substitute the current synced blockchain time. The timestamp of the oldest
 
-key will determine how far back blockchain rescans need to begin for missing wallet transactions.
+&#x20;                                                             key will determine how far back blockchain rescans need to begin for missing wallet transactions.
 
-"now" can be specified to bypass scanning, for keys which are known to never have been used, and
+&#x20;                                                             "now" can be specified to bypass scanning, for keys which are known to never have been used, and
 
-0 can be specified to scan the entire blockchain. Blocks up to 2 hours before the earliest key
+&#x20;                                                             0 can be specified to scan the entire blockchain. Blocks up to 2 hours before the earliest key
 
-creation time of all keys being imported by the importmulti call will be scanned.
+&#x20;                                                             creation time of all keys being imported by the importmulti call will be scanned.
 
-"redeemscript": "\<script>" , (string, optional) Allowed only if the scriptPubKey is a P2SH address or a P2SH scriptPubKey
+&#x20;     "redeemscript": "\<script>"                            , (string, optional) Allowed only if the scriptPubKey is a P2SH address or a P2SH scriptPubKey
 
-"pubkeys": \["\<pubKey>", ... ] , (array, optional) Array of strings giving pubkeys that must occur in the output or redeemscript
+&#x20;     "pubkeys": \["\<pubKey>", ... ]                         , (array, optional) Array of strings giving pubkeys that must occur in the output or redeemscript
 
-"keys": \["\<key>", ... ] , (array, optional) Array of strings giving private keys whose corresponding public keys must occur in the output or redeemscript
+&#x20;     "keys": \["\<key>", ... ]                               , (array, optional) Array of strings giving private keys whose corresponding public keys must occur in the output or redeemscript
 
-"internal": \<true> , (boolean, optional, default: false) Stating whether matching outputs should be treated as not incoming payments aka change
+&#x20;     "internal": \<true>                                    , (boolean, optional, default: false) Stating whether matching outputs should be treated as not incoming payments aka change
 
-"watchonly": \<true> , (boolean, optional, default: false) Stating whether matching outputs should be considered watched even when they're not spendable, only allowed if keys are empty
+&#x20;     "watchonly": \<true>                                   , (boolean, optional, default: false) Stating whether matching outputs should be considered watched even when they're not spendable, only allowed if keys are empty
 
-"label": \<label> , (string, optional, default: '') Label to assign to the address (aka account name, for now), only allowed with internal=false
+&#x20;     "label": \<label>                                      , (string, optional, default: '') Label to assign to the address (aka account name, for now), only allowed with internal=false
 
-}
+&#x20;   }
 
-,...
+&#x20; ,...
 
-]
+&#x20; ]
 
-2\. options (json, optional)
+2\. options                 (json, optional)
 
-{
+&#x20; {
 
-"rescan": \<false>, (boolean, optional, default: true) Stating if should rescan the blockchain after all imports
+&#x20;    "rescan": \<false>,         (boolean, optional, default: true) Stating if should rescan the blockchain after all imports
 
-}
+&#x20; }
+
+&#x20;
 
 Note: This call can take over an hour to complete if rescan is true, during that time, other rpc calls
 
@@ -5506,7 +5672,11 @@ may report that the imported keys, addresses or scripts exists but related trans
 
 \> Kalycoin -cli importmulti '\[{ "scriptPubKey": { "address": "\<my address>" }, "timestamp":1455191478 }, { "scriptPubKey": { "address": "\<my 2nd address>" }, "label": "example 2", "timestamp": 1455191480 }]'
 
+&#x20;
+
 \> Kalycoin -cli importmulti '\[{ "scriptPubKey": { "address": "\<my address>" }, "timestamp":1455191478 }]' '{ "rescan": false}'
+
+&#x20;
 
 Response is an array with the same size as the input that has the execution result :
 
@@ -5520,9 +5690,9 @@ Adds a private key (as returned by dumpprivkey) to your wallet. Requires a new w
 
 1\. " Kalycoin privkey" (string, required) The private key (see dumpprivkey)
 
-2\. "label" (string, optional, default="") An optional label
+2\. "label"       (string, optional, default="") An optional label
 
-3\. rescan (boolean, optional, default=true) Rescan the wallet for transactions
+3\. rescan        (boolean, optional, default=true) Rescan the wallet for transactions
 
 Note: This call can take over an hour to complete if rescan is true, during that time, other rpc calls may report that the imported key exists but related transactions are still missing, leading to temporarily incorrect/bogus balances and unspent outputs until rescan completes.
 
@@ -5574,33 +5744,33 @@ List balances by receiving address.
 
 **Result:**
 
-\[
+&#x20;\[
 
-{
+&#x20; {
 
-"involvesWatchonly" : true, (bool) Only returned if imported addresses were involved in transaction
+&#x20;   "involvesWatchonly" : true,        (bool) Only returned if imported addresses were involved in transaction
 
-"address" : "receivingaddress", (string) The receiving address
+&#x20;   "address" : "receivingaddress",    (string) The receiving address
 
-"account" : "accountname", (string) DEPRECATED. Backwards compatible alias for label.
+&#x20;   "account" : "accountname",         (string) DEPRECATED. Backwards compatible alias for label.
 
-"amount" : x.xxx, (numeric) The total amount in KLC received by the address
+&#x20;   "amount" : x.xxx,                  (numeric) The total amount in KLC received by the address
 
-"confirmations" : n, (numeric) The number of confirmations of the most recent transaction included
+&#x20;   "confirmations" : n,               (numeric) The number of confirmations of the most recent transaction included
 
-"label" : "label", (string) The label of the receiving address. The default label is "".
+&#x20;   "label" : "label",                 (string) The label of the receiving address. The default label is "".
 
-"txids": \[
+&#x20;   "txids": \[
 
-"txid", (string) The ids of transactions received with the address
+&#x20;      "txid",                         (string) The ids of transactions received with the address
 
-...
+&#x20;      ...
 
-]
+&#x20;   ]
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
@@ -5612,9 +5782,11 @@ Adds a public key (in hex) that can be watched as if it were in your wallet but 
 
 1\. "pubkey" (string, required) The hex-encoded public key
 
-2\. "label" (string, optional, default="") An optional label
+2\. "label"  (string, optional, default="") An optional label
 
-3\. rescan (boolean, optional, default=true) Rescan the wallet for transactions
+3\. rescan   (boolean, optional, default=true) Rescan the wallet for transactions
+
+&#x20;
 
 Note: This call can take over an hour to complete if rescan is true, during that time, other rpc calls
 
@@ -5668,6 +5840,8 @@ Fills the keypool.
 
 \> Kalycoin -cli keypoolrefill
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "keypoolrefill", "params": \[] }' -H 'con
 
 **listaddressgroupings**
@@ -5678,29 +5852,31 @@ Lists groups of addresses which have had their common ownership made public by c
 
 \[
 
-\[
+&#x20; \[
 
-\[
+&#x20;   \[
 
-"address", (string) The Kalycoin address
+&#x20;     "address", (string) The Kalycoin address
 
-amount, (numeric) The amount in KLC
+&#x20;      amount,   (numeric) The amount in KLC
 
-"label" (string, optional) The label
+&#x20;     "label"    (string, optional) The label
 
-]
+&#x20;   ]
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
-,...
+&#x20; ,...
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli listaddressgroupings
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listaddressgroupings", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5716,9 +5892,9 @@ Returns the list of all labels, or labels that are assigned to addresses with a 
 
 \[
 
-"label", (string) Label name
+&#x20; "label", (string) Label name
 
-...
+&#x20; ...
 
 ]
 
@@ -5748,15 +5924,15 @@ Returns list of temporarily unspendable outputs. See the lockunspent call to loc
 
 \[
 
-{
+&#x20; {
 
-"txid" : "transactionid", (string) The transaction id locked
+&#x20;   "txid" : "transactionid", (string) The transaction id locked
 
-"vout" : n , (numeric) The vout value
+&#x20;   "vout" : n ,              (numeric) The vout value
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
@@ -5786,9 +5962,15 @@ As a json rpc call
 
 \> Kalycoin -cli listreceivedbyaddress
 
+&#x20;
+
 \> Kalycoin -cli listreceivedbyaddress 6 true
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": \[6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbyaddress", "params": \[6, true, true, "1M72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5812,65 +5994,65 @@ Get all transactions in blocks since block \[blockhash], or all transactions if 
 
 {
 
-"transactions":
+&#x20; "transactions":
 
-\[
+&#x20; \[
 
-"account":"accountname", (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account name associated with the transaction. Will be "" for the default account.
+&#x20;   "account":"accountname",       (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The account name associated with the transaction. Will be "" for the default account.
 
-"address":"address", (string) The Kalycoin address of the transaction. Not present for move transactions (category = move).
+&#x20;   "address":"address",           (string) The Kalycoin address of the transaction. Not present for move transactions (category = move).
 
-"category":"send|receive", (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.
+&#x20;   "category":"send|receive",     (string) The transaction category. 'send' has negative amounts, 'receive' has positive amounts.
 
-"amount": x.xxx, (numeric) The amount in KLC. This is negative for the 'send' category, and for the 'move' category for moves
+&#x20;   "amount": x.xxx,               (numeric) The amount in KLC. This is negative for the 'send' category, and for the 'move' category for moves
 
-outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.
+&#x20;                                          outbound. It is positive for the 'receive' category, and for the 'move' category for inbound funds.
 
-"vout" : n, (numeric) the vout value
+&#x20;   "vout" : n,                    (numeric) the vout value
 
-"fee": x.xxx, (numeric) The amount of the fee in KLC. This is negative and only available for the 'send' category of transactions.
+&#x20;   "fee": x.xxx,                  (numeric) The amount of the fee in KLC. This is negative and only available for the 'send' category of transactions.
 
-"confirmations": n, (numeric) The number of confirmations for the transaction. Available for 'send' and 'receive' category of transactions.
+&#x20;   "confirmations": n,            (numeric) The number of confirmations for the transaction. Available for 'send' and 'receive' category of transactions.
 
-When it's < 0, it means the transaction conflicted that many blocks ago.
+&#x20;                                         When it's < 0, it means the transaction conflicted that many blocks ago.
 
-"blockhash": "hashvalue", (string) The block hash containing the transaction. Available for 'send' and 'receive' category of transactions.
+&#x20;   "blockhash": "hashvalue",      (string) The block hash containing the transaction. Available for 'send' and 'receive' category of transactions.
 
-"blockindex": n, (numeric) The index of the transaction in the block that includes it. Available for 'send' and 'receive' category of transactions.
+&#x20;   "blockindex": n,               (numeric) The index of the transaction in the block that includes it. Available for 'send' and 'receive' category of transactions.
 
-"blocktime": xxx, (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
+&#x20;   "blocktime": xxx,              (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
 
-"txid": "transactionid", (string) The transaction id. Available for 'send' and 'receive' category of transactions.
+&#x20;   "txid": "transactionid",       (string) The transaction id. Available for 'send' and 'receive' category of transactions.
 
-"time": xxx, (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT).
+&#x20;   "time": xxx,                   (numeric) The transaction time in seconds since epoch (Jan 1 1970 GMT).
 
-"timereceived": xxx, (numeric) The time received in seconds since epoch (Jan 1 1970 GMT). Available for 'send' and 'receive' category of transactions.
+&#x20;   "timereceived": xxx,           (numeric) The time received in seconds since epoch (Jan 1 1970 GMT). Available for 'send' and 'receive' category of transactions.
 
-"bip125-replaceable": "yes|no|unknown",
+&#x20;   "bip125-replaceable": "yes|no|unknown",&#x20;
 
-(string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
+&#x20;                                  (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
 
-may be unknown for unconfirmed transactions not in the mempool
+&#x20;                                         may be unknown for unconfirmed transactions not in the mempool
 
-"abandoned": xxx, (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the 'send' category of transactions.
+&#x20;   "abandoned": xxx,              (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the 'send' category of transactions.
 
-"comment": "...", (string) If a comment is associated with the transaction.
+&#x20;   "comment": "...",              (string) If a comment is associated with the transaction.
 
-"label" : "label" (string) A comment for the address/transaction, if any
+&#x20;   "label" : "label"              (string) A comment for the address/transaction, if any
 
-"to": "...", (string) If a comment to is associated with the transaction.
+&#x20;   "to": "...",                   (string) If a comment to is associated with the transaction.
 
-],
+&#x20; ],
 
-"removed": \[
+&#x20; "removed": \[
 
-\<structure is the same as "transactions" above, only present if include\_removed=true>
+&#x20;   \<structure is the same as "transactions" above, only present if include\_removed=true>
 
-Note: transactions that were re-added in the active chain will appear as-is in this array, and may thus have a positive confirmation count.
+&#x20;   Note: transactions that were re-added in the active chain will appear as-is in this array, and may thus have a positive confirmation count.
 
-],
+&#x20; ],
 
-"lastblock": "lastblockhash" (string) The hash of the block (target\_confirmations-1) from the best block on the main chain. This is typically used to feed back into listsinceblock the next time you call it. So you would generally use a target\_confirmations of say 6, so you will be continually re-notified of transactions until they've reached 6 confirmations plus any new ones
+&#x20; "lastblock": "lastblockhash"     (string) The hash of the block (target\_confirmations-1) from the best block on the main chain. This is typically used to feed back into listsinceblock the next time you call it. So you would generally use a target\_confirmations of say 6, so you will be continually re-notified of transactions until they've reached 6 confirmations plus any new ones
 
 }
 
@@ -5878,7 +6060,11 @@ Note: transactions that were re-added in the active chain will appear as-is in t
 
 \> Kalycoin -cli listsinceblock
 
+&#x20;
+
 \> Kalycoin -cli listsinceblock "000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad" 6
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listsinceblock", "params": \["000000000000000bacf66f7497b7dc45ef753ee9a7d38571037cdb1a57f663ad", 6] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -5892,13 +6078,13 @@ Note that the "account" argument and "otheraccount" return value have been remov
 
 **Arguments:**
 
-1\. "label" (string, optional) If set, should be a valid label name to return only incoming transactions
+1\. "label"           (string, optional) If set, should be a valid label name to return only incoming transactions
 
-with the specified label, or "\*" to disable filtering and return all transactions.
+&#x20;             with the specified label, or "\*" to disable filtering and return all transactions.
 
-2\. count (numeric, optional, default=10) The number of transactions to return
+2\. count             (numeric, optional, default=10) The number of transactions to return
 
-3\. skip (numeric, optional, default=0) The number of transactions to skip
+3\. skip              (numeric, optional, default=0) The number of transactions to skip
 
 4\. include\_watchonly (bool, optional, default=false) Include transactions to watch-only addresses (see 'importaddress')
 
@@ -5906,53 +6092,53 @@ with the specified label, or "\*" to disable filtering and return all transactio
 
 \[
 
-{
+&#x20; {
 
-"address":"address", (string) The Kalycoin address of the transaction.
+&#x20;   "address":"address",      (string) The Kalycoin address of the transaction.
 
-"category":"send|receive", (string) The transaction category.
+&#x20;   "category":"send|receive", (string) The transaction category.
 
-"amount": x.xxx, (numeric) The amount in KLC. This is negative for the 'send' category, and is positive
+&#x20;   "amount": x.xxx,          (numeric) The amount in KLC. This is negative for the 'send' category, and is positive
 
-for the 'receive' category,
+&#x20;                                       for the 'receive' category,
 
-"label": "label", (string) A comment for the address/transaction, if any
+&#x20;   "label": "label",         (string) A comment for the address/transaction, if any
 
-"vout": n, (numeric) the vout value
+&#x20;   "vout": n,                (numeric) the vout value
 
-"fee": x.xxx, (numeric) The amount of the fee in KLC. This is negative and only available for the
+&#x20;   "fee": x.xxx,             (numeric) The amount of the fee in KLC. This is negative and only available for the
 
-'send' category of transactions.
+&#x20;                                        'send' category of transactions.
 
-"confirmations": n, (numeric) The number of confirmations for the transaction. Negative confirmations indicate the
+&#x20;   "confirmations": n,       (numeric) The number of confirmations for the transaction. Negative confirmations indicate the
 
-transaction conflicts with the block chain
+&#x20;                                        transaction conflicts with the block chain
 
-"trusted": xxx, (bool) Whether we consider the outputs of this unconfirmed transaction safe to spend.
+&#x20;   "trusted": xxx,           (bool) Whether we consider the outputs of this unconfirmed transaction safe to spend.
 
-"blockhash": "hashvalue", (string) The block hash containing the transaction.
+&#x20;   "blockhash": "hashvalue", (string) The block hash containing the transaction.
 
-"blockindex": n, (numeric) The index of the transaction in the block that includes it.
+&#x20;   "blockindex": n,          (numeric) The index of the transaction in the block that includes it.
 
-"blocktime": xxx, (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
+&#x20;   "blocktime": xxx,         (numeric) The block time in seconds since epoch (1 Jan 1970 GMT).
 
-"txid": "transactionid", (string) The transaction id.
+&#x20;   "txid": "transactionid",  (string) The transaction id.
 
-"time": xxx, (numeric) The transaction time in seconds since epoch (midnight Jan 1 1970 GMT).
+&#x20;   "time": xxx,              (numeric) The transaction time in seconds since epoch (midnight Jan 1 1970 GMT).
 
-"timereceived": xxx, (numeric) The time received in seconds since epoch (midnight Jan 1 1970 GMT).
+&#x20;   "timereceived": xxx,      (numeric) The time received in seconds since epoch (midnight Jan 1 1970 GMT).
 
-"comment": "...", (string) If a comment is associated with the transaction.
+&#x20;   "comment": "...",         (string) If a comment is associated with the transaction.
 
-"bip125-replaceable": "yes|no|unknown", (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
+&#x20;   "bip125-replaceable": "yes|no|unknown",  (string) Whether this transaction could be replaced due to BIP125 (replace-by-fee);
 
-may be unknown for unconfirmed transactions not in the mempool
+&#x20;                                                    may be unknown for unconfirmed transactions not in the mempool
 
-"abandoned": xxx (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the
+&#x20;   "abandoned": xxx          (bool) 'true' if the transaction has been abandoned (inputs are respendable). Only available for the
 
-'send' category of transactions.
+&#x20;                                        'send' category of transactions.
 
-}
+&#x20; }
 
 ]
 
@@ -5976,9 +6162,9 @@ List received transactions by label.
 
 **Arguments:**
 
-1\. minconf (numeric, optional, default=1) The minimum number of confirmations before payments are included.
+1\. minconf           (numeric, optional, default=1) The minimum number of confirmations before payments are included.
 
-2\. include\_empty (bool, optional, default=false) Whether to include labels that haven't received any payments.
+2\. include\_empty     (bool, optional, default=false) Whether to include labels that haven't received any payments.
 
 3\. include\_watchonly (bool, optional, default=false) Whether to include watch-only addresses (see 'importaddress').
 
@@ -5986,21 +6172,21 @@ List received transactions by label.
 
 \[
 
-{
+&#x20; {
 
-"involvesWatchonly" : true, (bool) Only returned if imported addresses were involved in transaction
+&#x20;   "involvesWatchonly" : true, (bool) Only returned if imported addresses were involved in transaction
 
-"account" : "accountname", (string) DEPRECATED. Backwards compatible alias for label.
+&#x20;   "account" : "accountname",  (string) DEPRECATED. Backwards compatible alias for label.
 
-"amount" : x.xxx, (numeric) The total amount received by addresses with this label
+&#x20;   "amount" : x.xxx,           (numeric) The total amount received by addresses with this label
 
-"confirmations" : n, (numeric) The number of confirmations of the most recent transaction included
+&#x20;   "confirmations" : n,        (numeric) The number of confirmations of the most recent transaction included
 
-"label" : "label" (string) The label of the receiving address. The default label is "".
+&#x20;   "label" : "label"           (string) The label of the receiving address. The default label is "".
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
@@ -6008,7 +6194,11 @@ List received transactions by label.
 
 \> Kalycoin -cli listreceivedbylabel
 
+&#x20;
+
 \> Kalycoin -cli listreceivedbylabel 6 true
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listreceivedbylabel", "params": \[6, true, true] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6020,73 +6210,73 @@ Optionally filter to only include txouts paid to specified addresses.
 
 **Arguments:**
 
-1\. minconf (numeric, optional, default=1) The minimum confirmations to filter
+1\. minconf               (numeric, optional, default=1) The minimum confirmations to filter
 
-2\. maxconf (numeric, optional, default=9999999) The maximum confirmations to filter
+2\. maxconf               (numeric, optional, default=9999999) The maximum confirmations to filter
 
-3\. "addresses" (string) A json array of Kalycoin addresses to filter
+3\. "addresses"           (string) A json array of Kalycoin addresses to filter
 
-\[
+&#x20;   \[
 
-"address" (string) Kalycoin address
+&#x20;     "address"          (string) Kalycoin address
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
-4\. include\_unsafe (bool, optional, default=true) Include outputs that are not safe to spend See description of "safe" attribute below.
+4\. include\_unsafe        (bool, optional, default=true) Include outputs that are not safe to spend See description of "safe" attribute below.
 
-5\. query\_options (json, optional) JSON with query options
+5\. query\_options         (json, optional) JSON with query options
 
-{
+&#x20;   {
 
-"minimumAmount" (numeric or string, default=0) Minimum value of each UTXO in KLC
+&#x20;     "minimumAmount"    (numeric or string, default=0) Minimum value of each UTXO in KLC
 
-"maximumAmount" (numeric or string, default=unlimited) Maximum value of each UTXO in KLC
+&#x20;     "maximumAmount"    (numeric or string, default=unlimited) Maximum value of each UTXO in KLC
 
-"maximumCount" (numeric or string, default=unlimited) Maximum number of UTXOs
+&#x20;     "maximumCount"     (numeric or string, default=unlimited) Maximum number of UTXOs
 
-"minimumSumAmount" (numeric or string, default=unlimited) Minimum sum value of all UTXOs in KLC
+&#x20;     "minimumSumAmount" (numeric or string, default=unlimited) Minimum sum value of all UTXOs in KLC
 
-}
+&#x20;   }
 
 **Result：**
 
-\[
+\[              &#x20;
 
-{
+&#x20; {
 
-"txid" : "txid", (string) the transaction id
+&#x20;   "txid" : "txid",          (string) the transaction id
 
-"vout" : n, (numeric) the vout value
+&#x20;   "vout" : n,               (numeric) the vout value
 
-"address" : "address", (string) the Kalycoin address
+&#x20;   "address" : "address",    (string) the Kalycoin address
 
-"label" : "label", (string) The associated label, or "" for the default label
+&#x20;   "label" : "label",        (string) The associated label, or "" for the default label
 
-"account" : "account", (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The associated account, or "" for the default account
+&#x20;   "account" : "account",    (string) DEPRECATED. This field will be removed in V0.18. To see this deprecated field, start Kalycoin d with -deprecatedrpc=accounts. The associated account, or "" for the default account
 
-"scriptPubKey" : "key", (string) the script key
+&#x20;   "scriptPubKey" : "key",   (string) the script key
 
-"amount" : x.xxx, (numeric) the transaction output amount in KLC
+&#x20;   "amount" : x.xxx,         (numeric) the transaction output amount in KLC
 
-"confirmations" : n, (numeric) The number of confirmations
+&#x20;   "confirmations" : n,      (numeric) The number of confirmations
 
-"redeemScript" : n (string) The redeemScript if scriptPubKey is P2SH
+&#x20;   "redeemScript" : n        (string) The redeemScript if scriptPubKey is P2SH
 
-"spendable" : xxx, (bool) Whether we have the private keys to spend this output
+&#x20;   "spendable" : xxx,        (bool) Whether we have the private keys to spend this output
 
-"solvable" : xxx, (bool) Whether we know how to spend this output, ignoring the lack of keys
+&#x20;   "solvable" : xxx,         (bool) Whether we know how to spend this output, ignoring the lack of keys
 
-"safe" : xxx (bool) Whether this output is considered safe to spend. Unconfirmed transactions
+&#x20;   "safe" : xxx              (bool) Whether this output is considered safe to spend. Unconfirmed transactions
 
-from outside keys and unconfirmed replacement transactions are considered unsafe
+&#x20;                             from outside keys and unconfirmed replacement transactions are considered unsafe
 
-and are not eligible for spending by fundrawtransaction and sendtoaddress.
+&#x20;                             and are not eligible for spending by fundrawtransaction and sendtoaddress.
 
-}
+&#x20; }
 
-,...
+&#x20; ,...
 
 ]
 
@@ -6094,11 +6284,19 @@ and are not eligible for spending by fundrawtransaction and sendtoaddress.
 
 \> Kalycoin -cli listunspent
 
+&#x20;
+
 \> Kalycoin -cli listunspent 6 9999999 "\[\\"QjWnDZxwLhrJDcp4Hisse8RfBo2jRDZY5Z\\",\\"Q6sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\\"]"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": \[6, 9999999 "\[\\"QjWnDZxwLhrJDcp4Hisse8RfBo2jRDZY5Z\\",\\"Q6sSauSf5pF2UkUwvKGq4qjNRzBZYqgEL5\\"]"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
+&#x20;
+
 \> Kalycoin -cli listunspent 6 9999999 '\[]' true '{ "minimumAmount": 0.005 }'
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listunspent", "params": \[6, 9999999, \[] , true, { "minimumAmount": 0.005 } ] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6108,17 +6306,19 @@ Returns a list of currently loaded wallets. For full information on the wallet, 
 
 **Result:**
 
-\[
+\[                       &#x20;
 
-"walletname" (string) the wallet name
+&#x20; "walletname"            (string) the wallet name
 
-...
+&#x20;  ...
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli listwallets
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "listwallets", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6130,21 +6330,23 @@ Loads a wallet from a wallet file or directory. Note that all wallet command-lin
 
 **Arguments:**
 
-1\. "filename" (string, required) The wallet directory or .dat file.
+1\. "filename"    (string, required) The wallet directory or .dat file.
 
 **Result:**
 
 {
 
-"name" : \<wallet\_name>, (string) The wallet name if loaded successfully.
+&#x20; "name" :    \<wallet\_name>,        (string) The wallet name if loaded successfully.
 
-"warning" : \<warning>, (string) Warning message if wallet was not loaded cleanly.
+&#x20; "warning" : \<warning>,            (string) Warning message if wallet was not loaded cleanly.
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli loadwallet "test.dat"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "loadwallet", "params": \["test.dat"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6162,23 +6364,23 @@ Locks are stored in memory only. Nodes start with zero locked outputs, and the l
 
 **Arguments:**
 
-1\. unlock (boolean, required) Whether to unlock (true) or lock (false) the specified transactions
+1\. unlock            (boolean, required) Whether to unlock (true) or lock (false) the specified transactions
 
-2\. "transactions" (string, optional) A json array of objects. Each object the txid (string) vout (numeric)
+2\. "transactions"  (string, optional) A json array of objects. Each object the txid (string) vout (numeric)
 
-\[ (json array of json objects)
+&#x20;    \[           (json array of json objects)
 
-{
+&#x20;      {
 
-"txid":"id", (string) The transaction id
+&#x20;        "txid":"id",    (string) The transaction id
 
-"vout": n (numeric) The output number
+&#x20;        "vout": n         (numeric) The output number
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
 **Result:**
 
@@ -6236,15 +6438,17 @@ Rescan the local blockchain for wallet related transactions.
 
 {
 
-"start\_height" (numeric) The block height where the rescan has started. If omitted, rescan started from the genesis block.
+&#x20; "start\_height" (numeric) The block height where the rescan has started. If omitted, rescan started from the genesis block.
 
-"stop\_height" (numeric) The height of the last rescanned block. If omitted, rescan stopped at the chain tip.
+&#x20; "stop\_height" (numeric) The height of the last rescanned block. If omitted, rescan stopped at the chain tip.
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli rescanblockchain 100000 120000
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "rescanblockchain", "params": \[100000, 120000] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6260,49 +6464,49 @@ Requires wallet passphrase to be set with walletpassphrase call.
 
 **Arguments:**
 
-1\. "dummy" (string, required) Must be set to "" for backwards compatibility.
+1\. "dummy"               (string, required) Must be set to "" for backwards compatibility.
 
-2\. "amounts" (string, required) A json object with addresses and amounts
+2\. "amounts"             (string, required) A json object with addresses and amounts
 
-{
+&#x20;   {
 
-"address":amount (numeric or string) The Kalycoin address is the key, the numeric amount (can be string) in KLC is the value
+&#x20;     "address":amount   (numeric or string) The Kalycoin address is the key, the numeric amount (can be string) in KLC is the value
 
-,...
+&#x20;     ,...
 
-}
+&#x20;   }
 
-3\. minconf (numeric, optional, default=1) Only use the balance confirmed at least this many times.
+3\. minconf               (numeric, optional, default=1) Only use the balance confirmed at least this many times.
 
-4\. "comment" (string, optional) A comment
+4\. "comment"             (string, optional) A comment
 
-5\. subtractfeefrom (array, optional) A json array with addresses.
+5\. subtractfeefrom       (array, optional) A json array with addresses.
 
-The fee will be equally deducted from the amount of each selected address.
+&#x20;                          The fee will be equally deducted from the amount of each selected address.
 
-Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
+&#x20;                          Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
 
-If no addresses are specified here, the sender pays the fee.
+&#x20;                          If no addresses are specified here, the sender pays the fee.
 
-\[
+&#x20;   \[
 
-"address" (string) Subtract fee from this address
+&#x20;     "address"          (string) Subtract fee from this address
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
-6\. replaceable (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125
+6\. replaceable           (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125
 
-7\. conf\_target (numeric, optional) Confirmation target (in blocks)
+7\. conf\_target           (numeric, optional) Confirmation target (in blocks)
 
-8\. "estimate\_mode" (string, optional, default=UNSET) The fee estimate mode, must be one of:
+8\. "estimate\_mode"       (string, optional, default=UNSET) The fee estimate mode, must be one of:
 
-"UNSET"
+&#x20;      "UNSET"
 
-"ECONOMICAL"
+&#x20;      "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;      "CONSERVATIVE"
 
 **Result:**
 
@@ -6332,37 +6536,37 @@ Send multiple times. Amounts are double-precision floating point numbers. Suppor
 
 **Arguments:**
 
-1\. "fromaccount" (string, required) DEPRECATED. The account to send the funds from. Should be "" for the default account
+1\. "fromaccount"         (string, required) DEPRECATED. The account to send the funds from. Should be "" for the default account
 
-2\. "amounts" (string, required) A json object with addresses and amounts
+2\. "amounts"             (string, required) A json object with addresses and amounts
 
-{
+&#x20;   {
 
-"address":amount (numeric or string) The Kalycoin address is the key, the numeric amount (can be string) in KLC is the value
+&#x20;     "address":amount   (numeric or string) The Kalycoin address is the key, the numeric amount (can be string) in KLC is the value
 
-,...
+&#x20;     ,...
 
-}
+&#x20;   }
 
-3\. minconf (numeric, optional, default=1) Only use the balance confirmed at least this many times.
+3\. minconf               (numeric, optional, default=1) Only use the balance confirmed at least this many times.
 
-4\. "comment" (string, optional) A comment
+4\. "comment"             (string, optional) A comment
 
-5\. subtractfeefrom (array, optional) A json array with addresses.
+5\. subtractfeefrom       (array, optional) A json array with addresses.
 
-The fee will be equally deducted from the amount of each selected address.
+&#x20;                          The fee will be equally deducted from the amount of each selected address.
 
-Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
+&#x20;                          Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
 
-If no addresses are specified here, the sender pays the fee.
+&#x20;                          If no addresses are specified here, the sender pays the fee.
 
-\[
+&#x20;   \[
 
-"address" (string) Subtract fee from this address
+&#x20;     "address"          (string) Subtract fee from this address
 
-,...
+&#x20;     ,...
 
-]
+&#x20;   ]
 
 **Result:**
 
@@ -6394,39 +6598,39 @@ Requires wallet passphrase to be set with walletpassphrase call.
 
 **Arguments:**
 
-1\. "address" (string, required) The Kalycoin address to send to.
+&#x20; 1\. "address"            (string, required) The Kalycoin address to send to.
 
-2\. "amount" (numeric or string, required) The amount in KLC to send. eg 0.1
+2\. "amount"               (numeric or string, required) The amount in KLC to send. eg 0.1
 
-3\. "comment" (string, optional) A comment used to store what the transaction is for.
+3\. "comment"              (string, optional) A comment used to store what the transaction is for.
 
-This is not part of the transaction, just kept in your wallet.
+&#x20;                            This is not part of the transaction, just kept in your wallet.
 
-4\. "comment\_to" (string, optional) A comment to store the name of the person or organization
+4\. "comment\_to"           (string, optional) A comment to store the name of the person or organization
 
-to which you're sending the transaction. This is not part of the
+&#x20;                            to which you're sending the transaction. This is not part of the
 
-transaction, just kept in your wallet.
+&#x20;                            transaction, just kept in your wallet.
 
-5\. subtractfeefromamount (boolean, optional, default=false) The fee will be deducted from the amount being sent.
+5\. subtractfeefromamount  (boolean, optional, default=false) The fee will be deducted from the amount being sent.
 
-The recipient will receive less Kalycoin s than you enter in the amount field.
+&#x20;                            The recipient will receive less Kalycoin s than you enter in the amount field.
 
-6\. replaceable (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125
+6\. replaceable            (boolean, optional) Allow this transaction to be replaced by a transaction with higher fees via BIP 125
 
-7\. conf\_target (numeric, optional) Confirmation target (in blocks)
+7\. conf\_target            (numeric, optional) Confirmation target (in blocks)
 
-8\. "estimate\_mode" (string, optional, default=UNSET) The fee estimate mode, must be one of:
+8\. "estimate\_mode"        (string, optional, default=UNSET) The fee estimate mode, must be one of:
 
-"UNSET"
+&#x20;      "UNSET"
 
-"ECONOMICAL"
+&#x20;      "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;      "CONSERVATIVE"
 
-9\. "senderaddress" (string, optional) The quantum address that will be used to send money from.
+9\. "senderaddress"        (string, optional) The quantum address that will be used to send money from.
 
-10."changeToSender" (bool, optional, default=false) Return the change to the sender.
+10."changeToSender"       (bool, optional, default=false) Return the change to the sender.
 
 **Result:**
 
@@ -6436,13 +6640,23 @@ The recipient will receive less Kalycoin s than you enter in the amount field.
 
 \> Kalycoin -cli sendtoaddress "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1
 
+&#x20;
+
 \> Kalycoin -cli sendtoaddress "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "donation" "seans outpost"
+
+&#x20;
 
 \> Kalycoin -cli sendtoaddress "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd" 0.1 "" "" true
 
+&#x20;
+
 \> Kalycoin -cli sendtoaddress "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost", false, null, null, "", "QX1GkJdye9WoUnrE2v6ZQhQ72EUVDtGXQX", true
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": \["QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sendtoaddress", "params": \["QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd", 0.1, "donation", "seans outpost", false, null, null, "", "QX1GkJdye9WoUnrE2v6ZQhQ72EUVDtGXQX", true] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6456,39 +6670,41 @@ Requires wallet passphrase to be set with walletpassphrase call.
 
 1\. "contractaddress" (string, required) The contract address that will receive the funds and data.
 
-2\. "datahex" (string, required) data to send.
+2\. "datahex"         (string, required) data to send.
 
-3\. "amount" (numeric or string, optional) The amount in KLC to send. eg 0.1, default: 0
+3\. "amount"          (numeric or string, optional) The amount in KLC to send. eg 0.1, default: 0
 
-4\. gasLimit (numeric or string, optional) gasLimit, default: 250000, max: 40000000
+4\. gasLimit          (numeric or string, optional) gasLimit, default: 250000, max: 40000000
 
-5\. gasPrice (numeric or string, optional) gasPrice KLC price per gas unit, default: 0.0000004, min:0.0000004
+5\. gasPrice          (numeric or string, optional) gasPrice KLC price per gas unit, default: 0.0000004, min:0.0000004
 
-6\. "senderaddress" (string, optional) The quantum address that will be used as sender.
+6\. "senderaddress"   (string, optional) The quantum address that will be used as sender.
 
-7\. "broadcast" (bool, optional, default=true) Whether to broadcast the transaction or not.
+7\. "broadcast"       (bool, optional, default=true) Whether to broadcast the transaction or not.
 
-8\. "changeToSender" (bool, optional, default=true) Return the change to the sender.
+8\. "changeToSender"  (bool, optional, default=true) Return the change to the sender.
 
 **Result:**
 
 \[
 
-{
+&#x20; {
 
-"txid" : (string) The transaction id.
+&#x20;   "txid" :    (string) The transaction id.
 
-"sender" : (string) KLC address of the sender.
+&#x20;   "sender" :  (string) KLC address of the sender.
 
-"hash160" : (string) ripemd-160 hash of the sender.
+&#x20;   "hash160" : (string) ripemd-160 hash of the sender.
 
-}
+&#x20; }
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli sendtocontract "c6ca2697719d00446d4ea51f6fac8fd1e9310214" "54f6127f"
+
+&#x20;
 
 \> Kalycoin -cli sendtocontract "c6ca2697719d00446d4ea51f6fac8fd1e9310214" "54f6127f" 12.0015 6000000 0.0000004 "QM72Sfpbz1BPpXFHz9m3CdqATR44Jvaydd"
 
@@ -6518,9 +6734,15 @@ The seed value can be retrieved using the command. It is the private key marked 
 
 \> Kalycoin -cli sethdseed
 
+&#x20;
+
 \> Kalycoin -cli sethdseed false
 
+&#x20;
+
 \> Kalycoin -cli sethdseed true "wifkey"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "sethdseed", "params": \[true, "wifkey"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6542,6 +6764,8 @@ true|false (boolean) Returns true if successful
 
 \> Kalycoin -cli settxfee 0.00001
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "settxfee", "params": \[0.00001] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **signmessage**
@@ -6551,6 +6775,8 @@ Sign a message with the private key of an address
 **Arguments:**
 
 1\. "address" (string, required) The Kalycoin address to use for the private key.
+
+&#x20;
 
 2\. "message" (string, required) The message to create a signature of.
 
@@ -6582,77 +6808,79 @@ Sign inputs for raw transaction (serialized, hex-encoded). The second optional a
 
 **Arguments:**
 
-1\. "hexstring" (string, required) The transaction hex string
+1\. "hexstring"                      (string, required) The transaction hex string
 
-2\. "prevtxs" (string, optional) An json array of previous dependent transaction outputs
+2\. "prevtxs"                        (string, optional) An json array of previous dependent transaction outputs
 
-\[ (json array of json objects, or 'null' if none provided)
+&#x20;    \[                              (json array of json objects, or 'null' if none provided)
 
-{
+&#x20;      {
 
-"txid":"id", (string, required) The transaction id
+&#x20;        "txid":"id",               (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;        "vout":n,                  (numeric, required) The output number
 
-"scriptPubKey": "hex", (string, required) script key
+&#x20;        "scriptPubKey": "hex",     (string, required) script key
 
-"redeemScript": "hex", (string, required for P2SH or P2WSH) redeem script
+&#x20;        "redeemScript": "hex",     (string, required for P2SH or P2WSH) redeem script
 
-"amount": value (numeric, required) The amount spent
+&#x20;        "amount": value            (numeric, required) The amount spent
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;   ]
 
-3\. "sighashtype" (string, optional, default=ALL) The signature hash type. Must be one of
+3\. "sighashtype"                    (string, optional, default=ALL) The signature hash type. Must be one of
 
-"ALL"
+&#x20;      "ALL"
 
-"NONE"
+&#x20;      "NONE"
 
-"SINGLE"
+&#x20;      "SINGLE"
 
-"ALL|ANYONECANPAY"
+&#x20;      "ALL|ANYONECANPAY"
 
-"NONE|ANYONECANPAY"
+&#x20;      "NONE|ANYONECANPAY"
 
-"SINGLE|ANYONECANPAY"
+&#x20;      "SINGLE|ANYONECANPAY"
 
 **Result:**
 
 {
 
-"hex" : "value", (string) The hex-encoded raw transaction with signature(s)
+&#x20; "hex" : "value",                  (string) The hex-encoded raw transaction with signature(s)
 
-"complete" : true|false, (boolean) If the transaction has a complete set of signatures
+&#x20; "complete" : true|false,          (boolean) If the transaction has a complete set of signatures
 
-"errors" : \[ (json array of objects) Script verification errors (if there are any)
+&#x20; "errors" : \[                      (json array of objects) Script verification errors (if there are any)
 
-{
+&#x20;   {
 
-"txid" : "hash", (string) The hash of the referenced, previous transaction
+&#x20;     "txid" : "hash",              (string) The hash of the referenced, previous transaction
 
-"vout" : n, (numeric) The index of the output to spent and used as input
+&#x20;     "vout" : n,                   (numeric) The index of the output to spent and used as input
 
-"scriptSig" : "hex", (string) The hex-encoded signature script
+&#x20;     "scriptSig" : "hex",          (string) The hex-encoded signature script
 
-"sequence" : n, (numeric) Script sequence number
+&#x20;     "sequence" : n,               (numeric) Script sequence number
 
-"error" : "text" (string) Verification or signing error related to the input
+&#x20;     "error" : "text"              (string) Verification or signing error related to the input
 
-}
+&#x20;   }
 
-,...
+&#x20;   ,...
 
-]
+&#x20; ]
 
 }
 
 **Examples:**
 
 \> Kalycoin -cli signrawtransactionwithwallet "myhex"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "signrawtransactionwithwallet", "params": \["myhex"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6668,6 +6896,8 @@ Unloads the wallet referenced by the request endpoint otherwise unloads the wall
 
 \> Kalycoin -cli unloadwallet wallet\_name
 
+&#x20;
+
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "unloadwallet", "params": \[wallet\_name] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
 **walletcreatefundedpsbt**
@@ -6676,107 +6906,107 @@ Creates and funds a transaction in the Partially Signed Transaction format. Inpu
 
 **Arguments:**
 
-1\. "inputs" (array, required) A json array of json objects
+1\. "inputs"                (array, required) A json array of json objects
 
-\[
+&#x20;    \[
 
-{
+&#x20;      {
 
-"txid":"id", (string, required) The transaction id
+&#x20;        "txid":"id",      (string, required) The transaction id
 
-"vout":n, (numeric, required) The output number
+&#x20;        "vout":n,         (numeric, required) The output number
 
-"sequence":n (numeric, optional) The sequence number
+&#x20;        "sequence":n      (numeric, optional) The sequence number
 
-}
+&#x20;      }
 
-,...
+&#x20;      ,...
 
-]
+&#x20;    ]
 
-2\. "outputs" (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
+2\. "outputs"               (array, required) a json array with outputs (key-value pairs), where none of the keys are duplicated.
 
 That is, each address can only appear once and there can only be one 'data' object.
 
-\[
+&#x20;  \[
 
-{
+&#x20;   {
 
-"address": x.xxx, (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in KLC
+&#x20;     "address": x.xxx,    (obj, optional) A key-value pair. The key (string) is the Kalycoin address, the value (float or string) is the amount in KLC
 
-},
+&#x20;   },
 
-{
+&#x20;   {
 
-"data": "hex" (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
+&#x20;     "data": "hex"        (obj, optional) A key-value pair. The key must be "data", the value is hex encoded data
 
-}
+&#x20;   }
 
-,... More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
+&#x20;   ,...                     More key-value pairs of the above form. For compatibility reasons, a dictionary, which holds the key-value pairs directly, is also
 
-accepted as second parameter.
+&#x20;                            accepted as second parameter.
 
-]
+&#x20;  ]
 
-3\. locktime (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
+3\. locktime                  (numeric, optional, default=0) Raw locktime. Non-0 value also locktime-activates inputs
 
-Allows this transaction to be replaced by a transaction with higher fees. If provided, it is an error if explicit sequence numbers are incompatible.
+&#x20;                            Allows this transaction to be replaced by a transaction with higher fees. If provided, it is an error if explicit sequence numbers are incompatible.
 
-4\. options (object, optional)
+4\. options                 (object, optional)
 
-{
+&#x20;  {
 
-"changeAddress" (string, optional, default pool address) The Kalycoin address to receive the change
+&#x20;    "changeAddress"          (string, optional, default pool address) The Kalycoin address to receive the change
 
-"changePosition" (numeric, optional, default random) The index of the change output
+&#x20;    "changePosition"         (numeric, optional, default random) The index of the change output
 
-"change\_type" (string, optional) The output type to use. Only valid if changeAddress is not specified. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
+&#x20;    "change\_type"            (string, optional) The output type to use. Only valid if changeAddress is not specified. Options are "legacy", "p2sh-segwit", and "bech32". Default is set by -changetype.
 
-"includeWatching" (boolean, optional, default false) Also select inputs which are watch only
+&#x20;    "includeWatching"        (boolean, optional, default false) Also select inputs which are watch only
 
-"lockUnspents" (boolean, optional, default false) Lock selected unspent outputs
+&#x20;    "lockUnspents"           (boolean, optional, default false) Lock selected unspent outputs
 
-"feeRate" (numeric, optional, default not set: makes wallet determine the fee) Set a specific fee rate in KLC /kB
+&#x20;    "feeRate"                (numeric, optional, default not set: makes wallet determine the fee) Set a specific fee rate in KLC /kB
 
-"subtractFeeFromOutputs" (array, optional) A json array of integers.
+&#x20;    "subtractFeeFromOutputs" (array, optional) A json array of integers.
 
-The fee will be equally deducted from the amount of each specified output.
+&#x20;                             The fee will be equally deducted from the amount of each specified output.
 
-The outputs are specified by their zero-based index, before any change output is added.
+&#x20;                             The outputs are specified by their zero-based index, before any change output is added.
 
-Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
+&#x20;                             Those recipients will receive less Kalycoin s than you enter in their corresponding amount field.
 
-If no outputs are specified here, the sender pays the fee.
+&#x20;                             If no outputs are specified here, the sender pays the fee.
 
-\[vout\_index,...]
+&#x20;                                 \[vout\_index,...]
 
-"replaceable" (boolean, optional) Marks this transaction as BIP125 replaceable.
+&#x20;    "replaceable"            (boolean, optional) Marks this transaction as BIP125 replaceable.
 
-Allows this transaction to be replaced by a transaction with higher fees
+&#x20;                             Allows this transaction to be replaced by a transaction with higher fees
 
-"conf\_target" (numeric, optional) Confirmation target (in blocks)
+&#x20;    "conf\_target"            (numeric, optional) Confirmation target (in blocks)
 
-"estimate\_mode" (string, optional, default=UNSET) The fee estimate mode, must be one of:
+&#x20;    "estimate\_mode"          (string, optional, default=UNSET) The fee estimate mode, must be one of:
 
-"UNSET"
+&#x20;        "UNSET"
 
-"ECONOMICAL"
+&#x20;        "ECONOMICAL"
 
-"CONSERVATIVE"
+&#x20;        "CONSERVATIVE"
 
-}
+&#x20;  }
 
-5\. bip32derivs (boolean, optional, default=false) If true, includes the BIP 32 derivation paths for public keys if we know them
+5\. bip32derivs                    (boolean, optional, default=false) If true, includes the BIP 32 derivation paths for public keys if we know them
 
 **Result:**
 
 {
 
-"psbt": "value", (string) The resulting raw transaction (base64-encoded string)
+&#x20; "psbt": "value",         (string)  The resulting raw transaction (base64-encoded string)
 
-"fee": n, (numeric) Fee in KLC the resulting transaction pays
+&#x20; "fee":        n,         (numeric) Fee in KLC the resulting transaction pays
 
-"changepos": n, (numeric) The position of the added change output, or -1
+&#x20; "changepos":  n,         (numeric) The position of the added change output, or -1
 
 }
 
@@ -6822,13 +7052,23 @@ This is needed prior to performing transactions related to private keys such as 
 
 1\. "passphrase" (string, required) The wallet passphrase
 
-2\. timeout (numeric, required) The time to keep the decryption key in seconds; capped at 100000000 (\~3 years).
+&#x20;
+
+2\. timeout      (numeric, required) The time to keep the decryption key in seconds; capped at 100000000 (\~3 years).
+
+&#x20;
 
 3\. staking only (bool, optional, omitted=false, enabled=true) Unlock wallet for staking only.
 
+&#x20;
+
 Note:
 
+&#x20;
+
 Issuing the walletpassphrase command while the wallet is already unlocked will set a new unlock
+
+&#x20;
 
 time that overrides the old one.
 
@@ -6856,13 +7096,15 @@ Changes the wallet passphrase from 'oldpassphrase' to 'newpassphrase'.
 
 **Arguments:**
 
-1\. "oldpassphrase" (string) The current passphrase
+1\. "oldpassphrase"      (string) The current passphrase
 
-2\. "newpassphrase" (string) The new passphrase
+2\. "newpassphrase"      (string) The new passphrase
 
 **Examples:**
 
 \> Kalycoin -cli walletpassphrasechange "old one" "new one"
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "walletpassphrasechange", "params": \["old one", "new one"] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 
@@ -6874,35 +7116,35 @@ that we can sign for.
 
 **Arguments:**
 
-1\. "psbt" (string, required) The transaction base64 string
+1\. "psbt"                         (string, required) The transaction base64 string
 
-2\. sign (boolean, optional, default=true) Also sign the transaction when updating
+2\. sign                           (boolean, optional, default=true) Also sign the transaction when updating
 
-3\. "sighashtype" (string, optional, default=ALL) The signature hash type to sign with if not specified by the PSBT. Must be one of
+3\. "sighashtype"                  (string, optional, default=ALL) The signature hash type to sign with if not specified by the PSBT. Must be one of
 
-"ALL"
+&#x20;      "ALL"
 
-"NONE"
+&#x20;      "NONE"
 
-"SINGLE"
+&#x20;      "SINGLE"
 
-"ALL|ANYONECANPAY"
+&#x20;      "ALL|ANYONECANPAY"
 
-"NONE|ANYONECANPAY"
+&#x20;      "NONE|ANYONECANPAY"
 
-"SINGLE|ANYONECANPAY"
+&#x20;      "SINGLE|ANYONECANPAY"
 
-4\. bip32derivs (boolean, optional, default=false) If true, includes the BIP 32 derivation paths for public keys if we know them
+4\. bip32derivs                    (boolean, optional, default=false) If true, includes the BIP 32 derivation paths for public keys if we know them
 
 **Result:**
 
 {
 
-"psbt" : "value", (string) The base64-encoded partially signed transaction
+&#x20; "psbt" : "value",          (string) The base64-encoded partially signed transaction
 
-"complete" : true|false, (boolean) If the transaction has a complete set of signatures
+&#x20; "complete" : true|false,   (boolean) If the transaction has a complete set of signatures
 
-]
+&#x20; ]
 
 }
 
@@ -6920,21 +7162,23 @@ Returns information about the active ZeroMQ notifications.
 
 \[
 
-{
+&#x20; {
 
-"type": "pubhashtx", (string) Type of notification
+&#x20;   "type": "pubhashtx", (string) Type of notification
 
-"address": "..." (string) Address of the publisher
+&#x20;   "address": "..."     (string) Address of the publisher
 
-},
+&#x20; },
 
-...
+&#x20; ...
 
 ]
 
 **Examples:**
 
 \> Kalycoin -cli getzmqnotifications
+
+&#x20;
 
 \> curl --user myusername --data-binary '{"jsonrpc": "1.0", "id":"curltest", "method": "getzmqnotifications", "params": \[] }' -H 'content-type: text/plain;' http://127.0.0.1:3889/
 

@@ -32,7 +32,7 @@ Here we introduce a PoA consensus algorithm which will be available in the Kalyc
 
 To help explain this algorithm we assume there are 5 authorized block miners, A, B, C, D, E. Their public keys are stored in an ordered list. This list is initialized at the very beginning of the blockchain and can be updated later by a smart contract. So we suppose that, at block height _h1_, the _current\_authorized\_miner\_list_ is _\[pubkey\_A, pubkey\_B, pubkey\_C, pubkey\_D, pubkey\_E]_ . Then these 5 block miners will take turns producing a new block, from height _h1_ to _h2_, like the illustration below.
 
-![](<.gitbook/assets/image (11).png>)
+![](<.gitbook/assets/image (10).png>)
 
 When producing a new block, the miner has to use the _secp256k1\_ecdsa\_sign\_recoverable_ function to sign the block and then add the output signature to the block. By this way, other nodes can recover the miner's public key from the signature by using the function _secp256k1\_ecdsa\_recover_, and then verify its authority through the _current\_authorized\_miner\_list_.
 
@@ -48,7 +48,7 @@ One miner can mine the next block when:
 
 By this definition, we are able to obtain the miners which are actually allowed to mine the next block. It simply requires removing miners of the recent _n/2_ blocks from the _current\_authorized\_miner\_list_. For example, at the height _h2_, the _next\_block\_miner\_list_ can be calculated as.
 
-![](<.gitbook/assets/image (18).png>)
+![](<.gitbook/assets/image (12).png>)
 
 Although B, C, D all can mine the next block, a priority order should be specified for them, so as to avoid their competition for the next block and ensure the blockchain would be verified by as many miners as possible. Therefore, we define the _next\_block\_miner\_list_ as an ordered list, where the miner next to the current block miner in _current\_authorized\_miner\_list_ is supposed to be at the first place, and so on. In our example, the order of B, C, E is shown in the illustration above.
 
@@ -58,7 +58,7 @@ When the priority order is determined, the _block\_time_ for each miner is calcu
 
 In this way, if one node fails to mine a block, the next miner will take place after _timeout_ later. Here is an example. Node B is down when producing the block at height _h2+1_. Then node C, which is next to B in _next\_block\_miner\_list_, will broadcast its block _interval+timeout_ after _parent\_block\_time_.
 
-![](<.gitbook/assets/image (6).png>)
+![](<.gitbook/assets/image (13).png>)
 
 ### **DGP for Authorities Storage and Update**
 
